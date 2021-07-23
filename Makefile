@@ -6,7 +6,7 @@ install:
 	${PYTHON_INTERPRETER} -m pip install -r requirements.txt
 
 data:
-	${PYTHON_INTERPRETER} -m src.data.make_datasets data/external data/processed
+	${PYTHON_INTERPRETER} -m src.data.make_datasets data/external/chroma data/processed
 
 test:
 	pytest
