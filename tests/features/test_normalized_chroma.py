@@ -14,7 +14,7 @@ class TestNormalizedChroma:
             {'piece': 'vivaldi_1.mp3', 'time': 0, 'c1': 0, 'c2': 0, 'c3': 0, 'c4': 0, 
                 'c5': 0, 'c6': 0, 'c7': 0, 'c8': 0, 'c9': 0, 'c10': 0, 'c11': 0, 'c12': 0},
             {'piece': 'vivaldi_1.mp3', 'time': 0.1, 'c1': 0, 'c2': 0.12, 'c3': 0.7, 'c4': 0.39, 
-                'c5': 0.22, 'c6': 1.28, 'c7': 0.37, 'c8': 0.6, 'c9': 1.11, 'c10': 0.13, 'c11': 0.02, 'c12': 0.05}
+                'c5': 0.22, 'c6': 1.28, 'c7': 0.37, 'c8': 0.6, 'c9': 1.11, 'c10': -0.13, 'c11': 0.02, 'c12': -0.05}
         ]
 
         df = pd.DataFrame(data)
@@ -22,12 +22,6 @@ class TestNormalizedChroma:
         df = df.set_index(['piece', 'time'])
 
         return pd.DataFrame(df)
-
-    @pytest.mark.parametrize('chroma_vector, expected', [([1.2, 3.5, 4, 3.1], 11.8), ([-0.5, 0.3, -1.2], 2)])
-    def test_l1_norm(self, chroma_vector, expected):
-        result = NormalizedChroma().l1_norm(chroma_vector)
-
-        assert np.isclose(expected, result)
 
     def test_extraction(self, data):
         expected = pd.DataFrame([
@@ -41,7 +35,7 @@ class TestNormalizedChroma:
                 'c5': 0, 'c6': 0, 'c7': 0, 'c8': 0, 'c9': 0, 'c10': 0, 'c11': 0, 'c12': 0},
             {'piece': 'vivaldi_1.mp3', 'time': 0.1, 'c1': 0, 'c2': 0.02404809619, 'c3': 0.1402805611, 'c4': 0.07815631263, 
                 'c5': 0.04408817635, 'c6': 0.2565130261, 'c7': 0.07414829659, 'c8': 0.120240481, 'c9': 0.2224448898, 
-                'c10': 0.02605210421, 'c11': 0.004008016032, 'c12': 0.01002004008}
+                'c10': -0.02605210421, 'c11': 0.004008016032, 'c12': -0.01002004008}
         ])
         expected['time'] = pd.to_timedelta(expected['time'], unit='s')
         expected = expected.set_index(['piece', 'time'])
