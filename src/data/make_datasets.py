@@ -1,7 +1,9 @@
 import click
 import pathlib
 import pandas as pd
+from src.data.pipeline import Pipeline
 from src.features.chroma_resolution import ChromaResolution
+from src.features.normalized_chroma import NormalizedChroma
 from src.utils.formatters import format_chroma_resolution
 
 # Create datasets for each chroma resolution
@@ -19,14 +21,23 @@ def main(input_filepath, output_filepath):
             data = data.fillna(method='ffill')
 
             for resolution in RESOLUTIONS:
-                extractor = ChromaResolution(resolution)
-                processed = extractor.extract(data)
+                pipeline = make_pipeline(resolution)
+
+                processed = pipeline.run(data)
 
                 formatted_res = format_chroma_resolution(resolution)
                 filename_no_ext = path.name.rsplit('.', 1)[0]
 
                 print(f'Processed {path} for {formatted_res} chroma resolution')
+
                 processed.to_csv(output_filepath + '/' + filename_no_ext + '_' + formatted_res + '.csv')
+
+def make_pipeline(chroma_res: float):
+    pipeline = Pipeline()
+    pipeline.add_step(ChromaResolution(chroma_res))
+    pipeline.add_step(NormalizedChroma())
+
+    return pipeline
 
 if __name__ == '__main__':
     main()
