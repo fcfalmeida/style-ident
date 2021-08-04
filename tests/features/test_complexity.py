@@ -34,6 +34,13 @@ class TestComplexity:
 
         result = Complexity()._sum_chroma_diff(data[CHROMA_COLS].values)
 
+        assert np.allclose(result, expected)
+
+    def test_chroma_std(self, data):
+        expected = np.array([-0.06746974977, -0.009995874579])
+
+        result = Complexity()._chroma_std(data[CHROMA_COLS].values)
+
         print(result)
 
-        assert np.allclose(result, expected)
+        assert(np.allclose(result, expected))
