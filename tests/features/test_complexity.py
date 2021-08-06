@@ -8,10 +8,10 @@ class TestComplexity:
     @pytest.fixture
     def data(scope='class'):
         df = pd.DataFrame([
-            {'piece': 'bach_2.mp3', 'time': 0, 'c1': 0.21, 'c2': 0.45, 'c3': 0.77, 'c4': 0.09, 
-                'c5': 0.23, 'c6': 0.50, 'c7': 0.14, 'c8': 0.08, 'c9': 0.91, 'c10': 0.83, 'c11': 0.77, 'c12': 0.11},
-            {'piece': 'bach_2.mp3', 'time': 0.1, 'c1': 0.03, 'c2': 0.06, 'c3': 0.44, 'c4': 0.31, 
-                'c5': 0.97, 'c6': 0.13, 'c7': 0.19, 'c8': 0.25, 'c9': 0.37, 'c10': 0.52, 'c11': 0.81, 'c12': 0.01}
+            {'piece': 'bach_2.mp3', 'time': 0, 'c1': 0.03, 'c2': 0.07, 'c3': 0.11, 'c4': 0.09, 
+                'c5': 0.01, 'c6': 0.04, 'c7': 0.06, 'c8': 0.13, 'c9': 0.06, 'c10': 0.21, 'c11': 0.12, 'c12': 0.07},
+            {'piece': 'bach_2.mp3', 'time': 0.1, 'c1': 0.02, 'c2': 0.08, 'c3': 0.14, 'c4': 0.05, 
+                'c5': 0.01, 'c6': 0.15, 'c7': 0.10, 'c8': 0.05, 'c9': 0.03, 'c10': 0.07, 'c11': 0.18, 'c12': 0.12}
         ])
 
         df['time'] = pd.to_timedelta(df['time'], unit='s')
@@ -21,8 +21,8 @@ class TestComplexity:
 
     def test_sort_chroma_fifths(self, data):
         expected = np.array([
-            [0.21, 0.08, 0.77, 0.83, 0.23, 0.11, 0.14, 0.45, 0.91, 0.09, 0.77, 0.50],
-            [0.03, 0.25, 0.44, 0.52, 0.97, 0.01, 0.19, 0.06, 0.37, 0.31, 0.81, 0.13]
+            [0.03, 0.13, 0.11, 0.21, 0.01, 0.07, 0.06, 0.07, 0.06, 0.09, 0.12, 0.04],
+            [0.02, 0.05, 0.14, 0.07, 0.01, 0.12, 0.1, 0.08, 0.03, 0.05, 0.18, 0.15]
         ])
 
         result = Complexity()._sort_chroma_fifths(data[CHROMA_COLS].values)
@@ -30,14 +30,14 @@ class TestComplexity:
         assert np.array_equal(result, expected)
 
     def test_sum_chroma_diff(self, data):
-        expected = np.array([-0.9, -0.77])
+        expected = np.array([0.65, 0.59])
 
         result = Complexity()._sum_chroma_diff(data[CHROMA_COLS].values)
 
         assert np.allclose(result, expected)
 
     def test_chroma_std(self, data):
-        expected = np.array([-0.06746974977, -0.009995874579])
+        expected = np.array([0.82148763, 0.81760848])
 
         result = Complexity()._chroma_std(data[CHROMA_COLS].values)
 
@@ -46,7 +46,7 @@ class TestComplexity:
         assert(np.allclose(result, expected))
 
     def test_neg_slope(self, data):
-        expected = np.array([1.4922001026, 1.4742693077])
+        expected = np.array([1.1631701538, 1.1326878205])
 
         result = Complexity()._neg_slope(data[CHROMA_COLS].values)
 
