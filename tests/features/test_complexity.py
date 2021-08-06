@@ -11,7 +11,7 @@ class TestComplexity:
             {'piece': 'bach_2.mp3', 'time': 0, 'c1': 0.21, 'c2': 0.45, 'c3': 0.77, 'c4': 0.09, 
                 'c5': 0.23, 'c6': 0.50, 'c7': 0.14, 'c8': 0.08, 'c9': 0.91, 'c10': 0.83, 'c11': 0.77, 'c12': 0.11},
             {'piece': 'bach_2.mp3', 'time': 0.1, 'c1': 0.03, 'c2': 0.06, 'c3': 0.44, 'c4': 0.31, 
-                'c5': 0.97, 'c6': 0.13, 'c7': 0.19, 'c8': 0.25, 'c9': 0.37, 'c10': 0.52, 'c11': 0.81, 'c12': 0.01},
+                'c5': 0.97, 'c6': 0.13, 'c7': 0.19, 'c8': 0.25, 'c9': 0.37, 'c10': 0.52, 'c11': 0.81, 'c12': 0.01}
         ])
 
         df['time'] = pd.to_timedelta(df['time'], unit='s')
@@ -44,3 +44,12 @@ class TestComplexity:
         print(result)
 
         assert(np.allclose(result, expected))
+
+    def test_neg_slope(self, data):
+        expected = np.array([1.4922001026, 1.4742693077])
+
+        result = Complexity()._neg_slope(data[CHROMA_COLS].values)
+
+        print(result)
+
+        assert (np.allclose(result, expected))
