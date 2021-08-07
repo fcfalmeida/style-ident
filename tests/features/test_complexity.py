@@ -41,15 +41,33 @@ class TestComplexity:
 
         result = Complexity()._chroma_std(data[CHROMA_COLS].values)
 
-        print(result)
-
-        assert(np.allclose(result, expected))
+        assert np.allclose(result, expected)
 
     def test_neg_slope(self, data):
         expected = np.array([1.1631701538, 1.1326878205])
 
         result = Complexity()._neg_slope(data[CHROMA_COLS].values)
 
-        print(result)
+        assert np.allclose(result, expected)
 
-        assert (np.allclose(result, expected))
+    def test_entropy(self, data):
+        expected = np.array([0.92430871434, 0.91369479299])
+
+        result = Complexity()._entropy(data[CHROMA_COLS].values)
+
+        assert np.allclose(result, expected)
+
+        # Flat chroma vector entropy should be 1
+        flat_vector = np.array([[1/12, 1/12, 1/12, 1/12, 1/12, 1/12, 
+            1/12, 1/12, 1/12, 1/12, 1/12, 1/12]])
+        result = Complexity()._entropy(flat_vector)
+
+        assert np.allclose(result, np.array([1]))
+
+        # Sparse chroma vector entropy should be 0
+        sparse_vector = np.array([[0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0]])
+        result = Complexity()._entropy(sparse_vector)
+
+        assert np.allclose(result, np.array([0]))
+
+

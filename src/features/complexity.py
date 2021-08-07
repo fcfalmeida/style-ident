@@ -42,6 +42,10 @@ class Complexity(FeatureExtractor):
 
         return 1 - np.abs(slopes) / rescale_factor
 
+    def _entropy(self, chroma_vector: ArrayLike):
+        entropies = -1 / np.log2(12) * np.sum(chroma_vector * np.log2(chroma_vector, where=chroma_vector > 0), axis=1)
+
+        return entropies
 
     def extract(self, data: pd.DataFrame) -> pd.DataFrame:
         return super().extract(data)
