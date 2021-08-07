@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 from numpy.typing import ArrayLike
+from scipy.stats.mstats import gmean
 from src.features.feature_extractor import FeatureExtractor
 import src.utils.math as math
 
@@ -51,8 +52,14 @@ class Complexity(FeatureExtractor):
     def _non_sparseness(self, chroma_vector: ArrayLike):
         l1 = math.l1_norm(chroma_vector)
         l2 = math.l2_norm(chroma_vector)
-        
+
         return 1 - (np.sqrt(12) - l1 / l2) / (np.sqrt(12) - 1)
+
+    def _flatness(self, chroma_vector: ArrayLike):
+        geom_mean = gmean(chroma_vector, axis=1)
+        arith_mean = np.mean(chroma_vector, axis=1)
+
+        return geom_mean / arith_mean 
 
     def extract(self, data: pd.DataFrame) -> pd.DataFrame:
         return super().extract(data)

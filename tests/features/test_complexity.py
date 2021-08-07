@@ -77,3 +77,9 @@ class TestComplexity:
 
         assert np.allclose(result, expected)
 
+    def test_flatness(self, data):
+        expected = np.array([0.7923240272, 0.754386555])
+
+        result = Complexity()._flatness(data[CHROMA_COLS].values)
+
+        assert np.allclose(result, expected)
