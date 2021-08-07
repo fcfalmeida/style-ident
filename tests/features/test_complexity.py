@@ -70,4 +70,10 @@ class TestComplexity:
 
         assert np.allclose(result, np.array([0]))
 
+    def test_non_sparseness(self, data):
+        expected = np.array([0.78985308194, 0.78265321994])
+
+        result = Complexity()._non_sparseness(data[CHROMA_COLS].values)
+
+        assert np.allclose(result, expected)
 

@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 from numpy.typing import ArrayLike
 from src.features.feature_extractor import FeatureExtractor
+import src.utils.math as math
 
 class Complexity(FeatureExtractor):
     def _sort_chroma_fifths(self, chroma_vector: ArrayLike):
@@ -46,6 +47,12 @@ class Complexity(FeatureExtractor):
         entropies = -1 / np.log2(12) * np.sum(chroma_vector * np.log2(chroma_vector, where=chroma_vector > 0), axis=1)
 
         return entropies
+
+    def _non_sparseness(self, chroma_vector: ArrayLike):
+        l1 = math.l1_norm(chroma_vector)
+        l2 = math.l2_norm(chroma_vector)
+        
+        return 1 - (np.sqrt(12) - l1 / l2) / (np.sqrt(12) - 1)
 
     def extract(self, data: pd.DataFrame) -> pd.DataFrame:
         return super().extract(data)
