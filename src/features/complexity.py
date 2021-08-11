@@ -59,7 +59,20 @@ class Complexity(FeatureExtractor):
         geom_mean = gmean(chroma_vector, axis=1)
         arith_mean = np.mean(chroma_vector, axis=1)
 
-        return geom_mean / arith_mean 
+        return geom_mean / arith_mean
+
+    def _angular_deviation(self, chroma_vector: ArrayLike):
+        fifth_sorted = self._sort_chroma_fifths(chroma_vector)
+
+        pitch_class_dist = 0
+
+        for q in range(12):
+            temp = fifth_sorted[:, q] * np.exp(2j * np.pi * q / 12)
+            pitch_class_dist += fifth_sorted[:, q] * np.exp(2j * np.pi * q / 12)
+
+        pitch_class_dist = np.abs(pitch_class_dist)
+
+        return np.sqrt(1 - pitch_class_dist)
 
     def extract(self, data: pd.DataFrame) -> pd.DataFrame:
         return super().extract(data)

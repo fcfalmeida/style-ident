@@ -19,6 +19,15 @@ class TestComplexity:
 
         return df
 
+    @pytest.fixture
+    def flat_vector(scope='class'):
+        return np.array([[1/12, 1/12, 1/12, 1/12, 1/12, 1/12, 
+            1/12, 1/12, 1/12, 1/12, 1/12, 1/12]])
+
+    @pytest.fixture
+    def sparse_vector(scope='class'):
+        return np.array([[0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0]])
+
     def test_sort_chroma_fifths(self, data):
         expected = np.array([
             [0.03, 0.13, 0.11, 0.21, 0.01, 0.07, 0.06, 0.07, 0.06, 0.09, 0.12, 0.04],
@@ -50,24 +59,16 @@ class TestComplexity:
 
         assert np.allclose(result, expected)
 
-    def test_entropy(self, data):
+    def test_entropy(self, data, flat_vector, sparse_vector):
         expected = np.array([0.92430871434, 0.91369479299])
 
         result = Complexity()._entropy(data[CHROMA_COLS].values)
-
         assert np.allclose(result, expected)
 
-        # Flat chroma vector entropy should be 1
-        flat_vector = np.array([[1/12, 1/12, 1/12, 1/12, 1/12, 1/12, 
-            1/12, 1/12, 1/12, 1/12, 1/12, 1/12]])
         result = Complexity()._entropy(flat_vector)
-
         assert np.allclose(result, np.array([1]))
 
-        # Sparse chroma vector entropy should be 0
-        sparse_vector = np.array([[0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0]])
         result = Complexity()._entropy(sparse_vector)
-
         assert np.allclose(result, np.array([0]))
 
     def test_non_sparseness(self, data):
@@ -83,3 +84,16 @@ class TestComplexity:
         result = Complexity()._flatness(data[CHROMA_COLS].values)
 
         assert np.allclose(result, expected)
+
+    def test_angular_deviation(self, data, flat_vector, sparse_vector):
+        expected = np.array([0.9294068001, 0.955902087])
+
+        result = Complexity()._angular_deviation(data[CHROMA_COLS].values)
+        assert np.allclose(result, expected)
+
+        result = Complexity()._angular_deviation(flat_vector)
+        assert np.allclose(result, np.array([1]))
+
+        result = Complexity()._angular_deviation(sparse_vector)
+        assert np.allclose(result, np.array([0]))
+
