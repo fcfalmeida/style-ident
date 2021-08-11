@@ -38,26 +38,42 @@ class TestComplexity:
 
         assert np.array_equal(result, expected)
 
-    def test_sum_chroma_diff(self, data):
+    def test_sum_chroma_diff(self, data, flat_vector, sparse_vector):
         expected = np.array([0.65, 0.59])
 
         result = Complexity()._sum_chroma_diff(data[CHROMA_COLS].values)
-
         assert np.allclose(result, expected)
 
-    def test_chroma_std(self, data):
+        result = Complexity()._sum_chroma_diff(flat_vector)
+        assert np.allclose(result, np.array([1]))
+
+        result = Complexity()._sum_chroma_diff(sparse_vector)
+        assert np.allclose(result, np.array([0]))
+
+    def test_chroma_std(self, data, flat_vector, sparse_vector):
         expected = np.array([0.82148763, 0.81760848])
 
         result = Complexity()._chroma_std(data[CHROMA_COLS].values)
-
         assert np.allclose(result, expected)
 
-    def test_neg_slope(self, data):
+        result = Complexity()._chroma_std(flat_vector)
+        assert np.allclose(result, np.array([1]))
+
+        result = Complexity()._chroma_std(sparse_vector)
+        assert np.allclose(result, np.array([0.042572892]))
+
+    def test_neg_slope(self, data, flat_vector, sparse_vector):
         expected = np.array([0.641384257, 0.612694997])
 
         result = Complexity()._neg_slope(data[CHROMA_COLS].values)
-
         assert np.allclose(result, expected)
+
+        result = Complexity()._neg_slope(flat_vector)
+        assert np.allclose(result, np.array([1]))
+
+        result = Complexity()._neg_slope(sparse_vector)
+        assert np.allclose(result, np.array([0.013806706]))
+
 
     def test_entropy(self, data, flat_vector, sparse_vector):
         expected = np.array([0.92430871434, 0.91369479299])

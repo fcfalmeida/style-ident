@@ -28,7 +28,7 @@ class Complexity(FeatureExtractor):
     def _chroma_std(self, chroma_vector: ArrayLike):
         std = np.std(chroma_vector, axis=1)
 
-        rescale_factor = (1 / np.sqrt(12))
+        rescale_factor = 1 / np.sqrt(12)
 
         return 1 - std / rescale_factor
 
