@@ -33,6 +33,7 @@ class Complexity(FeatureExtractor):
         return 1 - std / rescale_factor
 
     def _neg_slope(self, chroma_vector: ArrayLike):
+        chroma_vector = np.sort(-chroma_vector, axis=1)
         pitch_classes = np.array(list(range(12)))
 
         coef_matrix = np.vstack([pitch_classes, np.ones(len(pitch_classes))]).T
@@ -40,7 +41,7 @@ class Complexity(FeatureExtractor):
         # Get the slope values of the linear regression of each chroma vector
         slopes, _ = np.linalg.lstsq(coef_matrix, chroma_vector.T, rcond=None)[0]
 
-        rescale_factor = -0.039
+        rescale_factor = 0.039
 
         return 1 - np.abs(slopes) / rescale_factor
 

@@ -53,7 +53,7 @@ class TestComplexity:
         assert np.allclose(result, expected)
 
     def test_neg_slope(self, data):
-        expected = np.array([1.1631701538, 1.1326878205])
+        expected = np.array([0.641384257, 0.612694997])
 
         result = Complexity()._neg_slope(data[CHROMA_COLS].values)
 
