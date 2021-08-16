@@ -1,4 +1,4 @@
-.PHONY: data
+.PHONY: data clean
 
 PYTHON_INTERPRETER = python3
 
@@ -10,3 +10,6 @@ data:
 
 test:
 	pytest
+
+clean:
+	rm data/processed/*
