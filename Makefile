@@ -9,7 +9,7 @@ data:
 	${PYTHON_INTERPRETER} -m src.data.make_datasets data/external/chroma data/processed
 
 test:
-	pytest
+	pytest --cov-report term-missing --cov=src tests/
 
 clean:
 	rm data/processed/*
