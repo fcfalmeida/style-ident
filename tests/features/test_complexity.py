@@ -82,7 +82,6 @@ class TestComplexity:
         expected = np.array([0.92430871434, 0.91369479299, 0])
 
         result = Complexity()._entropy(data[CHROMA_COLS].values)
-        print(result)
         assert np.allclose(result, expected)
 
         result = Complexity()._entropy(flat_vector)
@@ -119,3 +118,20 @@ class TestComplexity:
         result = Complexity()._angular_deviation(sparse_vector)
         assert np.allclose(result, np.array([0]))
 
+    def test_extract(self, data):
+        expected = pd.DataFrame([
+            {'piece': 'bach_2.mp3', 'time': 0, 'comp_diff': 0.65, 'comp_std': 0.82148763, 'comp_slope': 0.641384257, 'comp_entr': 0.92430871434,
+                'comp_sparse': 0.78985308194, 'comp_flat': 0.7923240272, 'comp_fifth': 0.9294068001},
+            {'piece': 'bach_2.mp3', 'time': 0.1, 'comp_diff': 0.59, 'comp_std': 0.81760848, 'comp_slope': 0.612694997, 'comp_entr': 0.91369479299,
+                'comp_sparse': 0.78265321994, 'comp_flat': 0.754386555, 'comp_fifth': 0.955902087},
+            {'piece': 'bach_2.mp3', 'time': 0.2, 'comp_diff': 0, 'comp_std': 0, 'comp_slope': 0, 'comp_entr': 0,
+                'comp_sparse': 0, 'comp_flat': 0, 'comp_fifth': 0}
+        ])
+        expected['time'] = pd.to_timedelta(expected['time'], unit='s')
+        expected = expected.set_index(['piece', 'time'])
+
+        result = Complexity().extract(data)
+
+        compare = pd.DataFrame(np.isclose(expected, result), columns=expected.columns)
+
+        assert compare.all(axis=None)
