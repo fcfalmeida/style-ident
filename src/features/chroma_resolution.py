@@ -1,8 +1,8 @@
 import pandas as pd
-from src.features.feature_extractor import FeatureExtractor
+from src.data.pipeline_task import PipelineTask
 from src.utils.converters import sec_to_ms
 
-class ChromaResolution(FeatureExtractor):
+class ChromaResolution(PipelineTask):
     GLOBAL = 0
 
     def __init__(self, resolution: float) -> None:
@@ -10,7 +10,7 @@ class ChromaResolution(FeatureExtractor):
 
         self.resolution = resolution
 
-    def extract(self, data: pd.DataFrame) -> pd.DataFrame:
+    def run(self, data: pd.DataFrame) -> pd.DataFrame:
         data['time'] = pd.to_timedelta(data['time'], unit='s')
 
         if self.resolution == ChromaResolution.GLOBAL:

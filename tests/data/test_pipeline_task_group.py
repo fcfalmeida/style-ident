@@ -2,10 +2,10 @@ import pytest
 import numpy as np
 import pandas as pd
 from src.data.pipeline import Pipeline
-from src.features.feature_group import FeatureGroup
+from src.data.pipeline_task_group import PipelineTaskGroup
 from src.features.template_based import TemplateBased
 from src.features.complexity import Complexity
-from src.features.remove_chroma import RemoveChroma
+from src.data.remove_chroma import RemoveChroma
 
 class TestFeatureGroup:
     @pytest.fixture
@@ -24,7 +24,7 @@ class TestFeatureGroup:
 
         return df
 
-    def test_extractor_group(self, data):
+    def test_pipeline_task_group(self, data):
         expected = pd.DataFrame([
             {'piece': 'bach_2.mp3', 'time': 0, 'ic1': 0.0873, 'ic2': 0.0814, 'ic3': 0.0717,
                 'ic4': 0.0827, 'ic5': 0.0789, 'ic6': 0.0808,
@@ -44,13 +44,13 @@ class TestFeatureGroup:
         expected = expected.set_index(['piece', 'time'])
 
         pipeline = Pipeline()
-        group = FeatureGroup()
+        group = PipelineTaskGroup()
 
-        group.add_extractor(TemplateBased())
-        group.add_extractor(Complexity())
+        group.add_task(TemplateBased())
+        group.add_task(Complexity())
 
-        pipeline.add_step(group)
-        pipeline.add_step(RemoveChroma())
+        pipeline.add_task(group)
+        pipeline.add_task(RemoveChroma())
 
         result = pipeline.run(data)
 

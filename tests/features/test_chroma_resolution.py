@@ -59,8 +59,7 @@ class TestChromaResolution:
         expected['time'] = pd.to_timedelta(expected['time'], unit='s')
         expected = expected.set_index(['piece', 'time'])
 
-        extractor = ChromaResolution(0.5)
-        result = extractor.extract(data)
+        result = ChromaResolution(0.5).run(data)
 
         # Create dataframe in which each cell will be True if an element in expected is aproximately equal to
         # the corresponding element in result
@@ -73,8 +72,7 @@ class TestChromaResolution:
         expected['time'] = pd.to_timedelta(expected['time'], unit='s')
         expected = expected.set_index(['piece', 'time'])
 
-        extractor = ChromaResolution(0.1)
-        result = extractor.extract(data)
+        result = ChromaResolution(0.1).run(data)
 
         # Create dataframe in which each cell will be True if an element in expected is aproximately equal to
         # the corresponding element in result
@@ -95,8 +93,7 @@ class TestChromaResolution:
         expected['time'] = pd.to_timedelta(expected['time'], unit='s')
         expected = expected.set_index(['piece', 'time'])
 
-        extractor = ChromaResolution(1)
-        result = extractor.extract(data)
+        result = ChromaResolution(1).run(data)
         
         compare = pd.DataFrame(np.isclose(expected,result), columns=expected.columns)
 
@@ -112,8 +109,7 @@ class TestChromaResolution:
         ])
         expected = expected.set_index('piece')
 
-        extractor = ChromaResolution(ChromaResolution.GLOBAL)
-        result = extractor.extract(data)
+        result = ChromaResolution(ChromaResolution.GLOBAL).run(data)
 
         print(result)
         print(expected.compare(result))

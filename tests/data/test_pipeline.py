@@ -21,7 +21,7 @@ class TestPipeline:
 
     def test_one_step(self, data):
         pipeline = Pipeline()
-        pipeline.add_step(ChromaResolution(0.5))
+        pipeline.add_task(ChromaResolution(0.5))
 
         expected = pd.DataFrame([
             {'piece': 'bach_2.mp3', 'time': 0, 'c1': 0.33, 'c2': 2.67, 'c3': 2.1, 'c4': 2.2, 
@@ -41,8 +41,8 @@ class TestPipeline:
 
     def test_two_steps(self, data):
         pipeline = Pipeline()
-        pipeline.add_step(ChromaResolution(0.5))
-        pipeline.add_step(NormalizedChroma())
+        pipeline.add_task(ChromaResolution(0.5))
+        pipeline.add_task(NormalizedChroma())
 
         expected = pd.DataFrame([
             {'piece': 'bach_2.mp3', 'time': 0, 'c1': 0.01073170732, 'c2': 0.08682926829, 'c3': 0.06829268293, 'c4': 0.07154471545, 

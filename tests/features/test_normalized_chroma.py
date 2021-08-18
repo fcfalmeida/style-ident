@@ -40,8 +40,7 @@ class TestNormalizedChroma:
         expected['time'] = pd.to_timedelta(expected['time'], unit='s')
         expected = expected.set_index(['piece', 'time'])
 
-        extractor = NormalizedChroma()
-        result = extractor.extract(data)
+        result = NormalizedChroma().run(data)
 
         compare = pd.DataFrame(np.isclose(expected,result), columns=expected.columns)
 

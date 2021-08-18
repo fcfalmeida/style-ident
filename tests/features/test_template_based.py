@@ -32,7 +32,7 @@ class TestTemplateBased:
         expected['time'] = pd.to_timedelta(expected['time'], unit='s')
         expected = expected.set_index(['piece', 'time'])
 
-        result = TemplateBased().extract(data)
+        result = TemplateBased().run(data)
 
         print(result)
 

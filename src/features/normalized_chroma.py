@@ -1,8 +1,8 @@
 import pandas as pd
-from src.features.feature_extractor import FeatureExtractor
+from src.data.pipeline_task import PipelineTask
 
-class NormalizedChroma(FeatureExtractor):
-    def extract(self, data: pd.DataFrame) -> pd.DataFrame:
+class NormalizedChroma(PipelineTask):
+    def run(self, data: pd.DataFrame) -> pd.DataFrame:
         """Normalizes chroma vectors by diving each vector by its manhattan norm
 
         Args:

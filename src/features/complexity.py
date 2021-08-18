@@ -1,14 +1,14 @@
 import pandas as pd
 import numpy as np
 from numpy.typing import ArrayLike
+from src.data.pipeline_task import PipelineTask
 from scipy.stats.mstats import gmean
-from src.features.feature_extractor import FeatureExtractor
 from src.data.constants import CHROMA_COLS, COMPLEXITY_DIFF, COMPLEXITY_STD, \
     COMPLEXITY_SLOPE, COMPLEXITY_ENTROPY, COMPLEXITY_NON_SPARSENESS, \
     COMPLEXITY_FLATNESS, COMPLEXITY_FIFTH_ANG_DEV, COMPLEXITY_COLS
 import src.utils.math as math
 
-class Complexity(FeatureExtractor):
+class Complexity(PipelineTask):
     def _null_chroma_returns_zero(feature):
         def wrapper(self, chroma_vector):
             null_chromas = np.where(~chroma_vector.any(axis=1))[0]
@@ -105,7 +105,7 @@ class Complexity(FeatureExtractor):
 
         return pitch_class_dist
 
-    def extract(self, data: pd.DataFrame) -> pd.DataFrame:
+    def run(self, data: pd.DataFrame) -> pd.DataFrame:
         data_cpy = data.copy()
 
         data_cpy[COMPLEXITY_DIFF] = self._sum_chroma_diff(data[CHROMA_COLS].values)

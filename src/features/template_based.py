@@ -1,9 +1,9 @@
 import pandas as pd
 from numpy.typing import ArrayLike
-from src.features.feature_extractor import FeatureExtractor
+from src.data.pipeline_task import PipelineTask
 from src.data.constants import CHROMA_COLS, INTERVAL_COLS, CHORD_MAJ, CHORD_MIN, CHORD_DIM, CHORD_AUG, CHORD_COLS
 
-class TemplateBased(FeatureExtractor):
+class TemplateBased(PipelineTask):
     TEMPLATES = {
         INTERVAL_COLS[0]: [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         INTERVAL_COLS[1]: [1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -17,7 +17,7 @@ class TemplateBased(FeatureExtractor):
         CHORD_AUG: [1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0],
     }
 
-    def extract(self, data: pd.DataFrame) -> pd.DataFrame:
+    def run(self, data: pd.DataFrame) -> pd.DataFrame:
         data_copy = data.copy()
 
         for template_key in self.TEMPLATES.keys():
@@ -26,7 +26,7 @@ class TemplateBased(FeatureExtractor):
         cols = []
         cols.extend(INTERVAL_COLS)
         cols.extend(CHORD_COLS)
-        
+
         return data_copy[cols]
 
     def _calc_template_feat(self, chroma_vector: ArrayLike, template_key: str) -> ArrayLike:

@@ -130,7 +130,7 @@ class TestComplexity:
         expected['time'] = pd.to_timedelta(expected['time'], unit='s')
         expected = expected.set_index(['piece', 'time'])
 
-        result = Complexity().extract(data)
+        result = Complexity().run(data)
 
         compare = pd.DataFrame(np.isclose(expected, result), columns=expected.columns)
 
