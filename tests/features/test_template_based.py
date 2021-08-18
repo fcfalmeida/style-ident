@@ -1,9 +1,9 @@
 import pytest
 import pandas as pd
 import numpy as np
-from src.features.intervals import Intervals
+from src.features.template_based import TemplateBased
 
-class TestIntervals:
+class TestTemplateBased:
     @pytest.fixture
     def data(scope='class'):
         df = pd.DataFrame([
@@ -18,19 +18,21 @@ class TestIntervals:
 
         return df
 
-    def test_calc_interval_feat(self, data):
+    def test_calc_template_feat(self, data):
         pd.set_option('display.max_columns', None)
         expected = pd.DataFrame([
             {'piece': 'bach_2.mp3', 'time': 0, 'ic1': 2.3022, 'ic2': 1.6935, 'ic3': 1.8768, 
-                'ic4': 2.2966, 'ic5': 2.0628, 'ic6': 2.1458},
+                'ic4': 2.2966, 'ic5': 2.0628, 'ic6': 2.1458,
+                'chord_maj': 0.870031, 'chord_min': 0.856451, 'chord_dim': 0.702883, 'chord_aug': 0.943503},
             {'piece': 'bach_2.mp3', 'time': 0.1, 'ic1': 1.3781, 'ic2': 1.2458, 'ic3': 0.8478, 
-                'ic4': 1.1827, 'ic5': 1.3709, 'ic6': 2.2634}
+                'ic4': 1.1827, 'ic5': 1.3709, 'ic6': 2.2634,
+                'chord_maj': 0.212985, 'chord_min': 0.223641, 'chord_dim': 0.334307, 'chord_aug': 0.249942}
         ])
 
         expected['time'] = pd.to_timedelta(expected['time'], unit='s')
         expected = expected.set_index(['piece', 'time'])
 
-        result = Intervals().extract(data)
+        result = TemplateBased().extract(data)
 
         print(result)
 
