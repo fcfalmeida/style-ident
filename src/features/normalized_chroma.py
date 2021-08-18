@@ -1,6 +1,5 @@
 import pandas as pd
 from src.features.feature_extractor import FeatureExtractor
-from src.data.constants import CHROMA_COLS
 
 class NormalizedChroma(FeatureExtractor):
     def extract(self, data: pd.DataFrame) -> pd.DataFrame:
