@@ -8,6 +8,9 @@ install:
 data:
 	${PYTHON_INTERPRETER} -m src.data.make_datasets data/external/chroma data/processed
 
+crossera:
+	${PYTHON_INTERPRETER} -m src.data.make_crossera_full data/external/chroma data/external/chroma
+
 test:
 	pytest --cov-report term-missing --cov=src tests/
 
