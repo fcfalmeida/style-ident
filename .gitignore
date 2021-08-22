@@ -136,4 +136,5 @@ dmypy.json
 
 # Large .csv files
 data/external/*/*.csv
+data/interim/*.csv
 data/processed/*.csv
