@@ -2,8 +2,13 @@ import click
 import pathlib
 import pandas as pd
 from src.data.pipeline import Pipeline
+from src.data.constants import CHROMA_COLS
 from src.features.chroma_resolution import ChromaResolution
 from src.features.normalized_chroma import NormalizedChroma
+from src.features.template_based import TemplateBased
+from src.features.complexity import Complexity
+from src.data.pipeline_task_group import PipelineTaskGroup
+from src.data.remove_chroma import RemoveChroma
 from src.utils.formatters import format_chroma_resolution
 
 # Create datasets for each chroma resolution
@@ -12,12 +17,13 @@ from src.utils.formatters import format_chroma_resolution
 @click.argument('input_filepath', type=click.Path(exists=True))
 @click.argument('output_filepath', type=click.Path())
 def main(input_filepath, output_filepath):
-    COL_NAMES = ['piece', 'time', 'c1', 'c2', 'c3', 'c4', 'c5', 'c6', 'c7', 'c8', 'c9', 'c10', 'c11', 'c12']
     RESOLUTIONS = [0.1, 0.5, 10, ChromaResolution.GLOBAL]
+    COL_NAMES = ['piece', 'time']
+    COL_NAMES.extend(CHROMA_COLS)
 
     for path in pathlib.Path(input_filepath).iterdir():
         if path.is_file():
-            data = pd.read_csv(path, header=None, names=COL_NAMES, dtype={'piece': str})
+            data = pd.read_csv(path, dtype={'piece': str})
             data = data.fillna(method='ffill')
 
             for resolution in RESOLUTIONS:
@@ -34,8 +40,15 @@ def main(input_filepath, output_filepath):
 
 def make_pipeline(chroma_res: float):
     pipeline = Pipeline()
-    pipeline.add_step(ChromaResolution(chroma_res))
-    pipeline.add_step(NormalizedChroma())
+    pipeline.add_task(ChromaResolution(chroma_res))
+    pipeline.add_task(NormalizedChroma())
+
+    group = PipelineTaskGroup()
+    group.add_task(TemplateBased())
+    group.add_task(Complexity())
+
+    pipeline.add_task(group)
+    pipeline.add_task(RemoveChroma())
 
     return pipeline
 

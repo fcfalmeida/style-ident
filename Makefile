@@ -6,7 +6,7 @@ install:
 	${PYTHON_INTERPRETER} -m pip install -r requirements.txt
 
 data:
-	${PYTHON_INTERPRETER} -m src.data.make_datasets data/external/chroma data/processed
+	${PYTHON_INTERPRETER} -m src.data.make_datasets data/interim data/processed
 
 crossera:
 	${PYTHON_INTERPRETER} -m src.data.make_crossera data/external/chroma data/interim
