@@ -17,8 +17,8 @@ def main(input_filepath, output_filepath):
     piano_files = list(p.glob('chroma-nnls_piano*'))
     orchestra_files = list(p.glob('chroma-nnls_orchestra*'))
 
-    crossera_piano = join_datasets(piano_files, 'piano', COL_NAMES, output_filepath)
-    crossera_orchestra = join_datasets(orchestra_files, 'orchestra', COL_NAMES, output_filepath)
+    crossera_piano = join_datasets(piano_files, COL_NAMES)
+    crossera_orchestra = join_datasets(orchestra_files, COL_NAMES)
 
     crossera_piano.to_csv(f'{output_filepath}/chroma-nnls_piano.csv', index=False)
     crossera_orchestra.to_csv(f'{output_filepath}/chroma-nnls_orchestra.csv', index=False)
@@ -27,7 +27,7 @@ def main(input_filepath, output_filepath):
     df = pd.DataFrame(crossera_full, columns=COL_NAMES)
     df.to_csv(output_filepath + '/' + 'chroma-nnls_full.csv', index=False)
 
-def join_datasets(files: list[str], type: str, columns: list[str], path: str):
+def join_datasets(files: list[str], columns: list[str]):
     joined = np.empty((0, len(columns)))
 
     for f in files:
@@ -35,8 +35,8 @@ def join_datasets(files: list[str], type: str, columns: list[str], path: str):
 
         joined = np.append(joined, data.to_numpy(), axis=0)
 
-        df = pd.DataFrame(joined, columns=columns)
-        return df
+    joined = pd.DataFrame(joined, columns=columns)
+    return joined
 
 if __name__ == '__main__':
     main()
