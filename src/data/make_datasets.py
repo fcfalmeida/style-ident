@@ -9,6 +9,7 @@ from src.features.template_based import TemplateBased
 from src.features.complexity import Complexity
 from src.data.pipeline_task_group import PipelineTaskGroup
 from src.data.remove_chroma import RemoveChroma
+from src.features.mean_and_std import MeanAndStd
 from src.utils.formatters import format_chroma_resolution
 
 # Create datasets for each chroma resolution
@@ -49,6 +50,7 @@ def make_pipeline(chroma_res: float):
 
     pipeline.add_task(group)
     pipeline.add_task(RemoveChroma())
+    pipeline.add_task(MeanAndStd())
 
     return pipeline
 
