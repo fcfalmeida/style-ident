@@ -19,7 +19,6 @@ class TestTemplateBased:
         return df
 
     def test_calc_template_feat(self, data):
-        pd.set_option('display.max_columns', None)
         expected = pd.DataFrame([
             {'piece': 'bach_2.mp3', 'time': 0, 'ic1': 2.3022, 'ic2': 1.6935, 'ic3': 1.8768, 
                 'ic4': 2.2966, 'ic5': 2.0628, 'ic6': 2.1458,
@@ -33,8 +32,6 @@ class TestTemplateBased:
         expected = expected.set_index(['piece', 'time'])
 
         result = TemplateBased().run(data)
-
-        print(result)
 
         compare = pd.DataFrame(np.isclose(expected, result), columns=expected.columns)
 
