@@ -31,6 +31,7 @@ def main(input_filepath, output_filepath):
         transformed = lda.fit_transform(X, y)
 
         transformed_df = pd.DataFrame(transformed, index=df.index, columns=['ld1', 'ld2', 'ld3'])
+        transformed_df = _add_style_period_labels(transformed_df)
 
         transformed_df.to_csv(f'{output_filepath}/chroma-nnls_{t}.csv')
 
