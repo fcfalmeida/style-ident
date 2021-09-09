@@ -63,5 +63,5 @@ def join_datasets(files: list[str], columns: list[str]) -> ArrayLike:
     return joined
 
 if __name__ == '__main__':
-    main() #pragma no cover
+    main() #pragma: no cover
     
