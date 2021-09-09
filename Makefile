@@ -14,6 +14,12 @@ data:
 trainsets:
 	${PYTHON_INTERPRETER} -m src.data.make_trainsets data/interim/chroma_resolutions data/processed
 
+train:
+	${PYTHON_INTERPRETER} -m src.models.weiss data/processed models/
+
+visualize_lda:
+	${PYTHON_INTERPRETER} -m src.tools.visualize_lda data/processed/chroma-nnls_full.csv
+
 test:
 	pytest --cov-report term-missing --cov=src tests/
 
