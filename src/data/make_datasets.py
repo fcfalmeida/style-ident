@@ -37,7 +37,7 @@ def main(input_filepath, output_filepath):
 
                 print(f'Processed {path} for {formatted_res} chroma resolution')
 
-                processed.to_csv(output_filepath + '/' + filename_no_ext + '_' + formatted_res + '.csv')
+                processed.to_csv(f'{output_filepath}/{filename_no_ext}_{formatted_res}.csv')
 
 def make_pipeline(chroma_res: float):
     pipeline = Pipeline()
