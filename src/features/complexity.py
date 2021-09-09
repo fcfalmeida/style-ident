@@ -1,3 +1,4 @@
+from typing import Any, Callable
 import pandas as pd
 import numpy as np
 from numpy.typing import ArrayLike
@@ -9,7 +10,17 @@ from src.data.constants import CHROMA_COLS, COMPLEXITY_DIFF, COMPLEXITY_STD, \
 import src.utils.math as math
 
 class Complexity(PipelineTask):
-    def _null_chroma_returns_zero(feature):
+    """This task computes tonal complexity features on the specified `DataFrame` object.
+    """
+    def _null_chroma_returns_zero(feature: Callable[[Any, ArrayLike], ArrayLike]):
+        """Decorator used as an utility for functions that compute tonal complexity feature values.
+
+        Forces the value of a tonal complexity feature to be zero if the chroma vector passed
+        for calculation is a null vector (all chroma values are equal to zero).
+
+        Args:
+            feature: Function to decorate.
+        """
         def wrapper(self, chroma_vector):
             null_chromas = np.where(~chroma_vector.any(axis=1))[0]
             result = feature(self, chroma_vector)
@@ -19,7 +30,15 @@ class Complexity(PipelineTask):
 
         return wrapper
 
-    def _sort_chroma_fifths(self, chroma_vector: ArrayLike):
+    def _sort_chroma_fifths(self, chroma_vector: ArrayLike) -> ArrayLike:
+        """Sorts a given chroma vector or array of chroma vectors in fifths.
+
+        Args:
+            chroma_vector: A 12-dimensional chroma vector or an array of such vectors.
+
+        Returns:
+            Chroma vector(s) sorted in fifths.
+        """
         sorted = chroma_vector.copy()
 
         for q in range(12):
@@ -28,7 +47,15 @@ class Complexity(PipelineTask):
         return sorted
 
     @_null_chroma_returns_zero
-    def _sum_chroma_diff(self, chroma_vector: ArrayLike):
+    def _sum_chroma_diff(self, chroma_vector: ArrayLike) -> ArrayLike:
+        """Calculates the absolute difference between all neighboring chroma values.
+
+        Args:
+            chroma_vector: A 12-dimensional chroma vector or an array of such vectors.
+
+        Returns:
+            The value of this feature or an array containing the value of this feature for each chroma vector.
+        """
         diff_sum = np.zeros(chroma_vector.shape[0])
 
         for q in range(12):
@@ -42,7 +69,15 @@ class Complexity(PipelineTask):
         return diff_sum
 
     @_null_chroma_returns_zero
-    def _chroma_std(self, chroma_vector: ArrayLike):
+    def _chroma_std(self, chroma_vector: ArrayLike) -> ArrayLike:
+        """Computes the standard deviation of the chroma vector.
+
+        Args:
+            chroma_vector: A 12-dimensional chroma vector or an array of such vectors.
+
+        Returns:
+            The value of this feature or an array containing the value of this feature for each chroma vector.
+        """
         std = np.std(chroma_vector, axis=1)
 
         rescale_factor = 1 / np.sqrt(12)
@@ -52,7 +87,15 @@ class Complexity(PipelineTask):
         return std
 
     @_null_chroma_returns_zero
-    def _neg_slope(self, chroma_vector: ArrayLike):
+    def _neg_slope(self, chroma_vector: ArrayLike) -> ArrayLike:
+        """Computes the negative slope value of the chroma vector sorted in a descending order
+
+        Args:
+            chroma_vector: A 12-dimensional chroma vector or an array of such vectors.
+
+        Returns:
+            The value of this feature or an array containing the value of this feature for each chroma vector.
+        """
         chroma_vector = np.sort(-chroma_vector, axis=1)
         pitch_classes = np.array(list(range(12)))
 
@@ -67,13 +110,29 @@ class Complexity(PipelineTask):
 
         return slopes
 
-    def _entropy(self, chroma_vector: ArrayLike):
+    def _entropy(self, chroma_vector: ArrayLike) -> ArrayLike:
+        """Computes the Shannon entropy of the chroma vector.
+
+        Args:
+            chroma_vector A 12-dimensional chroma vector or an array of such vectors.
+
+        Returns:
+            The value of this feature or an array containing the value of this feature for each chroma vector.
+        """
         entropies = -1 / np.log2(12) * np.sum(chroma_vector * np.log2(chroma_vector, where=chroma_vector > 0), axis=1)
 
         return entropies
 
     @_null_chroma_returns_zero
-    def _non_sparseness(self, chroma_vector: ArrayLike):
+    def _non_sparseness(self, chroma_vector: ArrayLike) -> ArrayLike:
+        """Computes the non-sparseness of the chroma vector based on the relationship between its l1 and l2 norm.
+
+        Args:
+            chroma_vector: A 12-dimensional chroma vector or an array of such vectors.
+
+        Returns:
+            The value of this feature or an array containing the value of this feature for each chroma vector.
+        """
         l1 = math.l1_norm(chroma_vector)
         l2 = math.l2_norm(chroma_vector)
 
@@ -82,7 +141,15 @@ class Complexity(PipelineTask):
         return non_sparse
 
     @_null_chroma_returns_zero
-    def _flatness(self, chroma_vector: ArrayLike):
+    def _flatness(self, chroma_vector: ArrayLike) -> ArrayLike:
+        """Computes a flatness measure of the chroma vector based on the relationship between its geometric and arithmetic mean.
+
+        Args:
+            chroma_vector: A 12-dimensional chroma vector or an array of such vectors.
+
+        Returns:
+            The value of this feature or an array containing the value of this feature for each chroma vector.
+        """
         with np.errstate(divide='ignore'):
             geom_mean = gmean(chroma_vector, axis=1)
             
@@ -93,7 +160,15 @@ class Complexity(PipelineTask):
         return ratio
 
     @_null_chroma_returns_zero
-    def _angular_deviation(self, chroma_vector: ArrayLike):
+    def _angular_deviation(self, chroma_vector: ArrayLike) -> ArrayLike:
+        """Computes the angular deviation of the fifth-ordered chroma vector
+
+        Args:
+            chroma_vector: A 12-dimensional chroma vector or an array of such vectors.
+
+        Returns:
+            The value of this feature or an array containing the value of this feature for each chroma vector.
+        """
         fifth_sorted = self._sort_chroma_fifths(chroma_vector)
         pitch_class_dist = 0
 
