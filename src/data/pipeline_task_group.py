@@ -1,17 +1,19 @@
-from typing import List
 import pandas as pd
 from src.data.pipeline_task import PipelineTask
+
 
 class PipelineTaskGroup(PipelineTask):
     """This class represents a `PipelineTask` that can itself contain other tasks.
 
-    Unlike what happens in a `Pipeline`, in which tasks are run sequentially (meaning they pass the output
-    `DataFrame`onto the next task), a `PipelineTaskGroup` will always pass the same `DataFrame` object to
+    Unlike what happens in a `Pipeline`, in which tasks are run
+    sequentially (meaning they pass the output `DataFrame`onto the next task),
+    a `PipelineTaskGroup` will always pass the same `DataFrame` object to
     each task and merge all resulting `DataFrame` objects.
 
     Attributes:
-        tasks: list of tasks that are run once the group is executed. 
+        tasks: list of tasks that are run once the group is executed.
     """
+
     def __init__(self) -> None:
         self.tasks: list[PipelineTask] = []
 

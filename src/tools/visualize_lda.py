@@ -4,6 +4,7 @@ from matplotlib import pyplot as plt
 from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 from sklearn.preprocessing import LabelEncoder
 
+
 @click.command()
 @click.argument('filepath', type=click.Path(exists=True))
 def main(filepath):
@@ -20,8 +21,8 @@ def main(filepath):
     plt.xlabel('Discriminant 1')
     plt.ylabel('Discriminant 2')
     plt.scatter(
-        X_transformed[:,0],
-        X_transformed[:,1],
+        X_transformed[:, 0],
+        X_transformed[:, 1],
         c=y,
         cmap='rainbow',
         alpha=0.7,
@@ -29,6 +30,7 @@ def main(filepath):
     )
     plt.legend()
     plt.show()
+
 
 if __name__ == '__main__':
     main()

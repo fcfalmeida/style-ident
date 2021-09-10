@@ -1,12 +1,14 @@
 import pandas as pd
 from src.data.pipeline_task import PipelineTask
 
-class Pipeline():
+
+class Pipeline:
     """This class represents a data processing pipeline.
 
     Attributes:
         tasks: List of tasks that are executed once the pipeline is run.
     """
+
     def __init__(self) -> None:
         self.tasks: list[PipelineTask] = []
 
@@ -19,7 +21,8 @@ class Pipeline():
         self.tasks.append(t)
 
     def run(self, data: pd.DataFrame) -> pd.DataFrame:
-        """Runs the pipeline on a given `DataFrame` object by executing each task sequentially.
+        """Runs the pipeline on a given `DataFrame` object by executing
+        each task sequentially.
 
         Args:
             data: The `DataFrame` object to process.
@@ -28,7 +31,7 @@ class Pipeline():
             The processed `DataFrame` object.
         """
         df = data.copy()
-        
+
         for s in self.tasks:
             df = s.run(df)
 
