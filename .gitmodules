@@ -1,3 +1,6 @@
 [submodule "lib/HCDF"]
 	path = lib/HCDF
 	url = https://github.com/PRamoneda/HCDF
+[submodule "lib/TIVlib"]
+	path = lib/TIVlib
+	url = https://github.com/aframires/TIVlib
