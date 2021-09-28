@@ -189,7 +189,7 @@ class TestHCDF:
             ]
         )
 
-        result = HCDF()._calc_tivs(data[CHROMA_COLS].values)
+        result = HCDF(5, 0.1)._calc_tivs(data[CHROMA_COLS].values)
 
         assert np.allclose(result, expected)
 
@@ -255,8 +255,8 @@ class TestHCDF:
             ]
         )
 
-        tivs = HCDF()._calc_tivs(data[CHROMA_COLS].values)
-        result = HCDF(5)._gaussian_blur(tivs)
+        tivs = HCDF(5, 0.1)._calc_tivs(data[CHROMA_COLS].values)
+        result = HCDF(5, 0.1)._gaussian_blur(tivs)
 
         assert np.allclose(result, expected)
 
@@ -273,8 +273,12 @@ class TestHCDF:
             ]
         )
 
-        tivs = HCDF()._calc_tivs(data[CHROMA_COLS].values)
-        tivs = HCDF()._gaussian_blur(tivs)
-        result = HCDF(5, HCDF.DISTANCE_EUCLIDEAN)._compute_hcdf(tivs)
+        tivs = HCDF(5, 0.1)._calc_tivs(data[CHROMA_COLS].values)
+        tivs = HCDF(5, 0.1)._gaussian_blur(tivs)
+        result = HCDF(5, 0.1)._compute_hcdf(tivs)
+
+        print(expected)
+        print('======')
+        print(result)
 
         assert np.allclose(result, expected)

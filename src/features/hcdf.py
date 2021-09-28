@@ -5,21 +5,15 @@ from scipy.ndimage.filters import gaussian_filter
 from TIVlib import TIV
 from src.data.pipeline_task import PipelineTask
 from src.data.constants import CHROMA_COLS
-from src.utils.math import cosine_distance
 
 
 class HCDF(PipelineTask):
-    DISTANCE_EUCLIDEAN = 0
-    DISTANCE_COSINE = 1
-
     def __init__(
         self,
         gaussian_sigma: float = 5,
-        distance_metric: int = DISTANCE_EUCLIDEAN,
         chroma_resolution: float = 0.1
     ) -> None:
         self.gaussian_sigma = gaussian_sigma
-        self.distance_metric = distance_metric
         self.chroma_resolution = chroma_resolution
 
     def _calc_tivs(self, chroma_vector: ArrayLike) -> ArrayLike:
@@ -45,15 +39,10 @@ class HCDF(PipelineTask):
         if tivs2 is None:
             tivs2 = np.zeros_like(tivs1)
 
-        if self.distance_metric == self.DISTANCE_EUCLIDEAN:
-            try:
-                dist = np.linalg.norm(tivs1 - tivs2, axis=1)
-
-                return dist
-            except np.AxisError:
-                return np.linalg.norm(tivs1 - tivs2)
-        elif self.distance_metric == self.DISTANCE_COSINE:
-            return cosine_distance(tivs1, tivs2)
+        try:
+            return np.linalg.norm(tivs1 - tivs2, axis=1)
+        except np.AxisError:
+            return np.linalg.norm(tivs1 - tivs2)
 
     def _compute_hcdf(self, tivs: ArrayLike) -> ArrayLike:
         hcdf = self._calc_distance(tivs[2:, :], tivs[:-2, :])
