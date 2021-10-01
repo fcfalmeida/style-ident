@@ -9,7 +9,7 @@ crossera:
 	${PYTHON_INTERPRETER} -m src.data.make_crossera data/external/chroma data/interim/crossera
 
 weiss_feats:
-	${PYTHON_INTERPRETER} -m src.data.make_datasets data/interim/crossera data/interim/weiss_feats
+	${PYTHON_INTERPRETER} -m src.data.make_weiss_feats data/interim/crossera data/interim/weiss_feats
 
 trainsets:
 	${PYTHON_INTERPRETER} -m src.data.make_trainsets data/interim/weiss_feats data/processed/weiss
