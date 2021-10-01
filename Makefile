@@ -1,4 +1,4 @@
-.PHONY: crossera data trainsets clean test
+.PHONY: crossera weiss_feats trainsets train visualize_lda test clean
 
 PYTHON_INTERPRETER = python3
 
@@ -6,24 +6,23 @@ install:
 	${PYTHON_INTERPRETER} -m pip install -r requirements.txt
 
 crossera:
-	${PYTHON_INTERPRETER} -m src.data.make_crossera data/external/chroma data/interim
+	${PYTHON_INTERPRETER} -m src.data.make_crossera data/external/chroma data/interim/crossera
 
-data:
-	${PYTHON_INTERPRETER} -m src.data.make_datasets data/interim data/interim/chroma_resolutions
+weiss_feats:
+	${PYTHON_INTERPRETER} -m src.data.make_datasets data/interim/crossera data/interim/weiss_feats
 
 trainsets:
-	${PYTHON_INTERPRETER} -m src.data.make_trainsets data/interim/chroma_resolutions data/processed
+	${PYTHON_INTERPRETER} -m src.data.make_trainsets data/interim/weiss_feats data/processed/weiss
 
 train:
-	${PYTHON_INTERPRETER} -m src.models.weiss data/processed models/
+	${PYTHON_INTERPRETER} -m src.models.weiss data/processed/weiss models/weiss
 
 visualize_lda:
-	${PYTHON_INTERPRETER} -m src.tools.visualize_lda data/processed/chroma-nnls_full.csv
+	${PYTHON_INTERPRETER} -m src.tools.visualize_lda data/processed/weiss/chroma-nnls_full.csv
 
 test:
 	pytest --cov-report term-missing --cov=src tests/
 
 clean:
-	rm -f data/interim/*.csv
-	rm -f data/interim/chroma_resolutions/*.csv
-	rm -f data/processed/*.csv
+	rm -f data/interim/**/*.csv
+	rm -f data/processed/**/*.csv
