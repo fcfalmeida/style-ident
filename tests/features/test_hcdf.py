@@ -8,7 +8,7 @@ from src.data.constants import CHROMA_COLS
 class TestHCDF:
     @pytest.fixture
     def data(scope="class"):
-        data = pd.DataFrame(
+        df = pd.DataFrame(
             [
                 {
                     "piece": "bach_2.mp3",
@@ -125,7 +125,7 @@ class TestHCDF:
             ]
         )
 
-        return data
+        return df
 
     def test_calc_tivs(self, data: pd.DataFrame):
         expected = np.array(
@@ -277,8 +277,29 @@ class TestHCDF:
         tivs = HCDF(5, 0.1)._gaussian_blur(tivs)
         result = HCDF(5, 0.1)._compute_hcdf(tivs)
 
-        print(expected)
-        print('======')
-        print(result)
+        assert np.allclose(result, expected)
+
+    def test_extract_peaks(self):
+        """
+        hcdf = np.array(
+            [
+                (0.0, 0.8671146244623705),
+                (0.1, 0.023421976928086136),
+                (0.2, 0.03374561190051528),
+                (0.3, 0.037492097006850654),
+                (0.4, 0.03384811297574506),
+                (0.5, 0.023422556227886394),
+                (0.6, 0.7846608976906223)
+            ]
+        )
+
+        expected = np.array([
+            (0.0, 0.8671146244623705),
+            (0.3, 0.037492097006850654),
+            (0.6, 0.7846608976906223)
+        ])
+
+        result = HCDF(5, 0.1)._extract_peaks(hcdf)
 
         assert np.allclose(result, expected)
+        """

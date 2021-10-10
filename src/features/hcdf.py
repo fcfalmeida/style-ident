@@ -20,7 +20,7 @@ class HCDF(PipelineTask):
         # Supress 0 division warning in TIV calculation
         with np.errstate(divide="ignore", invalid="ignore"):
             tivs = np.apply_along_axis(
-                lambda c: TIV.from_pcp(c).get_vector(), 1, chroma_vector
+                lambda c: TIV.from_pcp(c).vector, 1, chroma_vector
             )
             tivs = np.nan_to_num(tivs)
 
