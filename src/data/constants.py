@@ -37,3 +37,11 @@ COMPLEXITY_COLS = [
     COMPLEXITY_FLATNESS,
     COMPLEXITY_FIFTH_ANG_DEV,
 ]
+
+DISSONANCE = "dissonance"
+CHROMATICITY = "chromaticity"
+DYADICITY = "dyadicity"
+TRIADICITY = "triadicity"
+DIMINISHED_QUALITTY = "dim_quality"
+DIATONICITY = "diatonicity"
+WHOLETONENESS = "wholetoneness"

@@ -14,11 +14,20 @@ weiss_feats:
 hcdf_segmentation:
 	${PYTHON_INTERPRETER} -m src.data.make_hcdf_segmentation data/interim/crossera data/interim/hcdf_segmented
 
-trainsets:
-	${PYTHON_INTERPRETER} -m src.data.make_trainsets data/interim/weiss_feats data/processed/weiss
+tis_feats:
+	${PYTHON_INTERPRETER} -m src.data.make_tis_feats data/interim/hcdf_segmented data/interim/tis_feats
 
-train:
+weiss_trainset:
+	${PYTHON_INTERPRETER} -m src.data.make_weiss_trainset data/interim/weiss_feats data/processed/weiss
+
+tis_trainset:
+	${PYTHON_INTERPRETER} -m src.data.make_tis_trainset data/interim/tis_feats data/processed/tis
+
+weiss_train:
 	${PYTHON_INTERPRETER} -m src.models.weiss data/processed/weiss models/weiss
+
+tis_train:
+	${PYTHON_INTERPRETER} -m src.models.weiss data/processed/tis models/tis
 
 visualize_lda:
 	${PYTHON_INTERPRETER} -m src.tools.visualize_lda data/processed/weiss/chroma-nnls_full.csv
