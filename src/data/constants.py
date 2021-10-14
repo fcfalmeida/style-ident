@@ -45,3 +45,15 @@ TRIADICITY = "triadicity"
 DIMINISHED_QUALITTY = "dim_quality"
 DIATONICITY = "diatonicity"
 WHOLETONENESS = "wholetoneness"
+COS_TONAL_DISP = "cos_tonal_disp"
+TIS_COLS = [
+    DISSONANCE,
+    CHROMATICITY,
+    DYADICITY,
+    TRIADICITY,
+    DIMINISHED_QUALITTY,
+    DIATONICITY,
+    WHOLETONENESS,
+    COS_TONAL_DISP
+]
+TIV_COL = "tiv"
