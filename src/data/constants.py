@@ -47,6 +47,8 @@ DIATONICITY = "diatonicity"
 WHOLETONENESS = "wholetoneness"
 COS_TONAL_DISP = "cos_tonal_disp"
 EUC_TONAL_DISP = "euc_tonal_disp"
+COS_DIST = "cos_dist"
+EUC_DIST = "euc_dist"
 TIS_COLS = [
     DISSONANCE,
     CHROMATICITY,
@@ -56,6 +58,8 @@ TIS_COLS = [
     DIATONICITY,
     WHOLETONENESS,
     COS_TONAL_DISP,
-    EUC_TONAL_DISP
+    EUC_TONAL_DISP,
+    COS_DIST,
+    EUC_DIST
 ]
 TIV_COL = "tiv"

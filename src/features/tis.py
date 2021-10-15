@@ -8,6 +8,8 @@ from src.data.constants import (
     CHROMA_COLS,
     COS_TONAL_DISP,
     EUC_TONAL_DISP,
+    COS_DIST,
+    EUC_DIST,
     DIMINISHED_QUALITTY,
     DISSONANCE,
     CHROMATICITY,
@@ -25,7 +27,7 @@ class TIS(PipelineTask):
     DIST_COSINE = 1
 
     def _tonal_dispersion(
-        self, chroma_vectors: ArrayLike, tivs: TIVCollection, 
+        self, chroma_vectors: ArrayLike, tivs: TIVCollection,
             distance_type: int) -> pd.DataFrame:
         mean_chroma_vector = np.mean(chroma_vectors, axis=0)
         tonal_center = TIVCollection.from_pcp(mean_chroma_vector)
@@ -42,6 +44,23 @@ class TIS(PipelineTask):
             )
 
         return tonal_disp
+
+    def _distance(
+            self, tivs: TIVCollection, distance_type: int) -> pd.DataFrame:
+        dist = None
+
+        if distance_type == self.DIST_EUCLIDEAN:
+            dist = np.linalg.norm(
+                tivs.vectors[0:-1, ] - tivs.vectors[1:, ], axis=1
+            )
+        elif distance_type == self.DIST_COSINE:
+            dist = math.complex_cosine_dist(
+                tivs.vectors[0:-1, ], tivs.vectors[1:, ]
+            )
+
+        dist = np.append(dist, 0)
+
+        return dist
 
     def _tiv_mags(self, tivs: TIVCollection):
         return np.abs(tivs.vectors)
@@ -67,20 +86,25 @@ class TIS(PipelineTask):
         for piece, group in grouped:
             group_tivs = TIVCollection(group[TIV_COL].values)
 
-            euc_tonal_disp = self._tonal_dispersion(
-                group[CHROMA_COLS].values,
-                group_tivs,
-                self.DIST_EUCLIDEAN
-            )
-
             cos_tonal_disp = self._tonal_dispersion(
                 group[CHROMA_COLS].values,
                 group_tivs,
                 self.DIST_COSINE
             )
 
+            euc_tonal_disp = self._tonal_dispersion(
+                group[CHROMA_COLS].values,
+                group_tivs,
+                self.DIST_EUCLIDEAN
+            )
+
+            cos_dist = self._distance(group_tivs, self.DIST_COSINE)
+            euc_dist = self._distance(group_tivs, self.DIST_EUCLIDEAN)
+
             data_cpy.loc[piece, COS_TONAL_DISP] = cos_tonal_disp
             data_cpy.loc[piece, EUC_TONAL_DISP] = euc_tonal_disp
+            data_cpy.loc[piece, COS_DIST] = cos_dist
+            data_cpy.loc[piece, EUC_DIST] = euc_dist
 
         data_cpy[DISSONANCE] = self._dissonance(tivs)
         data_cpy[CHROMATICITY] = self._descriptor(mags, 0)

@@ -37,7 +37,7 @@ def make_pipeline():
 
     pipeline.add_task(RemoveChroma())
     pipeline.add_task(MeanAndStd())
-    pipeline.add_task(MedianAndIQR())
+    # pipeline.add_task(MedianAndIQR())
 
     return pipeline
 
