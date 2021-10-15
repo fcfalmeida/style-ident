@@ -55,5 +55,5 @@ def complex_cosine_dist(vector1, vector2):
     dot_prod = dot_product(vector1_split, vector2_split)
 
     dist = np.arccos(dot_prod / (vector1_norms * vector2_norms))
-    
+
     return np.nan_to_num(dist)
