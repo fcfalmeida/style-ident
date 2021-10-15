@@ -46,6 +46,7 @@ DIMINISHED_QUALITTY = "dim_quality"
 DIATONICITY = "diatonicity"
 WHOLETONENESS = "wholetoneness"
 COS_TONAL_DISP = "cos_tonal_disp"
+EUC_TONAL_DISP = "euc_tonal_disp"
 TIS_COLS = [
     DISSONANCE,
     CHROMATICITY,
@@ -54,6 +55,7 @@ TIS_COLS = [
     DIMINISHED_QUALITTY,
     DIATONICITY,
     WHOLETONENESS,
-    COS_TONAL_DISP
+    COS_TONAL_DISP,
+    EUC_TONAL_DISP
 ]
 TIV_COL = "tiv"

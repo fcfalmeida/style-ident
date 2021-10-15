@@ -7,6 +7,7 @@ from src.data.pipeline_task import PipelineTask
 from src.data.constants import (
     CHROMA_COLS,
     COS_TONAL_DISP,
+    EUC_TONAL_DISP,
     DIMINISHED_QUALITTY,
     DISSONANCE,
     CHROMATICITY,
@@ -29,10 +30,16 @@ class TIS(PipelineTask):
         mean_chroma_vector = np.mean(chroma_vectors, axis=0)
         tonal_center = TIVCollection.from_pcp(mean_chroma_vector)
 
-        # COSINE DISTANCE
-        tonal_disp = math.complex_cosine_dist(
-            tivs.vectors, tonal_center.vectors
-        )
+        tonal_disp = None
+
+        if distance_type == self.DIST_EUCLIDEAN:
+            tonal_disp = np.linalg.norm(
+                tivs.vectors - tonal_center.vectors, axis=1
+            )
+        elif distance_type == self.DIST_COSINE:
+            tonal_disp = math.complex_cosine_dist(
+                tivs.vectors, tonal_center.vectors
+            )
 
         return tonal_disp
 
@@ -60,13 +67,20 @@ class TIS(PipelineTask):
         for piece, group in grouped:
             group_tivs = TIVCollection(group[TIV_COL].values)
 
-            tonal_disp = self._tonal_dispersion(
+            euc_tonal_disp = self._tonal_dispersion(
+                group[CHROMA_COLS].values,
+                group_tivs,
+                self.DIST_EUCLIDEAN
+            )
+
+            cos_tonal_disp = self._tonal_dispersion(
                 group[CHROMA_COLS].values,
                 group_tivs,
                 self.DIST_COSINE
             )
 
-            data_cpy.loc[piece, COS_TONAL_DISP] = tonal_disp
+            data_cpy.loc[piece, COS_TONAL_DISP] = cos_tonal_disp
+            data_cpy.loc[piece, EUC_TONAL_DISP] = euc_tonal_disp
 
         data_cpy[DISSONANCE] = self._dissonance(tivs)
         data_cpy[CHROMATICITY] = self._descriptor(mags, 0)
