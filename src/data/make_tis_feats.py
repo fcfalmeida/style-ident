@@ -3,7 +3,7 @@ import pathlib
 import pandas as pd
 from src.data.pipeline import Pipeline
 from src.data.pipeline_task_group import PipelineTaskGroup
-from src.data.constants import CHROMA_COLS
+from src.data.constants import CHROMA_COLS, HCDF_PEAK_IDX, HCDF_PEAK_VALUE
 from src.features.tis import TIS
 from src.data.remove_columns import RemoveColumns
 from src.features.mean_and_std import MeanAndStd
@@ -35,7 +35,11 @@ def make_pipeline():
     group.add_task(TIS())
     pipeline.add_task(group)
 
-    pipeline.add_task(RemoveColumns(CHROMA_COLS))
+    remove_cols = CHROMA_COLS.copy()
+    remove_cols.append(HCDF_PEAK_IDX)
+    remove_cols.append(HCDF_PEAK_VALUE)
+
+    pipeline.add_task(RemoveColumns(remove_cols))
     pipeline.add_task(MeanAndStd())
 
     return pipeline
