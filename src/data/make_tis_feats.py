@@ -3,10 +3,10 @@ import pathlib
 import pandas as pd
 from src.data.pipeline import Pipeline
 from src.data.pipeline_task_group import PipelineTaskGroup
+from src.data.constants import CHROMA_COLS
 from src.features.tis import TIS
-from src.data.remove_chroma import RemoveChroma
+from src.data.remove_columns import RemoveColumns
 from src.features.mean_and_std import MeanAndStd
-from src.features.median_and_iqr import MedianAndIQR
 
 
 @click.command()
@@ -35,9 +35,8 @@ def make_pipeline():
     group.add_task(TIS())
     pipeline.add_task(group)
 
-    pipeline.add_task(RemoveChroma())
+    pipeline.add_task(RemoveColumns(CHROMA_COLS))
     pipeline.add_task(MeanAndStd())
-    # pipeline.add_task(MedianAndIQR())
 
     return pipeline
 

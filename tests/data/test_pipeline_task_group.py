@@ -3,9 +3,10 @@ import numpy as np
 import pandas as pd
 from src.data.pipeline import Pipeline
 from src.data.pipeline_task_group import PipelineTaskGroup
+from src.data.constants import CHROMA_COLS
 from src.features.template_based import TemplateBased
 from src.features.complexity import Complexity
-from src.data.remove_chroma import RemoveChroma
+from src.data.remove_columns import RemoveColumns
 
 
 class TestFeatureGroup:
@@ -147,7 +148,7 @@ class TestFeatureGroup:
         group.add_task(Complexity())
 
         pipeline.add_task(group)
-        pipeline.add_task(RemoveChroma())
+        pipeline.add_task(RemoveColumns(CHROMA_COLS))
 
         result = pipeline.run(data)
 

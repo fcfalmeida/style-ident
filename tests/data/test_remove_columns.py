@@ -1,10 +1,11 @@
-from src.data.remove_chroma import RemoveChroma
 import pytest
 import numpy as np
 import pandas as pd
+from src.data.remove_columns import RemoveColumns
+from src.data.constants import CHROMA_COLS
 
 
-class TestRemoveChroma:
+class TestRemoveColumns:
     @pytest.fixture(scope="class")
     def data(self):
         df = pd.DataFrame(
@@ -63,7 +64,7 @@ class TestRemoveChroma:
         expected["time"] = pd.to_timedelta(expected["time"], unit="s")
         expected = expected.set_index(["piece", "time"])
 
-        result = RemoveChroma().run(data)
+        result = RemoveColumns(CHROMA_COLS).run(data)
 
         compare = pd.DataFrame(
             np.isclose(expected, result), columns=expected.columns)
