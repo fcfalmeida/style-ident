@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 import copy
 from lib.HCDF.HCDF import harmonic_change
-from src.data.constants import CHROMA_COLS
+from src.data.constants import CHROMA_COLS, HCDF_PEAK_IDX, HCDF_PEAK_VALUE
 from src.data.pipeline_task import PipelineTask
 
 
@@ -28,20 +28,24 @@ class HCDFSegmentation(PipelineTask):
 
         for piece, group in grouped:
             # Get left bound of windows
-            changes, _, _ = harmonic_change(group[CHROMA_COLS].values)
-
-            right_bounds = self._get_window_right_bounds(
-                changes, group.shape[0]
+            peak_indexes, peak_values, _ = harmonic_change(
+                group[CHROMA_COLS].values
             )
 
-            for i in range(changes.size):
-                left_bound_idx = changes[i]
+            right_bounds = self._get_window_right_bounds(
+                peak_indexes, group.shape[0]
+            )
+
+            for i in range(peak_indexes.size):
+                left_bound_idx = peak_indexes[i]
                 right_bound_idx = right_bounds[i]
 
                 piece, time = group.iloc[left_bound_idx].name
                 row = group[left_bound_idx:right_bound_idx].sum().to_dict()
                 row['piece'] = piece
                 row['time'] = time
+                row[HCDF_PEAK_IDX] = peak_indexes[i]
+                row[HCDF_PEAK_VALUE] = peak_values[i]
 
                 segmented.append(row)
 

@@ -38,6 +38,9 @@ COMPLEXITY_COLS = [
     COMPLEXITY_FIFTH_ANG_DEV,
 ]
 
+HCDF_PEAK_IDX = "hcdf_peak_idx"
+HCDF_PEAK_VALUE = "hcdf_peak_value"
+
 DISSONANCE = "dissonance"
 CHROMATICITY = "chromaticity"
 DYADICITY = "dyadicity"
