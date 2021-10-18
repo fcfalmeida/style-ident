@@ -40,6 +40,7 @@ COMPLEXITY_COLS = [
 
 HCDF_PEAK_IDX = "hcdf_peak_idx"
 HCDF_PEAK_MAG = "hcdf_peak_mag"
+HCDF_PEAK_INT = "hcdf_peak_interval"
 
 DISSONANCE = "dissonance"
 CHROMATICITY = "chromaticity"
@@ -63,6 +64,7 @@ TIS_COLS = [
     COS_TONAL_DISP,
     EUC_TONAL_DISP,
     COS_DIST,
-    EUC_DIST
+    EUC_DIST,
+    HCDF_PEAK_INT
 ]
 TIV_COL = "tiv"

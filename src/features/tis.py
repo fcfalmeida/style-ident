@@ -18,7 +18,9 @@ from src.data.constants import (
     TRIADICITY,
     WHOLETONENESS,
     TIS_COLS,
-    TIV_COL
+    TIV_COL,
+    HCDF_PEAK_IDX,
+    HCDF_PEAK_INT
 )
 
 
@@ -73,6 +75,13 @@ class TIS(PipelineTask):
             np.dot(TIV.weights, TIV.weights)))
         )
 
+    def _hcdf_peak_interval(self, hcdf_peak_indexes: ArrayLike):
+        intervals = hcdf_peak_indexes[1:] - hcdf_peak_indexes[0:-1]
+
+        intervals = np.append(intervals, 0)
+
+        return intervals
+
     def run(self, data: pd.DataFrame) -> pd.DataFrame:
         data_cpy = data.copy()
 
@@ -105,6 +114,10 @@ class TIS(PipelineTask):
             data_cpy.loc[piece, EUC_TONAL_DISP] = euc_tonal_disp
             data_cpy.loc[piece, COS_DIST] = cos_dist
             data_cpy.loc[piece, EUC_DIST] = euc_dist
+
+            data_cpy.loc[piece, HCDF_PEAK_INT] = self._hcdf_peak_interval(
+                group[HCDF_PEAK_IDX].values
+            )
 
         data_cpy[DISSONANCE] = self._dissonance(tivs)
         data_cpy[CHROMATICITY] = self._descriptor(mags, 0)
