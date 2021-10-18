@@ -20,6 +20,8 @@ def main(filepath, piece):
     )
 
     fig, ax = plt.subplots()
+    fig.canvas.set_window_title(f'HCDF - {piece}')
+
     ax.set(xlabel='Time (s)', ylabel='HCDF magnitude')
 
     hcdf_x = np.arange(0, hcdf.size) * CHROMA_RESOLUTION
@@ -30,6 +32,9 @@ def main(filepath, piece):
         peak_indexes_x, peak_mags, label='hcdf peaks', color='red', s=10
     )
 
+    ax.xaxis.set_ticks(np.arange(min(hcdf_x), max(hcdf_x) + 1, 5))
+    ax.grid(ls='dashed')
+    
     plt.show()
 
 
