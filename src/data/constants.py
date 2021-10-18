@@ -39,7 +39,7 @@ COMPLEXITY_COLS = [
 ]
 
 HCDF_PEAK_IDX = "hcdf_peak_idx"
-HCDF_PEAK_VALUE = "hcdf_peak_value"
+HCDF_PEAK_MAG = "hcdf_peak_mag"
 
 DISSONANCE = "dissonance"
 CHROMATICITY = "chromaticity"
