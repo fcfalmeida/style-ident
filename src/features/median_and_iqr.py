@@ -9,9 +9,6 @@ class MedianAndIQR(PipelineTask):
     `DataFrame` object."""
 
     def run(self, data: pd.DataFrame) -> pd.DataFrame:
-        def std(data):
-            return np.std(data)
-
         temp = data.groupby("piece").agg([np.median, iqr])
         temp.columns = temp.columns.to_flat_index()
 
