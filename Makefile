@@ -29,8 +29,8 @@ weiss_train:
 tis_train:
 	${PYTHON_INTERPRETER} -m src.models.weiss data/processed/tis models/tis
 
-visualize_lda:
-	${PYTHON_INTERPRETER} -m src.tools.visualize_lda data/processed/weiss/chroma-nnls_full.csv
+plot_lda:
+	${PYTHON_INTERPRETER} -m src.tools.plot_lda $(dataset)
 
 plot_hcdf:
 	${PYTHON_INTERPRETER} -m src.tools.plot_hcdf data/interim/crossera/chroma-nnls_full.csv $(piece)
