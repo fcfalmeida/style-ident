@@ -43,17 +43,18 @@ def dot_product(vector1: ArrayLike, vector2: ArrayLike) -> ArrayLike:
 
 
 def complex_cosine_dist(vector1, vector2):
-    vector1_split = np.concatenate(
-        (vector1.real, vector1.imag), axis=1
-    )
-    vector2_split = np.concatenate(
-        (vector2.real, vector2.imag), axis=1
-    )
+    with np.errstate(divide='ignore', invalid='ignore'):
+        vector1_split = np.concatenate(
+            (vector1.real, vector1.imag), axis=1
+        )
+        vector2_split = np.concatenate(
+            (vector2.real, vector2.imag), axis=1
+        )
 
-    vector1_norms = np.linalg.norm(vector1, axis=1)
-    vector2_norms = np.linalg.norm(vector2, axis=1)
-    dot_prod = dot_product(vector1_split, vector2_split)
+        vector1_norms = np.linalg.norm(vector1, axis=1)
+        vector2_norms = np.linalg.norm(vector2, axis=1)
+        dot_prod = dot_product(vector1_split, vector2_split)
 
-    dist = np.arccos(dot_prod / (vector1_norms * vector2_norms))
+        dist = np.arccos(dot_prod / (vector1_norms * vector2_norms))
 
-    return np.nan_to_num(dist)
+        return np.nan_to_num(dist)
