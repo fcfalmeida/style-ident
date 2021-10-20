@@ -31,6 +31,18 @@ class TIS(PipelineTask):
     def _tonal_dispersion(
         self, chroma_vectors: ArrayLike, tivs: TIVCollection,
             distance_type: int) -> pd.DataFrame:
+        """Computes the tonal dispersion value of a `TIVCollection`.
+        The tonal dispersion value is either the cosine or euclidean distance
+        value between each `TIV` in the `TIVCollection` and the mean `TIV`.
+
+        Args:
+            chroma_vectors: Array of chroma vectors
+            tivs: `TIVCollection` object which contains a list of TIVs
+            distance_type: Type of distance measure to use. Can be one of
+            DIST_COSINE or DIST_EUCLIDEAN
+        Returns:
+            An array of tonal dispersion values for each `TIV` in `tivs`
+        """
         mean_chroma_vector = np.mean(chroma_vectors, axis=0)
         tonal_center = TIVCollection.from_pcp(mean_chroma_vector)
 
