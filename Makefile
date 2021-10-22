@@ -15,7 +15,7 @@ hcdf_segmentation:
 	${PYTHON_INTERPRETER} -m src.data.make_hcdf_segmentation data/interim/crossera data/interim/hcdf_segmented
 
 tis_feats:
-	${PYTHON_INTERPRETER} -m src.data.make_tis_feats data/interim/hcdf_segmented data/interim/tis_feats
+	${PYTHON_INTERPRETER} -m src.data.make_tis_feats data/interim/hcdf_segmented data/interim/tis_feats $(pipeline)
 
 weiss_trainset:
 	${PYTHON_INTERPRETER} -m src.data.make_weiss_trainset data/interim/weiss_feats data/processed/weiss

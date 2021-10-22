@@ -38,6 +38,7 @@ class PipelineTaskGroup(PipelineTask):
 
         for t in self.tasks:
             df = t.run(data_copy)
-            data_copy = data_copy.join(df)
+
+            data_copy = data_copy.join(df, rsuffix='_')
 
         return data_copy

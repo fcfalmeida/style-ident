@@ -357,7 +357,8 @@ class TestTISBasic:
                 "triadicity": 0.44779999,
                 "dim_quality": 0.1889306,
                 "diatonicity": 0.21732042,
-                "wholetoneness": 0.12074303
+                "wholetoneness": 0.12074303,
+                "hcdf_peak_mag": 0
             },
             {
                 "piece": "bach_2.mp3",
@@ -368,7 +369,8 @@ class TestTISBasic:
                 "triadicity": 0.17265286,
                 "dim_quality": 0.04029938,
                 "diatonicity": 0.13624077,
-                "wholetoneness": 0.19373219
+                "wholetoneness": 0.19373219,
+                "hcdf_peak_mag": 0.8
             },
             {
                 "piece": "bach_2.mp3",
@@ -379,7 +381,8 @@ class TestTISBasic:
                 "triadicity": 0,
                 "dim_quality": 0,
                 "diatonicity": 0,
-                "wholetoneness": 0
+                "wholetoneness": 0,
+                "hcdf_peak_mag": 1.3
             },
             {
                 "piece": "bach_2.mp3",
@@ -390,7 +393,8 @@ class TestTISBasic:
                 "triadicity": 0.10934247,
                 "dim_quality": 0.44405399,
                 "diatonicity": 0.22995932,
-                "wholetoneness": 0.03006012
+                "wholetoneness": 0.03006012,
+                "hcdf_peak_mag": 0.65
             },
             {
                 "piece": "chopin_3.mp3",
@@ -401,7 +405,8 @@ class TestTISBasic:
                 "triadicity": 0.45034618,
                 "dim_quality": 0.33863814,
                 "diatonicity": 0.25832167,
-                "wholetoneness": 0.2724359
+                "wholetoneness": 0.2724359,
+                "hcdf_peak_mag": 0
             },
             {
                 "piece": "chopin_3.mp3",
@@ -412,7 +417,8 @@ class TestTISBasic:
                 "triadicity": 0.17265286,
                 "dim_quality": 0.04029938,
                 "diatonicity": 0.13624077,
-                "wholetoneness": 0.19373219
+                "wholetoneness": 0.19373219,
+                "hcdf_peak_mag": 1.24
             },
             {
                 "piece": "chopin_3.mp3",
@@ -423,7 +429,9 @@ class TestTISBasic:
                 "triadicity": 0.40360278,
                 "dim_quality": 0.25771809,
                 "diatonicity": 0.19792183,
-                "wholetoneness": 0.00304569
+                "wholetoneness": 0.00304569,
+                "hcdf_peak_mag": 0.93
+
             },
             {
                 "piece": "chopin_3.mp3",
@@ -434,7 +442,8 @@ class TestTISBasic:
                 "triadicity": 0.27527971,
                 "dim_quality": 0.35473626,
                 "diatonicity": 0.19622033,
-                "wholetoneness": 0.05767894
+                "wholetoneness": 0.05767894,
+                "hcdf_peak_mag": 1.79
             }
         ])
 

@@ -53,7 +53,8 @@ COS_TONAL_DISP = "cos_tonal_disp"
 EUC_TONAL_DISP = "euc_tonal_disp"
 COS_DIST = "cos_dist"
 EUC_DIST = "euc_dist"
-TIS_COLS = [
+
+TIS_BASIC_COLS = [
     DISSONANCE,
     CHROMATICITY,
     DYADICITY,
@@ -61,6 +62,9 @@ TIS_COLS = [
     DIMINISHED_QUALITTY,
     DIATONICITY,
     WHOLETONENESS,
+    HCDF_PEAK_MAG
+]
+TIS_COLS = [
     COS_TONAL_DISP,
     EUC_TONAL_DISP,
     COS_DIST,
