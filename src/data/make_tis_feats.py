@@ -21,6 +21,7 @@ def main(input_filepath, output_filepath, pipeline_name):
 
             print(f'Processed {path}')
 
+            pathlib.Path(output_filepath).mkdir(exist_ok=True)
             processed.to_csv(f'{output_filepath}/{path.name}')
 
 
