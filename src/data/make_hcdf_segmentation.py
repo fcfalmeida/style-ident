@@ -1,7 +1,7 @@
 import click
 import pathlib
 import pandas as pd
-from src.data.pipeline import Pipeline
+from src.data.pipelines.pipeline import Pipeline
 from src.features.hcdf_segmentation import HCDFSegmentation
 
 

@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 from numpy.typing import ArrayLike
 from TIVlib import TIV, TIVCollection
-from src.data.pipeline_task import PipelineTask
+from src.data.pipelines.pipeline_task import PipelineTask
 from src.data.constants import (
     CHROMA_COLS,
     DIMINISHED_QUALITTY,

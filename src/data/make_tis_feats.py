@@ -1,7 +1,7 @@
 import click
 import pathlib
 import pandas as pd
-from src.data.pipelines import pipeline_catalogue
+from src.data.pipelines.catalogue import pipeline_catalogue
 
 
 @click.command()

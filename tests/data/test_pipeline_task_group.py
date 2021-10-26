@@ -1,7 +1,7 @@
 import pytest
 import numpy as np
 import pandas as pd
-from src.data.pipeline import Pipeline
+from src.data.pipelines.pipeline import Pipeline
 from src.data.pipeline_task_group import PipelineTaskGroup
 from src.data.constants import CHROMA_COLS
 from src.features.template_based import TemplateBased

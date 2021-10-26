@@ -3,7 +3,7 @@ import pandas as pd
 from numpy.typing import ArrayLike
 import src.utils.math as math
 from TIVlib import TIVCollection
-from src.data.pipeline_task import PipelineTask
+from src.data.pipelines.pipeline_task import PipelineTask
 from src.data.constants import (
     CHROMA_COLS,
     COS_TONAL_DISP,

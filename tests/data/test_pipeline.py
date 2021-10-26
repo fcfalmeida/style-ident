@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 from src.features.chroma_resolution import ChromaResolution
 from src.features.normalized_chroma import NormalizedChroma
-from src.data.pipeline import Pipeline
+from src.data.pipelines.pipeline import Pipeline
 
 
 class TestPipeline:

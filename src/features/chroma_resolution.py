@@ -1,5 +1,5 @@
 import pandas as pd
-from src.data.pipeline_task import PipelineTask
+from src.data.pipelines.pipeline_task import PipelineTask
 from src.utils.converters import sec_to_ms
 
 
