@@ -3,7 +3,7 @@ import numpy as np
 from numpy.typing import ArrayLike
 from scipy.ndimage.filters import gaussian_filter
 from TIVlib import TIV
-from src.data.pipelines.pipeline_task import PipelineTask
+from src.data.tasks.pipeline_task import PipelineTask
 from src.data.constants import CHROMA_COLS
 
 

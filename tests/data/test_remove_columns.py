@@ -1,7 +1,7 @@
 import pytest
 import numpy as np
 import pandas as pd
-from src.data.remove_columns import RemoveColumns
+from src.data.tasks.remove_columns import RemoveColumns
 from src.data.constants import CHROMA_COLS
 
 

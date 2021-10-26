@@ -2,7 +2,7 @@ from typing import Any, Callable
 import pandas as pd
 import numpy as np
 from numpy.typing import ArrayLike
-from src.data.pipelines.pipeline_task import PipelineTask
+from src.data.tasks.pipeline_task import PipelineTask
 from scipy.stats.mstats import gmean
 from src.data.constants import (
     CHROMA_COLS,

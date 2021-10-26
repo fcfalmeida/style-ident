@@ -1,7 +1,7 @@
 from src.data.pipelines.pipeline import Pipeline
-from src.data.pipelines.pipeline_task import PipelineTask
-from src.data.pipeline_task_group import PipelineTaskGroup
-from src.data.select_columns import SelectColumns
+from src.data.tasks.pipeline_task import PipelineTask
+from src.data.tasks.pipeline_task_group import PipelineTaskGroup
+from src.data.tasks.select_columns import SelectColumns
 from src.features.mean_and_std import MeanAndStd
 
 

@@ -1,7 +1,7 @@
 import pytest
 import numpy as np
 import pandas as pd
-from src.data.select_columns import SelectColumns
+from src.data.tasks.select_columns import SelectColumns
 
 
 class TestSelectColumns:

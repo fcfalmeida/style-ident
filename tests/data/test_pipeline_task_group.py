@@ -2,11 +2,11 @@ import pytest
 import numpy as np
 import pandas as pd
 from src.data.pipelines.pipeline import Pipeline
-from src.data.pipeline_task_group import PipelineTaskGroup
+from src.data.tasks.pipeline_task_group import PipelineTaskGroup
 from src.data.constants import CHROMA_COLS
 from src.features.template_based import TemplateBased
 from src.features.complexity import Complexity
-from src.data.remove_columns import RemoveColumns
+from src.data.tasks.remove_columns import RemoveColumns
 
 
 class TestFeatureGroup:

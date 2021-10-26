@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 from scipy.stats import iqr
-from src.data.pipelines.pipeline_task import PipelineTask
+from src.data.tasks.pipeline_task import PipelineTask
 
 
 class MedianAndIQR(PipelineTask):

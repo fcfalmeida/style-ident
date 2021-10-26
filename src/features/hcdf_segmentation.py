@@ -4,7 +4,7 @@ import numpy as np
 import copy
 from lib.HCDF.HCDF import harmonic_change
 from src.data.constants import CHROMA_COLS, HCDF_PEAK_IDX, HCDF_PEAK_MAG
-from src.data.pipelines.pipeline_task import PipelineTask
+from src.data.tasks.pipeline_task import PipelineTask
 
 
 class HCDFSegmentation(PipelineTask):
