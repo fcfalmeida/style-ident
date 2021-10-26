@@ -1,7 +1,7 @@
 import click
 import pathlib
 from src.data.pipeline_output_combiner import PipelineOutputCombiner
-from src.data.constants import INTERIM_DIR
+from src.data.constants.others import INTERIM_DIR
 
 
 @click.command()

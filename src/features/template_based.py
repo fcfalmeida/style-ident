@@ -1,14 +1,10 @@
 import pandas as pd
 from numpy.typing import ArrayLike
 from src.data.tasks.pipeline_task import PipelineTask
-from src.data.constants import (
-    CHROMA_COLS,
-    INTERVAL_COLS,
-    CHORD_MAJ,
-    CHORD_MIN,
-    CHORD_DIM,
-    CHORD_AUG,
-    CHORD_COLS,
+from src.data.constants.features import ChordFeats, IntervalFeats
+from src.data.constants.feature_groups import (
+    CHROMA_FEATS,
+    TEMPLATE_FEATS
 )
 
 
@@ -18,16 +14,16 @@ class TemplateBased(PipelineTask):
     """
 
     TEMPLATES = {
-        INTERVAL_COLS[0]: [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        INTERVAL_COLS[1]: [1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        INTERVAL_COLS[2]: [1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0],
-        INTERVAL_COLS[3]: [1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0],
-        INTERVAL_COLS[4]: [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0],
-        INTERVAL_COLS[5]: [1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
-        CHORD_MAJ: [1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0],
-        CHORD_MIN: [1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0],
-        CHORD_DIM: [1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0],
-        CHORD_AUG: [1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0],
+        IntervalFeats.IC1: [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        IntervalFeats.IC2: [1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        IntervalFeats.IC3: [1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0],
+        IntervalFeats.IC4: [1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0],
+        IntervalFeats.IC5: [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0],
+        IntervalFeats.IC6: [1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
+        ChordFeats.MAJ: [1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0],
+        ChordFeats.MIN: [1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0],
+        ChordFeats.DIM: [1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0],
+        ChordFeats.AUG: [1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0],
     }
 
     def _calc_template_feat(
@@ -69,11 +65,7 @@ class TemplateBased(PipelineTask):
 
         for template_key in self.TEMPLATES.keys():
             data_copy[template_key] = self._calc_template_feat(
-                data[CHROMA_COLS].values, template_key
+                data[CHROMA_FEATS].values, template_key
             )
 
-        cols = []
-        cols.extend(INTERVAL_COLS)
-        cols.extend(CHORD_COLS)
-
-        return data_copy[cols]
+        return data_copy[TEMPLATE_FEATS]

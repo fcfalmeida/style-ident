@@ -4,16 +4,10 @@ import numpy as np
 from numpy.typing import ArrayLike
 from src.data.tasks.pipeline_task import PipelineTask
 from scipy.stats.mstats import gmean
-from src.data.constants import (
-    CHROMA_COLS,
-    COMPLEXITY_DIFF,
-    COMPLEXITY_STD,
-    COMPLEXITY_SLOPE,
-    COMPLEXITY_ENTROPY,
-    COMPLEXITY_NON_SPARSENESS,
-    COMPLEXITY_FLATNESS,
-    COMPLEXITY_FIFTH_ANG_DEV,
-    COMPLEXITY_COLS,
+from src.data.constants.features import ComplexityFeats
+from src.data.constants.feature_groups import (
+    CHROMA_FEATS,
+    COMPLEXITY_FEATS
 )
 import src.utils.math as math
 
@@ -226,18 +220,26 @@ class Complexity(PipelineTask):
     def run(self, data: pd.DataFrame) -> pd.DataFrame:
         data_cpy = data.copy()
 
-        data_cpy[COMPLEXITY_DIFF] = self._sum_chroma_diff(
-            data[CHROMA_COLS].values)
-        data_cpy[COMPLEXITY_STD] = self._chroma_std(data[CHROMA_COLS].values)
-        data_cpy[COMPLEXITY_SLOPE] = self._neg_slope(data[CHROMA_COLS].values)
-        data_cpy[COMPLEXITY_ENTROPY] = self._entropy(data[CHROMA_COLS].values)
-        data_cpy[COMPLEXITY_NON_SPARSENESS] = self._non_sparseness(
-            data[CHROMA_COLS].values
+        data_cpy[ComplexityFeats.DIFF] = self._sum_chroma_diff(
+            data[CHROMA_FEATS].values
         )
-        data_cpy[COMPLEXITY_FLATNESS] = self._flatness(
-            data[CHROMA_COLS].values)
-        data_cpy[COMPLEXITY_FIFTH_ANG_DEV] = self._angular_deviation(
-            data[CHROMA_COLS].values
+        data_cpy[ComplexityFeats.STD] = self._chroma_std(
+            data[CHROMA_FEATS].values
+        )
+        data_cpy[ComplexityFeats.SLOPE] = self._neg_slope(
+            data[CHROMA_FEATS].values
+        )
+        data_cpy[ComplexityFeats.ENTROPY] = self._entropy(
+            data[CHROMA_FEATS].values
+        )
+        data_cpy[ComplexityFeats.NON_SPARSENESS] = self._non_sparseness(
+            data[CHROMA_FEATS].values
+        )
+        data_cpy[ComplexityFeats.FLATNESS] = self._flatness(
+            data[CHROMA_FEATS].values
+        )
+        data_cpy[ComplexityFeats.FIFTH_ANG_DEV] = self._angular_deviation(
+            data[CHROMA_FEATS].values
         )
 
-        return data_cpy[COMPLEXITY_COLS]
+        return data_cpy[COMPLEXITY_FEATS]

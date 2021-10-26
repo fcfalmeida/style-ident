@@ -4,7 +4,7 @@ from numpy.typing import ArrayLike
 from scipy.ndimage.filters import gaussian_filter
 from TIVlib import TIV
 from src.data.tasks.pipeline_task import PipelineTask
-from src.data.constants import CHROMA_COLS
+from src.data.constants.feature_groups import CHROMA_FEATS
 
 
 class HCDF(PipelineTask):
@@ -63,7 +63,7 @@ class HCDF(PipelineTask):
         pass
 
     def run(self, data: pd.DataFrame) -> pd.DataFrame:
-        tivs = self._calc_tivs(data[CHROMA_COLS].values)
+        tivs = self._calc_tivs(data[CHROMA_FEATS].values)
         smoothed_tivs = self._gaussian_blur(tivs)
         hcdf = self._compute_hcdf(smoothed_tivs)
 

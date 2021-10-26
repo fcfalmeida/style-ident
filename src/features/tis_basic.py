@@ -3,15 +3,9 @@ import pandas as pd
 from numpy.typing import ArrayLike
 from TIVlib import TIV, TIVCollection
 from src.data.tasks.pipeline_task import PipelineTask
-from src.data.constants import (
-    CHROMA_COLS,
-    DIMINISHED_QUALITTY,
-    DISSONANCE,
-    CHROMATICITY,
-    DIATONICITY,
-    DYADICITY,
-    TRIADICITY,
-    WHOLETONENESS,
+from src.data.constants.features import TISFeats
+from src.data.constants.feature_groups import (
+    CHROMA_FEATS,
     TIS_BASIC_COLS
 )
 
@@ -31,15 +25,15 @@ class TISBasic(PipelineTask):
     def run(self, data: pd.DataFrame) -> pd.DataFrame:
         data_cpy = data.copy()
 
-        tivs = TIVCollection.from_pcp(data_cpy[CHROMA_COLS].values.T)
+        tivs = TIVCollection.from_pcp(data_cpy[CHROMA_FEATS].values.T)
         mags = self._tiv_mags(tivs)
 
-        data_cpy[DISSONANCE] = self._dissonance(tivs)
-        data_cpy[CHROMATICITY] = self._descriptor(mags, 0)
-        data_cpy[DYADICITY] = self._descriptor(mags, 1)
-        data_cpy[TRIADICITY] = self._descriptor(mags, 2)
-        data_cpy[DIMINISHED_QUALITTY] = self._descriptor(mags, 3)
-        data_cpy[DIATONICITY] = self._descriptor(mags, 4)
-        data_cpy[WHOLETONENESS] = self._descriptor(mags, 5)
+        data_cpy[TISFeats.DISSONANCE] = self._dissonance(tivs)
+        data_cpy[TISFeats.CHROMATICITY] = self._descriptor(mags, 0)
+        data_cpy[TISFeats.DYADICITY] = self._descriptor(mags, 1)
+        data_cpy[TISFeats.TRIADICITY] = self._descriptor(mags, 2)
+        data_cpy[TISFeats.DIMINISHED_QUALITTY] = self._descriptor(mags, 3)
+        data_cpy[TISFeats.DIATONICITY] = self._descriptor(mags, 4)
+        data_cpy[TISFeats.WHOLETONENESS] = self._descriptor(mags, 5)
 
         return data_cpy[TIS_BASIC_COLS]

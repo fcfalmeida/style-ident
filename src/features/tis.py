@@ -4,16 +4,10 @@ from numpy.typing import ArrayLike
 import src.utils.math as math
 from TIVlib import TIVCollection
 from src.data.tasks.pipeline_task import PipelineTask
-from src.data.constants import (
-    CHROMA_COLS,
-    COS_TONAL_DISP,
-    EUC_TONAL_DISP,
-    COS_DIST,
-    EUC_DIST,
-    TIS_COLS,
-    TIV_COL,
-    HCDF_PEAK_IDX,
-    HCDF_PEAK_INT
+from src.data.constants.features import TISFeats
+from src.data.constants.feature_groups import (
+    CHROMA_FEATS,
+    TIS_COLS
 )
 
 
@@ -79,23 +73,23 @@ class TIS(PipelineTask):
     def run(self, data: pd.DataFrame) -> pd.DataFrame:
         data_cpy = data.copy()
 
-        tivs = TIVCollection.from_pcp(data_cpy[CHROMA_COLS].values.T)
+        tivs = TIVCollection.from_pcp(data_cpy[CHROMA_FEATS].values.T)
 
-        data_cpy[TIV_COL] = tivs.tivlist
+        data_cpy[TISFeats.TIV] = tivs.tivlist
 
         grouped = data_cpy.groupby('piece')
 
         for piece, group in grouped:
-            group_tivs = TIVCollection(group[TIV_COL].values)
+            group_tivs = TIVCollection(group[TISFeats.TIV].values)
 
             cos_tonal_disp = self._tonal_dispersion(
-                group[CHROMA_COLS].values,
+                group[CHROMA_FEATS].values,
                 group_tivs,
                 self.DIST_COSINE
             )
 
             euc_tonal_disp = self._tonal_dispersion(
-                group[CHROMA_COLS].values,
+                group[CHROMA_FEATS].values,
                 group_tivs,
                 self.DIST_EUCLIDEAN
             )
@@ -103,13 +97,14 @@ class TIS(PipelineTask):
             cos_dist = self._distance(group_tivs, self.DIST_COSINE)
             euc_dist = self._distance(group_tivs, self.DIST_EUCLIDEAN)
 
-            data_cpy.loc[piece, COS_TONAL_DISP] = cos_tonal_disp
-            data_cpy.loc[piece, EUC_TONAL_DISP] = euc_tonal_disp
-            data_cpy.loc[piece, COS_DIST] = cos_dist
-            data_cpy.loc[piece, EUC_DIST] = euc_dist
+            data_cpy.loc[piece, TISFeats.COS_TONAL_DISP] = cos_tonal_disp
+            data_cpy.loc[piece, TISFeats.EUC_TONAL_DISP] = euc_tonal_disp
+            data_cpy.loc[piece, TISFeats.COS_DIST] = cos_dist
+            data_cpy.loc[piece, TISFeats.EUC_DIST] = euc_dist
 
-            data_cpy.loc[piece, HCDF_PEAK_INT] = self._hcdf_peak_interval(
-                group[HCDF_PEAK_IDX].values
+            data_cpy.loc[
+                piece, TISFeats.HCDF_PEAK_INT] = self._hcdf_peak_interval(
+                    group[TISFeats.HCDF_PEAK_IDX].values
             )
 
         return data_cpy[TIS_COLS]

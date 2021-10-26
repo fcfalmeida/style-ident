@@ -3,7 +3,7 @@ import pathlib
 import pandas as pd
 import numpy as np
 from numpy.typing import ArrayLike
-from src.data.constants import CHROMA_COLS
+from src.data.constants.feature_groups import CHROMA_FEATS
 
 
 @click.command()
@@ -11,7 +11,7 @@ from src.data.constants import CHROMA_COLS
 @click.argument("output_filepath", type=click.Path())
 def main(input_filepath, output_filepath):  # pragma no cover
     COL_NAMES = ["piece", "time"]
-    COL_NAMES.extend(CHROMA_COLS)
+    COL_NAMES.extend(CHROMA_FEATS)
 
     glob_patterns = ["chroma-nnls_piano*", "chroma-nnls_orchestra*"]
     file_names = [
@@ -56,12 +56,12 @@ def make_datasets(
         # Numpy sets the dtype of the chroma columns as object
         # because of the "piece" column
         # so we force dtype float64
-        df[CHROMA_COLS] = df[CHROMA_COLS].astype(np.float64)
+        df[CHROMA_FEATS] = df[CHROMA_FEATS].astype(np.float64)
 
         datasets[i] = (file_names[i], df)
 
     full = pd.DataFrame(full, columns=columns)
-    full[CHROMA_COLS] = full[CHROMA_COLS].astype(np.float64)
+    full[CHROMA_FEATS] = full[CHROMA_FEATS].astype(np.float64)
 
     datasets.append((file_names[-1], full))
 

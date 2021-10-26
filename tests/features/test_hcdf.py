@@ -2,7 +2,7 @@ import pytest
 import pandas as pd
 import numpy as np
 from src.features.hcdf import HCDF
-from src.data.constants import CHROMA_COLS
+from src.data.constants.feature_groups import CHROMA_FEATS
 
 
 class TestHCDF:
@@ -189,7 +189,7 @@ class TestHCDF:
             ]
         )
 
-        result = HCDF(5, 0.1)._calc_tivs(data[CHROMA_COLS].values)
+        result = HCDF(5, 0.1)._calc_tivs(data[CHROMA_FEATS].values)
 
         assert np.allclose(result, expected)
 
@@ -255,7 +255,7 @@ class TestHCDF:
             ]
         )
 
-        tivs = HCDF(5, 0.1)._calc_tivs(data[CHROMA_COLS].values)
+        tivs = HCDF(5, 0.1)._calc_tivs(data[CHROMA_FEATS].values)
         result = HCDF(5, 0.1)._gaussian_blur(tivs)
 
         assert np.allclose(result, expected)
@@ -273,7 +273,7 @@ class TestHCDF:
             ]
         )
 
-        tivs = HCDF(5, 0.1)._calc_tivs(data[CHROMA_COLS].values)
+        tivs = HCDF(5, 0.1)._calc_tivs(data[CHROMA_FEATS].values)
         tivs = HCDF(5, 0.1)._gaussian_blur(tivs)
         result = HCDF(5, 0.1)._compute_hcdf(tivs)
 

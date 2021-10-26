@@ -2,7 +2,7 @@ import pytest
 import pandas as pd
 import numpy as np
 from src.features.complexity import Complexity
-from src.data.constants import CHROMA_COLS
+from src.data.constants.feature_groups import CHROMA_FEATS
 
 
 class TestComplexity:
@@ -114,14 +114,14 @@ class TestComplexity:
             ]
         )
 
-        result = Complexity()._sort_chroma_fifths(data[CHROMA_COLS].values)
+        result = Complexity()._sort_chroma_fifths(data[CHROMA_FEATS].values)
 
         assert np.array_equal(result, expected)
 
     def test_sum_chroma_diff(self, data, flat_vector, sparse_vector):
         expected = np.array([0.65, 0.59, 0])
 
-        result = Complexity()._sum_chroma_diff(data[CHROMA_COLS].values)
+        result = Complexity()._sum_chroma_diff(data[CHROMA_FEATS].values)
         assert np.allclose(result, expected)
 
         result = Complexity()._sum_chroma_diff(flat_vector)
@@ -133,7 +133,7 @@ class TestComplexity:
     def test_chroma_std(self, data, flat_vector, sparse_vector):
         expected = np.array([0.82148763, 0.81760848, 0])
 
-        result = Complexity()._chroma_std(data[CHROMA_COLS].values)
+        result = Complexity()._chroma_std(data[CHROMA_FEATS].values)
         assert np.allclose(result, expected)
 
         result = Complexity()._chroma_std(flat_vector)
@@ -145,7 +145,7 @@ class TestComplexity:
     def test_neg_slope(self, data, flat_vector, sparse_vector):
         expected = np.array([0.641384257, 0.612694997, 0])
 
-        result = Complexity()._neg_slope(data[CHROMA_COLS].values)
+        result = Complexity()._neg_slope(data[CHROMA_FEATS].values)
         assert np.allclose(result, expected)
 
         result = Complexity()._neg_slope(flat_vector)
@@ -157,7 +157,7 @@ class TestComplexity:
     def test_entropy(self, data, flat_vector, sparse_vector):
         expected = np.array([0.92430871434, 0.91369479299, 0])
 
-        result = Complexity()._entropy(data[CHROMA_COLS].values)
+        result = Complexity()._entropy(data[CHROMA_FEATS].values)
         assert np.allclose(result, expected)
 
         result = Complexity()._entropy(flat_vector)
@@ -169,14 +169,14 @@ class TestComplexity:
     def test_non_sparseness(self, data):
         expected = np.array([0.78985308194, 0.78265321994, 0])
 
-        result = Complexity()._non_sparseness(data[CHROMA_COLS].values)
+        result = Complexity()._non_sparseness(data[CHROMA_FEATS].values)
 
         assert np.allclose(result, expected)
 
     def test_flatness(self, data):
         expected = np.array([0.7923240272, 0.754386555, 0])
 
-        result = Complexity()._flatness(data[CHROMA_COLS].values)
+        result = Complexity()._flatness(data[CHROMA_FEATS].values)
 
         print(result)
 
@@ -185,7 +185,7 @@ class TestComplexity:
     def test_angular_deviation(self, data, flat_vector, sparse_vector):
         expected = np.array([0.9294068001, 0.955902087, 0])
 
-        result = Complexity()._angular_deviation(data[CHROMA_COLS].values)
+        result = Complexity()._angular_deviation(data[CHROMA_FEATS].values)
         assert np.allclose(result, expected)
 
         result = Complexity()._angular_deviation(flat_vector)

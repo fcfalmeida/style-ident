@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 from matplotlib import pyplot as plt
 from lib.HCDF import HCDF
-from src.data.constants import CHROMA_COLS
+from src.data.constants.feature_groups import CHROMA_FEATS
 
 
 @click.command()
@@ -16,7 +16,7 @@ def main(filepath, piece):
     df = df.fillna(method='ffill')
 
     peak_indexes, peak_mags, hcdf = HCDF.harmonic_change(
-        df.loc[df['piece'] == piece][CHROMA_COLS].values
+        df.loc[df['piece'] == piece][CHROMA_FEATS].values
     )
 
     fig, ax = plt.subplots()

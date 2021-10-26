@@ -2,7 +2,7 @@ import pytest
 import pandas as pd
 import numpy as np
 import src.data.commands.make_crossera as make_crossera
-from src.data.constants import CHROMA_COLS
+from src.data.constants.feature_groups import CHROMA_FEATS
 from pytest_mock import MockerFixture
 
 
@@ -348,7 +348,7 @@ class TestMakeCrossera:
         )
 
         COL_NAMES = ["piece", "time"]
-        COL_NAMES.extend(CHROMA_COLS)
+        COL_NAMES.extend(CHROMA_FEATS)
 
         mocker.patch("pandas.read_csv", side_effect=[df1, df2])
 
@@ -372,7 +372,7 @@ class TestMakeCrossera:
         expected = [("df12.csv", df12), ("df34.csv", df34), ("full.csv", full)]
 
         COL_NAMES = ["piece", "time"]
-        COL_NAMES.extend(CHROMA_COLS)
+        COL_NAMES.extend(CHROMA_FEATS)
 
         mocker.patch(
             "pathlib.Path.glob",

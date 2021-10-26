@@ -2,7 +2,7 @@ import pytest
 import numpy as np
 import pandas as pd
 from src.data.tasks.remove_columns import RemoveColumns
-from src.data.constants import CHROMA_COLS
+from src.data.constants.feature_groups import CHROMA_FEATS
 
 
 class TestRemoveColumns:
@@ -64,7 +64,7 @@ class TestRemoveColumns:
         expected["time"] = pd.to_timedelta(expected["time"], unit="s")
         expected = expected.set_index(["piece", "time"])
 
-        result = RemoveColumns(CHROMA_COLS).run(data)
+        result = RemoveColumns(CHROMA_FEATS).run(data)
 
         compare = pd.DataFrame(
             np.isclose(expected, result), columns=expected.columns)

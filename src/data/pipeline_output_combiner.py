@@ -1,6 +1,6 @@
 import pandas as pd
 import pathlib
-from src.data.constants import INTERIM_DIR
+from src.data.constants.others import INTERIM_DIR
 
 
 class PipelineOutputCombiner:
