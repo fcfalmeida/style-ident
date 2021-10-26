@@ -7,7 +7,8 @@ from sklearn.preprocessing import LabelEncoder
 
 @click.command()
 @click.argument('filepath', type=click.Path(exists=True))
-def main(filepath):
+@click.argument('plot_title', type=str)
+def main(filepath, plot_title):
     df = pd.read_csv(filepath, dtype={'piece': str}, index_col='piece')
 
     lda = LinearDiscriminantAnalysis(n_components=2)
@@ -23,8 +24,8 @@ def main(filepath):
     )
     transformed_df = _add_style_period_labels(transformed_df)
 
-    plt.xlabel('Discriminant 1')
-    plt.ylabel('Discriminant 2')
+    fig, ax = plt.subplots()
+    ax.set(xlabel='Discriminant 1', ylabel='Discriminant 2')
 
     baroque = transformed_df.loc[
         transformed_df['style_period'] == 'baroque'
@@ -40,24 +41,26 @@ def main(filepath):
     ]
 
     alpha = 0.7
-    baroque_scatter = plt.scatter(
+    baroque_scatter = ax.scatter(
         baroque['ld1'], baroque['ld2'], alpha=alpha
     )
-    classical_scatter = plt.scatter(
+    classical_scatter = ax.scatter(
         classical['ld1'], classical['ld2'], alpha=alpha
     )
-    romantic_scatter = plt.scatter(
+    romantic_scatter = ax.scatter(
         romantic['ld1'], romantic['ld2'], alpha=alpha
     )
-    modern_scatter = plt.scatter(
+    modern_scatter = ax.scatter(
         modern['ld1'], modern['ld2'], alpha=alpha
     )
 
-    plt.legend(
+    ax.legend(
         (baroque_scatter, classical_scatter, romantic_scatter, modern_scatter),
         ('baroque', 'classical', 'romantic', 'modern'),
         fontsize=8
     )
+
+    ax.set_title(plot_title)
     plt.show()
 
 
