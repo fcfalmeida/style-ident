@@ -9,8 +9,12 @@ class FeaturePipeline(Pipeline):
     def __init__(
         self,
         feature_tasks: list[PipelineTask],
-            feature_cols: list[str]) -> None:
+        feature_cols: list[str],
+            prep_tasks: list[PipelineTask] = []) -> None:
         super().__init__()
+
+        for task in prep_tasks:
+            self.add_task(task)
 
         group = PipelineTaskGroup()
 

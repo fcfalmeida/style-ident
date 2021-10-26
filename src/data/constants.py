@@ -1,3 +1,6 @@
+EXTERNAL_DIR = "data/external"
+INTERIM_DIR = "data/interim"
+
 CHROMA_COLS = [
     "c1",
     "c2",

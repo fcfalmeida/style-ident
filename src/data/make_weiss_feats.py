@@ -1,25 +1,17 @@
 import click
 import pathlib
 import pandas as pd
-from src.data.pipeline import Pipeline
-from src.data.constants import CHROMA_COLS
-from src.data.remove_columns import RemoveColumns
 from src.features.chroma_resolution import ChromaResolution
-from src.features.normalized_chroma import NormalizedChroma
-from src.features.template_based import TemplateBased
-from src.features.complexity import Complexity
-from src.data.pipeline_task_group import PipelineTaskGroup
-from src.features.mean_and_std import MeanAndStd
 from src.utils.formatters import format_chroma_resolution
+from src.data.pipelines import pipeline_catalogue
 
 
 @click.command()
 @click.argument("input_filepath", type=click.Path(exists=True))
 @click.argument("output_filepath", type=click.Path())
-def main(input_filepath, output_filepath):
+@click.argument("pipeline_name", type=str)
+def main(input_filepath, output_filepath, pipeline_name):
     RESOLUTIONS = [0.1, 0.5, 10, ChromaResolution.GLOBAL]
-    COL_NAMES = ["piece", "time"]
-    COL_NAMES.extend(CHROMA_COLS)
 
     for path in pathlib.Path(input_filepath).iterdir():
         if path.is_file():
@@ -27,7 +19,7 @@ def main(input_filepath, output_filepath):
             data = data.fillna(method="ffill")
 
             for resolution in RESOLUTIONS:
-                pipeline = make_pipeline(resolution)
+                pipeline = pipeline_catalogue[pipeline_name](resolution)
 
                 processed = pipeline.run(data)
 
@@ -38,25 +30,47 @@ def main(input_filepath, output_filepath):
                     f"Processed {path} for {formatted_res} chroma resolution"
                 )
 
+                pathlib.Path(output_filepath).mkdir(exist_ok=True)
                 processed.to_csv(
                     f"{output_filepath}/{filename_no_ext}_{formatted_res}.csv"
                 )
 
+    TYPES = ["piano", "orchestra", "full"]
 
-def make_pipeline(chroma_res: float):
-    pipeline = Pipeline()
-    pipeline.add_task(ChromaResolution(chroma_res))
-    pipeline.add_task(NormalizedChroma())
+    for t in TYPES:
+        files = list(pathlib.Path(output_filepath).glob(f"chroma-nnls_{t}_*"))
 
-    group = PipelineTaskGroup()
-    group.add_task(TemplateBased())
-    group.add_task(Complexity())
+        joined = join_datasets(files)
 
-    pipeline.add_task(group)
-    pipeline.add_task(RemoveColumns(CHROMA_COLS))
-    pipeline.add_task(MeanAndStd())
+        joined.to_csv(f"{output_filepath}/chroma-nnls_{t}.csv")
 
-    return pipeline
+    cleanup_output_dir(output_filepath)
+
+
+def join_datasets(files: list[str]):
+    joined = None
+
+    for f in files:
+        data = pd.read_csv(f, dtype={"piece": str}, index_col="piece")
+
+        resolution = f.name.split("_")[2]
+        resolution = resolution.replace(".csv", "")
+
+        data = data.add_suffix(f"_{resolution}")
+
+        if joined is None:
+            joined = data.copy()
+        else:
+            joined = joined.join(data)
+
+    return joined
+
+
+def cleanup_output_dir(output_dir):
+    path = pathlib.Path(output_dir).glob('chroma-nnls_*_*')
+
+    for file in path:
+        file.unlink()
 
 
 if __name__ == "__main__":
