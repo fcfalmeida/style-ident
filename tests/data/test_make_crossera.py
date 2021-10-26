@@ -1,7 +1,7 @@
 import pytest
 import pandas as pd
 import numpy as np
-import src.data.make_crossera as make_crossera
+import src.data.commands.make_crossera as make_crossera
 from src.data.constants import CHROMA_COLS
 from pytest_mock import MockerFixture
 
