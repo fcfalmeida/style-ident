@@ -22,12 +22,17 @@ def main(input_filepath, output_filepath):
             X = data.drop("style_period", axis=1)
             y = le.fit_transform(data["style_period"])
 
+            c = [2 ** x for x in range(-5, 15)]
+
             search_params = {
-                "C": list(range(1, 20)),
+                "C": c,
                 "gamma": ["scale", "auto"]
             }
             svc = svm.SVC(kernel="rbf")
-            clf = GridSearchCV(svc, search_params, cv=5)
+
+            cv = ShuffleSplit(n_splits=3, test_size=1 / 3)
+
+            clf = GridSearchCV(svc, search_params, cv=cv)
             clf.fit(X, y)
 
             overall_mean_acc = 0
