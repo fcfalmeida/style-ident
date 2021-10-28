@@ -140,14 +140,7 @@ class Complexity(PipelineTask):
             The value of this feature or an array containing the value of
             this feature for each chroma vector.
         """
-        entropies = (-1 / np.log2(12) * np.sum(
-                chroma_vector * np.log2(
-                    chroma_vector, where=chroma_vector > 0),
-                axis=1
-            )
-        )
-
-        return entropies
+        return (1 / np.log2(12)) * math.entropy(chroma_vector)
 
     @_null_chroma_returns_zero
     def _non_sparseness(self, chroma_vector: ArrayLike) -> ArrayLike:

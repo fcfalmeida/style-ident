@@ -55,3 +55,4 @@ class TISFeats:
     EUC_TONAL_DISP = 'euc_tonal_disp'
     COS_DIST = 'cos_dist'
     EUC_DIST = 'euc_dist'
+    COEF_ENTROPY = 'coef_entropy'

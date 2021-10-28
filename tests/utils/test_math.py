@@ -32,7 +32,9 @@ class TestMath:
             ),
             (
                 np.array([[1 + 2j, 0.5 + 0.6j], [0.2 + 1.7j, 0.8 - 0.01j]]),
-                np.array([[3.2 - 1.2j, -0.9 + 0.9j], [-0.2 - 5j, 2.2j + 0.07j]]),
+                np.array(
+                    [[3.2 - 1.2j, -0.9 + 0.9j], [-0.2 - 5j, 2.2j + 0.07j]]
+                ),
                 np.array(
                     [
                         4.609999999999999 + 5.11j,
@@ -91,5 +93,37 @@ class TestMath:
     )
     def test_complex_cosine_dist(self, vector1, vector2, expected):
         result = math.complex_cosine_dist(vector1, vector2)
+
+        assert np.allclose(result, expected)
+
+    def test_normalize(self):
+        values = np.array([
+            [1.0, 3.0, 4.0, 5.0],
+            [2.0, 2.0, 2.0, 2.0],
+            [0.0, 0.0, 0.0, 0.0]
+        ])
+
+        expected = np.array([
+            [0.07692307692, 0.2307692308, 0.3076923077, 0.3846153846],
+            [0.25, 0.25, 0.25, 0.25],
+            [0, 0, 0, 0]
+        ])
+
+        result = math.normalize(values)
+
+        assert np.allclose(result, expected)
+
+    def test_entropy(self):
+        values = np.array([
+            [0.14, 0.26, 0.48, 0.02],
+            [0.25, 0.25, 0.25, 0.25],
+            [0.0, 0.0, 0.0, 0.0]
+        ])
+
+        expected = np.array([1.52354455465, 2.0, 0])
+
+        result = math.entropy(values)
+
+        print(result)
 
         assert np.allclose(result, expected)

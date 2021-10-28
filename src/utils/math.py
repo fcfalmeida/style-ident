@@ -58,3 +58,26 @@ def complex_cosine_dist(vector1, vector2):
         dist = np.arccos(dot_prod / (vector1_norms * vector2_norms))
 
         return np.nan_to_num(dist)
+
+
+def normalize(values: ArrayLike):
+    sum = np.sum(values, axis=1)
+
+    return np.divide(
+        values,
+        sum[:, None],
+        out=np.zeros_like(values),
+        where=sum[:, None] != 0
+    )
+
+
+def entropy(values: ArrayLike):
+    """Computes the Shannon entropy of a 2D array of values, row-wise.
+
+    Args:
+        values: A 2-dimensional vector of values
+
+    Returns:
+        An array of the entropy value for each row of `values´
+    """
+    return np.sum(-values * np.log2(values, where=values > 0), axis=1)

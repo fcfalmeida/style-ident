@@ -6,8 +6,10 @@ from src.data.tasks.pipeline_task import PipelineTask
 from src.data.constants.features import TISFeats
 from src.data.constants.feature_groups import (
     CHROMA_FEATS,
-    TIS_BASIC_COLS
+    TIS_BASIC_COLS,
+    TIS_COEFFICIENTS
 )
+import src.utils.math as math
 
 
 class TISBasic(PipelineTask):
@@ -22,6 +24,11 @@ class TISBasic(PipelineTask):
             np.dot(TIV.weights, TIV.weights)))
         )
 
+    def _coef_entropy(self, tiv_coefficients: ArrayLike):
+        normalized_coefficients = math.normalize(tiv_coefficients)
+
+        return math.entropy(normalized_coefficients)
+
     def run(self, data: pd.DataFrame) -> pd.DataFrame:
         data_cpy = data.copy()
 
@@ -35,5 +42,8 @@ class TISBasic(PipelineTask):
         data_cpy[TISFeats.DIMINISHED_QUALITTY] = self._descriptor(mags, 3)
         data_cpy[TISFeats.DIATONICITY] = self._descriptor(mags, 4)
         data_cpy[TISFeats.WHOLETONENESS] = self._descriptor(mags, 5)
+        data_cpy[TISFeats.COEF_ENTROPY] = self._coef_entropy(
+            data_cpy[TIS_COEFFICIENTS].values
+        )
 
         return data_cpy[TIS_BASIC_COLS]
