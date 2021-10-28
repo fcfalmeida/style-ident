@@ -16,7 +16,7 @@ class TISBasic(PipelineTask):
     def _tiv_mags(self, tivs: TIVCollection):
         return np.abs(tivs.vectors)
 
-    def _descriptor(self, tiv_mags: ArrayLike, k: int) -> ArrayLike:
+    def _coefficient(self, tiv_mags: ArrayLike, k: int) -> ArrayLike:
         return tiv_mags[:, k] / TIV.weights[k]
 
     def _dissonance(self, tivs: TIVCollection):
@@ -36,12 +36,12 @@ class TISBasic(PipelineTask):
         mags = self._tiv_mags(tivs)
 
         data_cpy[TISFeats.DISSONANCE] = self._dissonance(tivs)
-        data_cpy[TISFeats.CHROMATICITY] = self._descriptor(mags, 0)
-        data_cpy[TISFeats.DYADICITY] = self._descriptor(mags, 1)
-        data_cpy[TISFeats.TRIADICITY] = self._descriptor(mags, 2)
-        data_cpy[TISFeats.DIMINISHED_QUALITTY] = self._descriptor(mags, 3)
-        data_cpy[TISFeats.DIATONICITY] = self._descriptor(mags, 4)
-        data_cpy[TISFeats.WHOLETONENESS] = self._descriptor(mags, 5)
+        data_cpy[TISFeats.CHROMATICITY] = self._coefficient(mags, 0)
+        data_cpy[TISFeats.DYADICITY] = self._coefficient(mags, 1)
+        data_cpy[TISFeats.TRIADICITY] = self._coefficient(mags, 2)
+        data_cpy[TISFeats.DIMINISHED_QUALITTY] = self._coefficient(mags, 3)
+        data_cpy[TISFeats.DIATONICITY] = self._coefficient(mags, 4)
+        data_cpy[TISFeats.WHOLETONENESS] = self._coefficient(mags, 5)
         data_cpy[TISFeats.COEF_ENTROPY] = self._coef_entropy(
             data_cpy[TIS_COEFFICIENTS].values
         )

@@ -335,14 +335,14 @@ class TestTISBasic:
             ])
         )
     ])
-    def test_descriptor(
+    def test_coefficient(
         self, chroma_data: ArrayLike, k: int, expected: ArrayLike
     ):
         tivs = TIVCollection.from_pcp(chroma_data.T)
 
         tiv_mags = TISBasic()._tiv_mags(tivs)
 
-        result = TISBasic()._descriptor(tiv_mags, k)
+        result = TISBasic()._coefficient(tiv_mags, k)
 
         assert np.allclose(result, expected)
 
