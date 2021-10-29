@@ -38,6 +38,9 @@ plot_lda:
 plot_hcdf:
 	${PYTHON_INTERPRETER} -m src.tools.plot_hcdf data/interim/crossera/chroma-nnls_full.csv $(piece)
 
+plot_feature:
+	${PYTHON_INTERPRETER} -m src.tools.plot_feature $(dataset) "$(feature)"
+
 test:
 	pytest --cov-report term-missing --cov=src tests/
 
