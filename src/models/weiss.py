@@ -30,7 +30,7 @@ def main(input_filepath, output_filepath):
             }
             svc = svm.SVC(kernel="rbf")
 
-            cv = ShuffleSplit(n_splits=3, test_size=1 / 3)
+            cv = ShuffleSplit(n_splits=5, test_size=1 / 5)
 
             clf = GridSearchCV(svc, search_params, cv=cv)
             clf.fit(X, y)
