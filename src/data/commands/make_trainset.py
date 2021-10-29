@@ -9,12 +9,10 @@ from sklearn.preprocessing import LabelEncoder
 @click.argument("input_filepath", type=click.Path(exists=True))
 @click.argument("output_filepath", type=click.Path())
 def main(input_filepath, output_filepath):
-    p = pathlib.Path(input_filepath)
-
-    for path in p.iterdir():
+    for path in pathlib.Path(input_filepath).iterdir():
         if path.is_file():
-
             df = pd.read_csv(path, dtype={"piece": str}, index_col="piece")
+
             df = _add_style_period_labels(df)
 
             lda = LinearDiscriminantAnalysis(n_components=3)
@@ -30,6 +28,7 @@ def main(input_filepath, output_filepath):
             )
             transformed_df = _add_style_period_labels(transformed_df)
 
+            pathlib.Path(output_filepath).mkdir(exist_ok=True)
             transformed_df.to_csv(f"{output_filepath}/{path.name}")
 
 
@@ -40,5 +39,5 @@ def _add_style_period_labels(data: pd.DataFrame) -> pd.DataFrame:
     return data
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()

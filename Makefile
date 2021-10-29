@@ -18,19 +18,13 @@ tis_feats:
 	${PYTHON_INTERPRETER} -m src.data.commands.make_tis_feats data/interim/hcdf_segmented data/interim/$(pipeline) $(pipeline)
 
 combine_feats:
-	${PYTHON_INTERPRETER} -m src.data.combine_pipeline_output $(pipelines)
+	${PYTHON_INTERPRETER} -m src.data.commands.combine_pipeline_output $(pipelines)
 
-weiss_trainset:
-	${PYTHON_INTERPRETER} -m src.data.commands.make_weiss_trainset data/interim/$(pipeline) data/processed/weiss
+trainset:
+	${PYTHON_INTERPRETER} -m src.data.commands.make_trainset data/interim/$(pipeline) data/processed/$(pipeline)
 
-tis_trainset:
-	${PYTHON_INTERPRETER} -m src.data.commands.make_tis_trainset data/interim/$(pipeline) data/processed/tis
-
-weiss_train:
-	${PYTHON_INTERPRETER} -m src.models.weiss data/processed/weiss models/weiss
-
-tis_train:
-	${PYTHON_INTERPRETER} -m src.models.weiss data/processed/tis models/tis
+train:
+	${PYTHON_INTERPRETER} -m src.models.weiss data/processed/$(pipeline) models/$(pipeline)
 
 plot_lda:
 	${PYTHON_INTERPRETER} -m src.tools.plot_lda $(dataset) "$(title)"
