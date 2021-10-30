@@ -22,11 +22,12 @@ def main(input_filepath, output_filepath):
             X = data.drop("style_period", axis=1)
             y = le.fit_transform(data["style_period"])
 
-            c = [2 ** x for x in range(-5, 15)]
+            c = [2 ** x for x in range(-5, 17, 2)]
+            gamma = [2 ** x for x in range(-15, 5, 2)]
 
             search_params = {
                 "C": c,
-                "gamma": ["scale", "auto"]
+                "gamma": gamma
             }
             svc = svm.SVC(kernel="rbf")
 
