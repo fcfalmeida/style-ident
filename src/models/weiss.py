@@ -4,7 +4,7 @@ import pandas as pd
 import numpy as np
 from sklearn import svm
 from sklearn.preprocessing import LabelEncoder
-from sklearn.model_selection import cross_val_score, GridSearchCV, ShuffleSplit
+from sklearn.model_selection import cross_val_score, GridSearchCV, KFold
 
 
 @click.command()
@@ -30,7 +30,7 @@ def main(input_filepath, output_filepath):
             }
             svc = svm.SVC(kernel="rbf")
 
-            cv = ShuffleSplit(n_splits=5, test_size=1 / 5)
+            cv = KFold(n_splits=5, shuffle=True)
 
             clf = GridSearchCV(svc, search_params, cv=cv)
             clf.fit(X, y)
@@ -62,7 +62,7 @@ def main(input_filepath, output_filepath):
 
 def train(X, y, C, gamma):
     clf = svm.SVC(kernel="rbf", C=C, gamma=gamma)
-    cv = ShuffleSplit(n_splits=3, test_size=1 / 3)
+    cv = KFold(n_splits=3, shuffle=True)
 
     scores = cross_val_score(clf, X, y, cv=cv)
 
