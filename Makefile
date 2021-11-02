@@ -8,14 +8,14 @@ install:
 crossera:
 	${PYTHON_INTERPRETER} -m src.data.commands.make_crossera data/external/chroma data/interim/crossera
 
-weiss_feats:
-	${PYTHON_INTERPRETER} -m src.data.commands.make_weiss_feats data/interim/crossera data/interim/$(pipeline) $(pipeline)
+res_feats:
+	${PYTHON_INTERPRETER} -m src.data.commands.make_res_feats data/interim/crossera data/interim/$(pipeline) $(pipeline)
 
 hcdf_segmentation:
 	${PYTHON_INTERPRETER} -m src.data.commands.make_hcdf_segmentation data/interim/crossera data/interim/hcdf_segmented
 
-tis_feats:
-	${PYTHON_INTERPRETER} -m src.data.commands.make_tis_feats data/interim/hcdf_segmented data/interim/$(pipeline) $(pipeline)
+segmented_feats:
+	${PYTHON_INTERPRETER} -m src.data.commands.make_segmented_feats data/interim/hcdf_segmented data/interim/$(pipeline) $(pipeline)
 
 combine_feats:
 	${PYTHON_INTERPRETER} -m src.data.commands.combine_pipeline_output $(pipelines)
