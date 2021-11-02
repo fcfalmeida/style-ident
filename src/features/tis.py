@@ -6,13 +6,13 @@ from src.data.tasks.pipeline_task import PipelineTask
 from src.data.constants.features import TISFeats
 from src.data.constants.feature_groups import (
     CHROMA_FEATS,
-    TIS_BASIC_COLS,
+    TIS_FEATS,
     TIS_COEFFICIENTS
 )
 import src.utils.math as math
 
 
-class TISBasic(PipelineTask):
+class TIS(PipelineTask):
     def _tiv_mags(self, tivs: TIVCollection):
         return np.abs(tivs.vectors)
 
@@ -46,4 +46,4 @@ class TISBasic(PipelineTask):
             data_cpy[TIS_COEFFICIENTS].values
         )
 
-        return data_cpy[TIS_BASIC_COLS]
+        return data_cpy[TIS_FEATS]

@@ -3,10 +3,10 @@ import numpy as np
 import pandas as pd
 from numpy.typing import ArrayLike
 from TIVlib import TIVCollection
-from src.features.tis_basic import TISBasic
+from src.features.tis import TIS
 
 
-class TestTISBasic:
+class TestTIS:
     @pytest.fixture
     def chroma_data(scope="class"):
         chroma = np.array(
@@ -254,7 +254,7 @@ class TestTISBasic:
             ]
         )
 
-        result = TISBasic()._dissonance(tivs)
+        result = TIS()._dissonance(tivs)
 
         assert np.allclose(result, expected)
 
@@ -299,7 +299,7 @@ class TestTISBasic:
             ]
         )
 
-        result = TISBasic()._tiv_mags(tivs)
+        result = TIS()._tiv_mags(tivs)
 
         assert np.allclose(result, expected)
 
@@ -340,9 +340,9 @@ class TestTISBasic:
     ):
         tivs = TIVCollection.from_pcp(chroma_data.T)
 
-        tiv_mags = TISBasic()._tiv_mags(tivs)
+        tiv_mags = TIS()._tiv_mags(tivs)
 
-        result = TISBasic()._coefficient(tiv_mags, k)
+        result = TIS()._coefficient(tiv_mags, k)
 
         assert np.allclose(result, expected)
 
@@ -449,7 +449,7 @@ class TestTISBasic:
 
         expected = expected.set_index(["piece", "time"])
 
-        result = TISBasic().run(data)
+        result = TIS().run(data)
 
         compare = pd.DataFrame(
             np.isclose(expected, result), columns=expected.columns)

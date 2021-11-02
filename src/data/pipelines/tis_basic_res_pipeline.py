@@ -1,13 +1,13 @@
 from src.data.pipelines.feature_pipeline import FeaturePipeline
-from src.data.constants.feature_groups import TIS_BASIC_COLS
+from src.data.constants.feature_groups import TIS_BASIC_FEATS
 from src.features.chroma_resolution import ChromaResolution
-from src.features.tis_basic import TISBasic
+from src.features.tis import TIS
 
 
 class TISBasicResPipeline(FeaturePipeline):
     def __init__(self, chroma_resolution: float) -> None:
         super().__init__(
-            [TISBasic()],
-            TIS_BASIC_COLS,
+            [TIS()],
+            TIS_BASIC_FEATS,
             [ChromaResolution(chroma_resolution)]
         )
