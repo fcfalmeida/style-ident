@@ -7,11 +7,11 @@ from src.data.tasks.pipeline_task import PipelineTask
 from src.data.constants.features import TISFeats
 from src.data.constants.feature_groups import (
     CHROMA_FEATS,
-    TIS_COLS
+    TIS_PIECE_FEATS
 )
 
 
-class TIS(PipelineTask):
+class TISPiece(PipelineTask):
     DIST_EUCLIDEAN = 0
     DIST_COSINE = 1
 
@@ -95,4 +95,4 @@ class TIS(PipelineTask):
             data_cpy.loc[piece, TISFeats.COS_DIST] = cos_dist
             data_cpy.loc[piece, TISFeats.EUC_DIST] = euc_dist
 
-        return data_cpy[TIS_COLS]
+        return data_cpy[TIS_PIECE_FEATS]

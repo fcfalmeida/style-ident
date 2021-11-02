@@ -3,10 +3,10 @@ import numpy as np
 import pandas as pd
 from numpy.typing import ArrayLike
 from TIVlib import TIVCollection
-from src.features.tis import TIS
+from src.features.tis_piece import TISPiece
 
 
-class TestTIS:
+class TestTISPiece:
     @pytest.fixture
     def chroma_data(scope="class"):
         chroma = np.array(
@@ -245,11 +245,11 @@ class TestTIS:
         "distance_type, expected",
         [
             (
-                TIS.DIST_COSINE,
+                TISPiece.DIST_COSINE,
                 np.array([1.0988581, 0.88569352, 0.47083198, 0, 1.16067857]),
             ),
             (
-                TIS.DIST_EUCLIDEAN,
+                TISPiece.DIST_EUCLIDEAN,
                 np.array(
                     [
                         7.024411157159626,
@@ -267,16 +267,16 @@ class TestTIS:
     ):
         tivs = TIVCollection.from_pcp(chroma_data.T)
 
-        result = TIS()._tonal_dispersion(chroma_data, tivs, distance_type)
+        result = TISPiece()._tonal_dispersion(chroma_data, tivs, distance_type)
 
         assert np.allclose(result, expected)
 
     @pytest.mark.parametrize(
         "distance_type, expected",
         [
-            (TIS.DIST_COSINE, np.array([1.9128754, 0.92266401, 0, 0, 0])),
+            (TISPiece.DIST_COSINE, np.array([1.9128754, 0.92266401, 0, 0, 0])),
             (
-                TIS.DIST_EUCLIDEAN,
+                TISPiece.DIST_EUCLIDEAN,
                 np.array(
                     [
                         10.928152516237695,
@@ -294,7 +294,7 @@ class TestTIS:
     ):
         tivs = TIVCollection.from_pcp(chroma_data.T)
 
-        result = TIS()._distance(tivs, distance_type)
+        result = TISPiece()._distance(tivs, distance_type)
 
         assert np.allclose(result, expected)
 
@@ -368,7 +368,7 @@ class TestTIS:
 
         expected = expected.set_index(["piece", "time"])
 
-        result = TIS().run(data)
+        result = TISPiece().run(data)
 
         compare = pd.DataFrame(
             np.isclose(expected, result), columns=expected.columns)
