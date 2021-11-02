@@ -63,13 +63,6 @@ class TIS(PipelineTask):
 
         return dist
 
-    def _hcdf_peak_interval(self, hcdf_peak_indexes: ArrayLike):
-        intervals = hcdf_peak_indexes[1:] - hcdf_peak_indexes[0:-1]
-
-        intervals = np.append(intervals, 0)
-
-        return intervals
-
     def run(self, data: pd.DataFrame) -> pd.DataFrame:
         data_cpy = data.copy()
 
@@ -101,10 +94,5 @@ class TIS(PipelineTask):
             data_cpy.loc[piece, TISFeats.EUC_TONAL_DISP] = euc_tonal_disp
             data_cpy.loc[piece, TISFeats.COS_DIST] = cos_dist
             data_cpy.loc[piece, TISFeats.EUC_DIST] = euc_dist
-
-            data_cpy.loc[
-                piece, TISFeats.HCDF_PEAK_INT] = self._hcdf_peak_interval(
-                    group[TISFeats.HCDF_PEAK_IDX].values
-            )
 
         return data_cpy[TIS_COLS]

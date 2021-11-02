@@ -358,7 +358,6 @@ class TestTISBasic:
                 "dim_quality": 0.1889306,
                 "diatonicity": 0.21732042,
                 "wholetoneness": 0.12074303,
-                "hcdf_peak_mag": 0,
                 "coef_entropy": 2.4559371
             },
             {
@@ -371,7 +370,6 @@ class TestTISBasic:
                 "dim_quality": 0.04029938,
                 "diatonicity": 0.13624077,
                 "wholetoneness": 0.19373219,
-                "hcdf_peak_mag": 0.8,
                 "coef_entropy": 2.3440925
             },
             {
@@ -384,7 +382,6 @@ class TestTISBasic:
                 "dim_quality": 0,
                 "diatonicity": 0,
                 "wholetoneness": 0,
-                "hcdf_peak_mag": 1.3,
                 "coef_entropy": 0
             },
             {
@@ -397,7 +394,6 @@ class TestTISBasic:
                 "dim_quality": 0.44405399,
                 "diatonicity": 0.22995932,
                 "wholetoneness": 0.03006012,
-                "hcdf_peak_mag": 0.65,
                 "coef_entropy": 2.23982496
             },
             {
@@ -410,7 +406,6 @@ class TestTISBasic:
                 "dim_quality": 0.33863814,
                 "diatonicity": 0.25832167,
                 "wholetoneness": 0.2724359,
-                "hcdf_peak_mag": 0,
                 "coef_entropy": 2.5141074
             },
             {
@@ -423,7 +418,6 @@ class TestTISBasic:
                 "dim_quality": 0.04029938,
                 "diatonicity": 0.13624077,
                 "wholetoneness": 0.19373219,
-                "hcdf_peak_mag": 1.24,
                 "coef_entropy": 2.3440925
             },
             {
@@ -436,7 +430,6 @@ class TestTISBasic:
                 "dim_quality": 0.25771809,
                 "diatonicity": 0.19792183,
                 "wholetoneness": 0.00304569,
-                "hcdf_peak_mag": 0.93,
                 "coef_entropy": 2.29402995
 
             },
@@ -450,7 +443,6 @@ class TestTISBasic:
                 "dim_quality": 0.35473626,
                 "diatonicity": 0.19622033,
                 "wholetoneness": 0.05767894,
-                "hcdf_peak_mag": 1.79,
                 "coef_entropy": 2.44540898
             }
         ])
