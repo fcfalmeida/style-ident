@@ -3,6 +3,6 @@ from src.data.constants.feature_groups import TIS_COLS
 from src.features.tis import TIS
 
 
-class TISPipeline(FeaturePipeline):
+class TISSegmentedPipeline(FeaturePipeline):
     def __init__(self) -> None:
         super().__init__([TIS()], TIS_COLS)

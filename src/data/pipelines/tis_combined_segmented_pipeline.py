@@ -4,6 +4,6 @@ from src.features.tis_basic import TISBasic
 from src.features.tis import TIS
 
 
-class TISCombinedPipeline(FeaturePipeline):
+class TISCombinedSegmentedPipeline(FeaturePipeline):
     def __init__(self) -> None:
         super().__init__([TISBasic(), TIS()], TIS_BASIC_COLS + TIS_COLS)
