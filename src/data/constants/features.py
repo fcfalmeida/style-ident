@@ -41,9 +41,6 @@ class ComplexityFeats:
 
 class TISFeats:
     TIV = 'TIV'
-    HCDF_PEAK_IDX = 'hcdf_peak_idx'
-    HCDF_PEAK_MAG = 'hcdf_peak_mag'
-    HCDF_PEAK_INT = 'hcdf_peak_interval'
     DISSONANCE = 'dissonance'
     CHROMATICITY = 'chromaticity'
     DYADICITY = 'dyadicity'
@@ -56,3 +53,9 @@ class TISFeats:
     COS_DIST = 'cos_dist'
     EUC_DIST = 'euc_dist'
     COEF_ENTROPY = 'coef_entropy'
+
+
+class HarmRhythmFeats:
+    HCDF_PEAK_IDX = 'hcdf_peak_idx'
+    HCDF_PEAK_MAG = 'hcdf_peak_mag'
+    HCDF_PEAK_INT = 'hcdf_peak_interval'

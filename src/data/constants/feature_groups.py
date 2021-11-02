@@ -1,5 +1,6 @@
 from src.data.constants.features import (
     ChromaFeats,
+    HarmRhythmFeats,
     IntervalFeats,
     ChordFeats,
     ComplexityFeats,
@@ -67,7 +68,6 @@ TIS_BASIC_COLS = [
     TISFeats.DIMINISHED_QUALITTY,
     TISFeats.DIATONICITY,
     TISFeats.WHOLETONENESS,
-    TISFeats.HCDF_PEAK_MAG,
     TISFeats.COEF_ENTROPY
 ]
 
@@ -75,6 +75,10 @@ TIS_COLS = [
     TISFeats.COS_TONAL_DISP,
     TISFeats.EUC_TONAL_DISP,
     TISFeats.COS_DIST,
-    TISFeats.EUC_DIST,
-    TISFeats.HCDF_PEAK_INT
+    TISFeats.EUC_DIST
+]
+
+HARM_RHYTHM_FEATS = [
+    HarmRhythmFeats.HCDF_PEAK_INT,
+    HarmRhythmFeats.HCDF_PEAK_MAG
 ]
