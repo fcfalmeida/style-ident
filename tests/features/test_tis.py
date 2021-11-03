@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 from numpy.typing import ArrayLike
 from TIVlib import TIVCollection
-from src.features.tis import TIS
+from src.features.tis_vertical import TISVertical
 
 
 class TestTIS:
@@ -254,7 +254,7 @@ class TestTIS:
             ]
         )
 
-        result = TIS()._dissonance(tivs)
+        result = TISVertical()._dissonance(tivs)
 
         assert np.allclose(result, expected)
 
@@ -299,7 +299,7 @@ class TestTIS:
             ]
         )
 
-        result = TIS()._tiv_mags(tivs)
+        result = TISVertical()._tiv_mags(tivs)
 
         assert np.allclose(result, expected)
 
@@ -340,9 +340,9 @@ class TestTIS:
     ):
         tivs = TIVCollection.from_pcp(chroma_data.T)
 
-        tiv_mags = TIS()._tiv_mags(tivs)
+        tiv_mags = TISVertical()._tiv_mags(tivs)
 
-        result = TIS()._coefficient(tiv_mags, k)
+        result = TISVertical()._coefficient(tiv_mags, k)
 
         assert np.allclose(result, expected)
 
@@ -449,7 +449,7 @@ class TestTIS:
 
         expected = expected.set_index(["piece", "time"])
 
-        result = TIS().run(data)
+        result = TISVertical().run(data)
 
         compare = pd.DataFrame(
             np.isclose(expected, result), columns=expected.columns)

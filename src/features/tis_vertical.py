@@ -12,7 +12,7 @@ from src.data.constants.feature_groups import (
 import src.utils.math as math
 
 
-class TIS(PipelineTask):
+class TISVertical(PipelineTask):
     def _tiv_mags(self, tivs: TIVCollection):
         return np.abs(tivs.vectors)
 
