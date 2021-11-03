@@ -3,10 +3,10 @@ import numpy as np
 import pandas as pd
 from numpy.typing import ArrayLike
 from TIVlib import TIVCollection
-from src.features.tis_piece import TISPiece
+from src.features.tis_horizontal import TISHorizontal
 
 
-class TestTISPiece:
+class TestTISHorizontal:
     @pytest.fixture
     def chroma_data(scope="class"):
         chroma = np.array(
@@ -245,11 +245,11 @@ class TestTISPiece:
         "distance_type, expected",
         [
             (
-                TISPiece.DIST_COSINE,
+                TISHorizontal.DIST_COSINE,
                 np.array([1.0988581, 0.88569352, 0.47083198, 0, 1.16067857]),
             ),
             (
-                TISPiece.DIST_EUCLIDEAN,
+                TISHorizontal.DIST_EUCLIDEAN,
                 np.array(
                     [
                         7.024411157159626,
@@ -267,16 +267,16 @@ class TestTISPiece:
     ):
         tivs = TIVCollection.from_pcp(chroma_data.T)
 
-        result = TISPiece()._tonal_dispersion(chroma_data, tivs, distance_type)
+        result = TISHorizontal()._tonal_dispersion(chroma_data, tivs, distance_type)
 
         assert np.allclose(result, expected)
 
     @pytest.mark.parametrize(
         "distance_type, expected",
         [
-            (TISPiece.DIST_COSINE, np.array([1.9128754, 0.92266401, 0, 0, 0])),
+            (TISHorizontal.DIST_COSINE, np.array([1.9128754, 0.92266401, 0, 0, 0])),
             (
-                TISPiece.DIST_EUCLIDEAN,
+                TISHorizontal.DIST_EUCLIDEAN,
                 np.array(
                     [
                         10.928152516237695,
@@ -294,7 +294,7 @@ class TestTISPiece:
     ):
         tivs = TIVCollection.from_pcp(chroma_data.T)
 
-        result = TISPiece()._distance(tivs, distance_type)
+        result = TISHorizontal()._distance(tivs, distance_type)
 
         assert np.allclose(result, expected)
 
@@ -368,7 +368,7 @@ class TestTISPiece:
 
         expected = expected.set_index(["piece", "time"])
 
-        result = TISPiece().run(data)
+        result = TISHorizontal().run(data)
 
         compare = pd.DataFrame(
             np.isclose(expected, result), columns=expected.columns)

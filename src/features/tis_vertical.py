@@ -6,7 +6,7 @@ from src.data.tasks.pipeline_task import PipelineTask
 from src.data.constants.features import TISFeats
 from src.data.constants.feature_groups import (
     CHROMA_FEATS,
-    TIS_FEATS,
+    TIS_VERTICAL_FEATS,
     TIS_COEFFICIENTS
 )
 import src.utils.math as math
@@ -46,4 +46,4 @@ class TISVertical(PipelineTask):
             data_cpy[TIS_COEFFICIENTS].values
         )
 
-        return data_cpy[TIS_FEATS]
+        return data_cpy[TIS_VERTICAL_FEATS]
