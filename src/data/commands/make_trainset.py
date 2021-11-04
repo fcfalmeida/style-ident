@@ -9,6 +9,10 @@ from sklearn.preprocessing import LabelEncoder
 @click.argument("input_filepath", type=click.Path(exists=True))
 @click.argument("output_filepath", type=click.Path())
 def main(input_filepath, output_filepath):
+    execute(input_filepath, output_filepath)
+
+
+def execute(input_filepath, output_filepath):
     for path in pathlib.Path(input_filepath).iterdir():
         if path.is_file():
             df = pd.read_csv(path, dtype={"piece": str}, index_col="piece")
