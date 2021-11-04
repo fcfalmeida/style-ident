@@ -3,15 +3,25 @@ import pathlib
 import pandas as pd
 from src.features.chroma_resolution import ChromaResolution
 from src.utils.formatters import format_chroma_resolution
-from src.data.pipelines.catalogue import pipeline_catalogue
+from src.data.pipelines.catalogue import res_pipelines
+from src.data.constants.others import EXTERNAL_DIR, INTERIM_DIR
 
 
 @click.command()
-@click.argument("input_filepath", type=click.Path(exists=True))
-@click.argument("output_filepath", type=click.Path())
 @click.argument("pipeline_name", type=str)
-def main(input_filepath, output_filepath, pipeline_name):
+def main(pipeline_name):
+    execute(pipeline_name)
+
+
+def execute(pipeline_name):
     RESOLUTIONS = [0.1, 0.5, 10, ChromaResolution.GLOBAL]
+
+    input_filepath = f'{EXTERNAL_DIR}/crossera'
+    output_filepath = f'{INTERIM_DIR}/{pipeline_name}'
+
+    print(
+        f'Processing resolution features for pipeline: {pipeline_name}'
+    )
 
     for path in pathlib.Path(input_filepath).iterdir():
         if path.is_file():
@@ -19,21 +29,20 @@ def main(input_filepath, output_filepath, pipeline_name):
             data = data.fillna(method="ffill")
 
             for resolution in RESOLUTIONS:
-                pipeline = pipeline_catalogue[pipeline_name](resolution)
+                pipeline = res_pipelines[pipeline_name](resolution)
 
                 processed = pipeline.run(data)
 
                 formatted_res = format_chroma_resolution(resolution)
                 filename_no_ext = path.name.rsplit(".", 1)[0]
 
-                print(
-                    f"Processed {path} for {formatted_res} chroma resolution"
-                )
+                outfile = \
+                    f'{output_filepath}/{filename_no_ext}_{formatted_res}.csv'
 
                 pathlib.Path(output_filepath).mkdir(exist_ok=True)
-                processed.to_csv(
-                    f"{output_filepath}/{filename_no_ext}_{formatted_res}.csv"
-                )
+                processed.to_csv(outfile)
+
+                print(f'Wrote {outfile}')
 
     TYPES = ["piano", "orchestra", "full"]
 

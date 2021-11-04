@@ -7,6 +7,10 @@ from src.data.constants.others import INTERIM_DIR
 @click.command()
 @click.argument('pipelines', type=str, nargs=-1)
 def main(pipelines):
+    execute(pipelines)
+
+
+def execute(pipelines):
     TYPES = ['orchestra', 'piano', 'full']
     pipelines_str = '_'.join(pipelines)
 
