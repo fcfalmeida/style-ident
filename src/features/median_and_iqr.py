@@ -1,15 +1,11 @@
-import pandas as pd
 import numpy as np
 from scipy.stats import iqr
-from src.data.tasks.pipeline_task import PipelineTask
+from src.features.stats import Stats
 
 
-class MedianAndIQR(PipelineTask):
+class MedianAndIQR(Stats):
     """This task computes the median and IQR of all columns in a
     `DataFrame` object."""
 
-    def run(self, data: pd.DataFrame) -> pd.DataFrame:
-        temp = data.groupby("piece").agg([np.median, iqr])
-        temp.columns = temp.columns.to_flat_index()
-
-        return temp
+    def __init__(self):
+        super().__init__([np.median, iqr])

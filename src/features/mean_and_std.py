@@ -1,17 +1,13 @@
-import pandas as pd
 import numpy as np
-from src.data.tasks.pipeline_task import PipelineTask
+from src.features.stats import Stats
 
 
-class MeanAndStd(PipelineTask):
+class MeanAndStd(Stats):
     """This task computes the mean and standard deviation of all columns in a
     `DataFrame` object."""
 
-    def run(self, data: pd.DataFrame) -> pd.DataFrame:
+    def __init__(self):
         def std(data):
             return np.std(data)
 
-        temp = data.groupby("piece").agg([np.mean, std])
-        temp.columns = temp.columns.to_flat_index()
-
-        return temp
+        super().__init__([np.mean, std])

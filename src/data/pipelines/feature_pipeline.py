@@ -2,7 +2,7 @@ from src.data.pipelines.pipeline import Pipeline
 from src.data.tasks.pipeline_task import PipelineTask
 from src.data.tasks.pipeline_task_group import PipelineTaskGroup
 from src.data.tasks.select_columns import SelectColumns
-from src.features.mean_and_std import MeanAndStd
+from src.features.stats import Stats
 
 
 class FeaturePipeline(Pipeline):
@@ -10,7 +10,9 @@ class FeaturePipeline(Pipeline):
         self,
         feature_tasks: list[PipelineTask],
         feature_cols: list[str],
+        stats_task: Stats,
             prep_tasks: list[PipelineTask] = []) -> None:
+
         super().__init__()
 
         for task in prep_tasks:
@@ -24,4 +26,5 @@ class FeaturePipeline(Pipeline):
         self.add_task(group)
 
         self.add_task(SelectColumns(feature_cols))
-        self.add_task(MeanAndStd())
+
+        self.add_task(stats_task)
