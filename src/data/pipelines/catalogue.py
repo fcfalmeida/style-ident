@@ -1,3 +1,4 @@
+import src.utils.lists as lst_utils
 from src.data.pipelines.tis_complexity_segmented_pipeline import (
     TISComplexitySegmentedPipeline,
 )
@@ -25,3 +26,14 @@ res_pipelines = {
     'complexity': ComplexityPipeline,
     'template_based': TemplateBasedPipeline,
 }
+
+
+def all_pipeline_combinations() -> list:
+    segmented_pipeline_names = list(segmented_pipelines.keys())
+    res_pipeline_names = list(res_pipelines.keys())
+
+    combs = lst_utils.all_combinations(
+        segmented_pipeline_names + res_pipeline_names
+    )
+
+    return combs
