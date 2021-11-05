@@ -124,6 +124,14 @@ class TestMath:
 
         result = math.entropy(values)
 
-        print(result)
+        assert np.allclose(result, expected)
+
+    @pytest.mark.parametrize("values, expected", [
+        (np.array([0.14, 0.26, 0.48, 0.02]), (-0.1975, 0.6225)),
+        (np.array([0.99, 0.88, 0.77, 0.66]), (0.495, 1.155)),
+        (np.array([0.0, 0.0, 0.0, 0.0]), (0.0, 0.0))
+    ])
+    def test_whisker_values(self, values, expected):
+        result = math.whisker_values(values)
 
         assert np.allclose(result, expected)

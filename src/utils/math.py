@@ -81,3 +81,25 @@ def entropy(values: ArrayLike):
         An array of the entropy value for each row of `values´
     """
     return np.sum(-values * np.log2(values, where=values > 0), axis=1)
+
+
+def whisker_values(arr: ArrayLike):
+    """Computes the whisker values of an array of values, row-wise.
+
+    Args:
+        arr: An array of values
+
+    Returns:
+        A tuple of (lower_whisker, upper_whisker) with the value of the
+        lower and upper whisker, respectively
+    """
+
+    q1 = np.percentile(arr, 25)
+    q3 = np.percentile(arr, 75)
+
+    iqr = q3 - q1
+
+    lower_whisker = q1 - 1.5 * iqr
+    upper_whisker = q3 + 1.5 * iqr
+
+    return lower_whisker, upper_whisker
