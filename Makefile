@@ -53,5 +53,5 @@ test:
 	pytest --cov-report term-missing --cov=src tests/
 
 clean:
-	rm -f data/interim/**/*.csv
-	rm -f data/processed/**/*.csv
+	rm -rf data/interim/*
+	rm -rf data/processed/*
