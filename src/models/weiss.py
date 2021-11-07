@@ -5,12 +5,22 @@ import numpy as np
 from sklearn import svm
 from sklearn.preprocessing import LabelEncoder
 from sklearn.model_selection import cross_val_score, GridSearchCV, KFold
+from src.data.constants.others import PROCESSED_DIR
 
 
 @click.command()
-@click.argument("input_filepath", type=click.Path(exists=True))
-@click.argument("output_filepath", type=click.Path())
-def main(input_filepath, output_filepath):
+@click.argument("pipeline_name", type=str)
+def main(pipeline_name):
+    execute(pipeline_name)
+
+
+def execute(pipeline_name: str):
+    input_filepath = f'{PROCESSED_DIR}/{pipeline_name}'
+
+    print('-' * 75)
+    print(f'Pipeline: {pipeline_name}')
+    print('-' * 75)
+
     for path in pathlib.Path(input_filepath).iterdir():
         if path.is_file():
             print(f"Dataset -> {path.name}")
@@ -21,6 +31,7 @@ def main(input_filepath, output_filepath):
             le = LabelEncoder()
             X = data.drop("style_period", axis=1)
             y = le.fit_transform(data["style_period"])
+            # y = data["style_period"].values
 
             c = [2 ** x for x in range(-5, 17, 2)]
             gamma = [2 ** x for x in range(-15, 5, 2)]
@@ -59,6 +70,9 @@ def main(input_filepath, output_filepath):
             print(f"Inter-run deviation: {interrun_std}")
             print(f"Inter-fold deviation: {interfold_std}")
             print("-" * 50)
+
+    print('-' * 75)
+    print('-' * 75)
 
 
 def train(X, y, C, gamma):

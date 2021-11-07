@@ -38,7 +38,10 @@ all_trainsets:
 	${PYTHON_INTERPRETER} -m src.data.commands.make_all_trainsets
 
 train:
-	${PYTHON_INTERPRETER} -m src.models.weiss data/processed/$(pipeline) models/$(pipeline)
+	${PYTHON_INTERPRETER} -m src.models.weiss $(pipeline)
+
+train_all:
+	${PYTHON_INTERPRETER} -m src.data.commands.train_all
 
 plot_lda:
 	${PYTHON_INTERPRETER} -m src.tools.plot_lda $(dataset) "$(title)"
