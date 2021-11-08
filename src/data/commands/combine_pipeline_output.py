@@ -2,25 +2,26 @@ import click
 import pathlib
 from src.data.pipeline_output_combiner import PipelineOutputCombiner
 from src.data.constants.others import INTERIM_DIR
+from src.data.dataset_config import dataset_config
 
 
 @click.command()
+@click.argument('dataset', type=str)
 @click.argument('pipelines', type=str, nargs=-1)
-def main(pipelines):
-    execute(pipelines)
+def main(dataset, pipelines):
+    execute(dataset, pipelines)
 
 
-def execute(pipelines):
-    TYPES = ['orchestra', 'piano', 'full']
+def execute(dataset, pipelines):
     pipelines_str = '_'.join(pipelines)
 
-    for t in TYPES:
-        data = PipelineOutputCombiner.combine(pipelines, t, 'piece')
+    for cat in dataset_config[dataset]['categories']:
+        data = PipelineOutputCombiner.combine(pipelines, cat, 'piece')
 
-        output_dir = f'{INTERIM_DIR}/{pipelines_str}'
+        output_dir = f'{INTERIM_DIR}/{dataset}/{pipelines_str}'
         pathlib.Path(output_dir).mkdir(exist_ok=True)
 
-        data.to_csv(f'{output_dir}/chroma-nnls_{t}.csv')
+        data.to_csv(f'{output_dir}/chroma-nnls_{cat}.csv')
 
 
 if __name__ == '__main__':

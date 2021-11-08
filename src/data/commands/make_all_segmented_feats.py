@@ -4,9 +4,10 @@ from src.data.pipelines.catalogue import segmented_pipelines
 
 
 @click.command()
-def main():
+@click.argument('dataset', type=str)
+def main(dataset):
     for pipeline_name in segmented_pipelines.keys():
-        make_segmented_feats.execute(pipeline_name)
+        make_segmented_feats.execute(dataset, pipeline_name)
 
 
 if __name__ == '__main__':

@@ -3,12 +3,15 @@ import pathlib
 import pandas as pd
 from src.data.pipelines.pipeline import Pipeline
 from src.features.hcdf_segmentation import HCDFSegmentation
+from src.data.constants.others import EXTERNAL_DIR, HCDF_SEGMENTED_DIR
 
 
 @click.command()
-@click.argument("input_filepath", type=click.Path(exists=True))
-@click.argument("output_filepath", type=click.Path())
-def main(input_filepath, output_filepath):
+@click.argument('dataset', type=str)
+def main(dataset):
+    input_filepath = f'{EXTERNAL_DIR}/{dataset}'
+    output_filepath = f'{HCDF_SEGMENTED_DIR}/{dataset}'
+
     for path in pathlib.Path(input_filepath).iterdir():
         if path.is_file():
             data = pd.read_csv(path, dtype={"piece": str})

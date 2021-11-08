@@ -6,14 +6,15 @@ from src.data.constants.others import INTERIM_DIR, HCDF_SEGMENTED_DIR
 
 
 @click.command()
+@click.argument('dataset', type=str)
 @click.argument("pipeline_name", type=str)
-def main(pipeline_name):
-    execute(pipeline_name)
+def main(dataset, pipeline_name):
+    execute(dataset, pipeline_name)
 
 
-def execute(pipeline_name):
-    input_filepath = HCDF_SEGMENTED_DIR
-    output_filepath = f'{INTERIM_DIR}/{pipeline_name}'
+def execute(dataset, pipeline_name):
+    input_filepath = f'{HCDF_SEGMENTED_DIR}/{dataset}'
+    output_filepath = f'{INTERIM_DIR}/{dataset}/{pipeline_name}'
 
     print(
         f'Processing segmented features for pipeline: {pipeline_name}'

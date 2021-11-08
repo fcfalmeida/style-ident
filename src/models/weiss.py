@@ -6,16 +6,20 @@ from sklearn import svm
 from sklearn.preprocessing import LabelEncoder
 from sklearn.model_selection import cross_val_score, GridSearchCV, KFold
 from src.data.constants.others import PROCESSED_DIR
+from src.data.dataset_config import dataset_config
 
 
 @click.command()
+@click.argument('dataset', type=str)
 @click.argument("pipeline_name", type=str)
-def main(pipeline_name):
-    execute(pipeline_name)
+def main(dataset, pipeline_name):
+    execute(dataset, pipeline_name)
 
 
-def execute(pipeline_name: str):
-    input_filepath = f'{PROCESSED_DIR}/{pipeline_name}'
+def execute(dataset: str, pipeline_name: str):
+    input_filepath = f'{PROCESSED_DIR}/{dataset}/{pipeline_name}'
+
+    target_col = dataset_config[dataset]['target_col']
 
     print('-' * 75)
     print(f'Pipeline: {pipeline_name}')
@@ -29,9 +33,8 @@ def execute(pipeline_name: str):
             data = pd.read_csv(path, dtype={"piece": str}, index_col="piece")
 
             le = LabelEncoder()
-            X = data.drop("style_period", axis=1)
-            y = le.fit_transform(data["style_period"])
-            # y = data["style_period"].values
+            X = data.drop(target_col, axis=1).values
+            y = le.fit_transform(data[target_col])
 
             c = [2 ** x for x in range(-5, 17, 2)]
             gamma = [2 ** x for x in range(-15, 5, 2)]

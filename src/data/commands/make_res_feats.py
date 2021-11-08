@@ -5,19 +5,21 @@ from src.features.chroma_resolution import ChromaResolution
 from src.utils.formatters import format_chroma_resolution
 from src.data.pipelines.catalogue import res_pipelines
 from src.data.constants.others import EXTERNAL_DIR, INTERIM_DIR
+from src.data.dataset_config import dataset_config
 
 
 @click.command()
+@click.argument("dataset", type=str)
 @click.argument("pipeline_name", type=str)
-def main(pipeline_name):
-    execute(pipeline_name)
+def main(dataset, pipeline_name):
+    execute(dataset, pipeline_name)
 
 
-def execute(pipeline_name):
+def execute(dataset, pipeline_name):
     RESOLUTIONS = [0.1, 0.5, 10, ChromaResolution.GLOBAL]
 
-    input_filepath = f'{EXTERNAL_DIR}/crossera'
-    output_filepath = f'{INTERIM_DIR}/{pipeline_name}'
+    input_filepath = f'{EXTERNAL_DIR}/{dataset}'
+    output_filepath = f'{INTERIM_DIR}/{dataset}/{pipeline_name}'
 
     print(
         f'Processing resolution features for pipeline: {pipeline_name}'
@@ -44,14 +46,14 @@ def execute(pipeline_name):
 
                 print(f'Wrote {outfile}')
 
-    TYPES = ["piano", "orchestra", "full"]
-
-    for t in TYPES:
-        files = list(pathlib.Path(output_filepath).glob(f"chroma-nnls_{t}_*"))
+    for cat in dataset_config[dataset]['categories']:
+        files = list(
+            pathlib.Path(output_filepath).glob(f"chroma-nnls_{cat}_*")
+        )
 
         joined = join_datasets(files)
 
-        joined.to_csv(f"{output_filepath}/chroma-nnls_{t}.csv")
+        joined.to_csv(f"{output_filepath}/chroma-nnls_{cat}.csv")
 
     cleanup_output_dir(output_filepath)
 
@@ -62,7 +64,7 @@ def join_datasets(files: list[str]):
     for f in files:
         data = pd.read_csv(f, dtype={"piece": str}, index_col="piece")
 
-        resolution = f.name.split("_")[2]
+        resolution = f.name.split("_")[-1]
         resolution = resolution.replace(".csv", "")
 
         data = data.add_suffix(f"_{resolution}")

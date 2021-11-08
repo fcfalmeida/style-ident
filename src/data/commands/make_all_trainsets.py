@@ -5,10 +5,13 @@ import src.data.commands.make_trainset as make_trainset
 
 
 @click.command()
-def main():
-    for path in pathlib.Path(INTERIM_DIR).iterdir():
+@click.argument('dataset', type=str)
+def main(dataset):
+    input_filepath = f'{INTERIM_DIR}/{dataset})'
+
+    for path in pathlib.Path(input_filepath).iterdir():
         if path.is_dir():
-            output_path = f'{PROCESSED_DIR}/{path.name}'
+            output_path = f'{PROCESSED_DIR}/{dataset}/{path.name}'
             make_trainset.execute(str(path), output_path)
 
             print(f'Created {output_path} trainset')
