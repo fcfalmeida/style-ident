@@ -16,7 +16,7 @@ def execute(dataset, pipelines):
     pipelines_str = '_'.join(pipelines)
 
     for cat in dataset_config[dataset]['categories']:
-        data = PipelineOutputCombiner.combine(pipelines, cat, 'piece')
+        data = PipelineOutputCombiner.combine(dataset, pipelines, cat, 'piece')
 
         output_dir = f'{INTERIM_DIR}/{dataset}/{pipelines_str}'
         pathlib.Path(output_dir).mkdir(exist_ok=True)

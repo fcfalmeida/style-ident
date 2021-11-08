@@ -41,8 +41,11 @@ def execute(dataset, pipeline_name):
             )
             transformed_df = _add_class_labels(transformed_df, target_col)
 
+            outfile = f'{output_filepath}/{path.name}'
             pathlib.Path(output_filepath).mkdir(exist_ok=True)
-            transformed_df.to_csv(f"{output_filepath}/{path.name}")
+            transformed_df.to_csv(outfile)
+
+            print(f'Created {pipeline_name} trainset')
 
 
 def _add_class_labels(data: pd.DataFrame, colname: str) -> pd.DataFrame:
