@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 import copy
 from lib.HCDF.HCDF import harmonic_change
-from src.data.constants.features import TISFeats
+from src.data.constants.features import HarmRhythmFeats
 from src.data.constants.feature_groups import CHROMA_FEATS
 from src.data.tasks.pipeline_task import PipelineTask
 
@@ -45,8 +45,8 @@ class HCDFSegmentation(PipelineTask):
                 row = group[left_bound_idx:right_bound_idx].sum().to_dict()
                 row['piece'] = piece
                 row['time'] = time
-                row[TISFeats.HCDF_PEAK_IDX] = peak_indexes[i]
-                row[TISFeats.HCDF_PEAK_MAG] = peak_mags[i]
+                row[HarmRhythmFeats.HCDF_PEAK_IDX] = peak_indexes[i]
+                row[HarmRhythmFeats.HCDF_PEAK_MAG] = peak_mags[i]
 
                 segmented.append(row)
 
