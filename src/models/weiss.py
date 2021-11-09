@@ -3,10 +3,15 @@ import pathlib
 import pandas as pd
 import numpy as np
 import csv
+import matplotlib.pyplot as plt
 from sklearn import svm
-from sklearn.preprocessing import LabelEncoder
-from sklearn.model_selection import cross_val_score, GridSearchCV, KFold, train_test_split
-from src.data.constants.others import PROCESSED_DIR, TRAINOUT_DIR
+from sklearn.model_selection import (
+    cross_val_score, GridSearchCV, KFold, train_test_split
+)
+from sklearn.metrics import plot_confusion_matrix
+from src.data.constants.others import (
+    PROCESSED_DIR, TRAINOUT_DIR, CONFUSION_MATRICES_DIR
+)
 from src.data.dataset_config import dataset_config
 
 
@@ -40,9 +45,8 @@ def execute(dataset: str, pipeline_name: str):
                 data = pd.read_csv(
                     path, dtype={"piece": str}, index_col="piece")
 
-                le = LabelEncoder()
                 X = data.drop(target_col, axis=1).values
-                y = le.fit_transform(data[target_col])
+                y = data[target_col].values
 
                 c = [2 ** x for x in range(-5, 17, 2)]
                 gamma = [2 ** x for x in range(-15, 5, 2)]
@@ -91,6 +95,13 @@ def execute(dataset: str, pipeline_name: str):
                     interfold_std
                 ])
 
+                _create_conf_matrix(
+                    clf,
+                    X_test,
+                    y_test,
+                    f'{CONFUSION_MATRICES_DIR}/{path.stem}_{pipeline_name}.png'
+                )
+
     print('-' * 75)
     print('-' * 75)
 
@@ -101,6 +112,14 @@ def _get_scores(clf, X_test, y_test):
     scores = cross_val_score(clf, X_test, y_test, cv=cv)
 
     return scores.mean(), scores.std()  # inter-fold deviation
+
+
+def _create_conf_matrix(clf, X_test, y_test, filename):
+    plot_confusion_matrix(
+        clf, X_test, y_test, normalize='true',
+        values_format='.2%', cmap='Greys', colorbar=False)
+
+    plt.savefig(filename)
 
 
 if __name__ == "__main__":
