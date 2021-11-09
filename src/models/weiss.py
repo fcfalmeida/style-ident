@@ -5,7 +5,7 @@ import numpy as np
 import csv
 from sklearn import svm
 from sklearn.preprocessing import LabelEncoder
-from sklearn.model_selection import cross_val_score, GridSearchCV, KFold
+from sklearn.model_selection import cross_val_score, GridSearchCV, KFold, train_test_split
 from src.data.constants.others import PROCESSED_DIR, TRAINOUT_DIR
 from src.data.dataset_config import dataset_config
 
@@ -55,17 +55,19 @@ def execute(dataset: str, pipeline_name: str):
 
                 cv = KFold(n_splits=5, shuffle=True)
 
+                X_train, X_test, y_train, y_test = train_test_split(
+                    X, y, test_size=0.3
+                )
+
                 clf = GridSearchCV(svc, search_params, cv=cv)
-                clf.fit(X, y)
+                clf.fit(X_train, y_train)
 
                 overall_mean_acc = 0
                 interfold_std = 0
                 mean_accuracies = []
                 runs = 10
                 for _ in range(runs):
-                    mean, std = train(
-                        X, y, clf.best_params_["C"], clf.best_params_["gamma"]
-                    )
+                    mean, std = _get_scores(clf, X_test, y_test)
 
                     overall_mean_acc += mean
                     mean_accuracies.append(mean)
@@ -93,11 +95,10 @@ def execute(dataset: str, pipeline_name: str):
     print('-' * 75)
 
 
-def train(X, y, C, gamma):
-    clf = svm.SVC(kernel="rbf", C=C, gamma=gamma)
+def _get_scores(clf, X_test, y_test):
     cv = KFold(n_splits=3, shuffle=True)
 
-    scores = cross_val_score(clf, X, y, cv=cv)
+    scores = cross_val_score(clf, X_test, y_test, cv=cv)
 
     return scores.mean(), scores.std()  # inter-fold deviation
 
