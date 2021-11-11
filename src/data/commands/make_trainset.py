@@ -26,9 +26,7 @@ def execute(dataset, pipeline_name):
 
             df = _add_class_labels(df, target_col)
 
-            n_components = len(dataset_config[dataset]['classes']) - 1
-
-            lda = LinearDiscriminantAnalysis(n_components=n_components)
+            lda = LinearDiscriminantAnalysis()
 
             le = LabelEncoder()
             X = df.drop(target_col, axis=1)
