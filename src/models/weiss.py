@@ -6,7 +6,7 @@ import csv
 import matplotlib.pyplot as plt
 from sklearn import svm
 from sklearn.model_selection import (
-    cross_val_score, GridSearchCV, KFold, train_test_split
+    cross_val_score, GridSearchCV, StratifiedKFold, train_test_split
 )
 from sklearn.metrics import plot_confusion_matrix
 from src.data.constants.others import (
@@ -57,7 +57,7 @@ def execute(dataset: str, pipeline_name: str):
                 }
                 svc = svm.SVC(kernel="rbf")
 
-                cv = KFold(n_splits=5, shuffle=True)
+                cv = StratifiedKFold(n_splits=5, shuffle=True)
 
                 X_train, X_test, y_train, y_test = train_test_split(
                     X, y, test_size=0.3
@@ -107,7 +107,7 @@ def execute(dataset: str, pipeline_name: str):
 
 
 def _get_scores(clf, X_test, y_test):
-    cv = KFold(n_splits=3, shuffle=True)
+    cv = StratifiedKFold(n_splits=3, shuffle=True)
 
     scores = cross_val_score(clf, X_test, y_test, cv=cv)
 
