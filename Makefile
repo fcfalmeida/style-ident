@@ -1,6 +1,6 @@
 .PHONY: crossera res_feats all_res_feats hcdf_segmentation combine_feats \
 	combine_feats_multiple trainset all_trainsets train \
-	plot_lda plot_hcdf plot_feature test clean
+	plot_lda plot_hcdf plot_feature extract_chroma test clean
 
 PYTHON_INTERPRETER = python3
 
@@ -51,6 +51,9 @@ plot_hcdf:
 
 plot_feature:
 	${PYTHON_INTERPRETER} -m src.tools.plot_feature $(dataset) "$(feature)"
+
+extract_chroma:
+	${PYTHON_INTERPRETER} -m src.tools.extract_chroma $(dataset)
 
 test:
 	pytest --cov-report term-missing --cov=src tests/
