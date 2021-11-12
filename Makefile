@@ -43,6 +43,9 @@ train:
 train_all:
 	${PYTHON_INTERPRETER} -m src.data.commands.train_all $(dataset)
 
+predict:
+	${PYTHON_INTERPRETER} -m src.data.commands.predict $(dataset) $(pipeline) $(test_set)
+
 plot_lda:
 	${PYTHON_INTERPRETER} -m src.tools.plot_lda $(dataset) "$(title)"
 
