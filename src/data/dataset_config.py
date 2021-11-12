@@ -1,8 +1,15 @@
 dataset_config = {
-    'crossera': {
+    'crossera_piano': {
         'target_col': 'style_period',
-        'classes': ['baroque', 'classical', 'romantic', 'modern'],
-        'categories': ['piano', 'orchestra', 'full']
+        'classes': ['baroque', 'classical', 'romantic', 'modern']
+    },
+    'crossera_orchestra': {
+        'target_col': 'style_period',
+        'classes': ['baroque', 'classical', 'romantic', 'modern']
+    },
+    'crossera_full': {
+        'target_col': 'style_period',
+        'classes': ['baroque', 'classical', 'romantic', 'modern']
     },
     'crosscomp5': {
         'target_col': 'composer',
@@ -12,9 +19,6 @@ dataset_config = {
             'brahms',
             'haydn',
             'shostakovich'
-        ],
-        'categories': [
-            'composers'
         ]
     },
     'crosscomp11': {
@@ -31,9 +35,30 @@ dataset_config = {
             'rameau',
             'schubert',
             'shostakovich'
-        ],
-        'categories': [
-            'composers'
+        ]
+    },
+    'orchsetera': {
+        'target_col': 'style_period',
+        'classes': ['classical', 'romantic', 'modern']
+    },
+    'orchsetcomp': {
+        'target_col': 'composer',
+        'classes': [
+            'beethoven',
+            'brahms',
+            'dvorak',
+            'grieg',
+            'haydn',
+            'holst',
+            'musorgski',
+            'prokofiev',
+            'ravel',
+            'rimski-korsakov',
+            'schubert',
+            'smetana',
+            'strauss',
+            'tchaikovsky',
+            'wagner'
         ]
     }
 }

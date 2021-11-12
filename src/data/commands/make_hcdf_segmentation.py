@@ -9,23 +9,22 @@ from src.data.constants.others import EXTERNAL_DIR, HCDF_SEGMENTED_DIR
 @click.command()
 @click.argument('dataset', type=str)
 def main(dataset):
-    input_filepath = f'{EXTERNAL_DIR}/{dataset}'
-    output_filepath = f'{HCDF_SEGMENTED_DIR}/{dataset}'
+    input_filepath = EXTERNAL_DIR
+    output_filepath = HCDF_SEGMENTED_DIR
 
-    for path in pathlib.Path(input_filepath).iterdir():
-        if path.is_file():
-            data = pd.read_csv(path, dtype={"piece": str})
-            data = data.fillna(method="ffill")
-            data = data.set_index(['piece', 'time'])
+    pathlib.Path(output_filepath).mkdir(exist_ok=True)
 
-            pipeline = make_pipeline()
+    data = pd.read_csv(
+        f'{input_filepath}/{dataset}.csv', dtype={'piece': str}
+    )
+    data = data.fillna(method='ffill')
+    data = data.set_index(['piece', 'time'])
 
-            processed = pipeline.run(data)
+    pipeline = make_pipeline()
 
-            print(f"Processed {path}")
+    processed = pipeline.run(data)
 
-            pathlib.Path(output_filepath).mkdir(exist_ok=True)
-            processed.to_csv(f"{output_filepath}/{path.name}")
+    processed.to_csv(f'{output_filepath}/{dataset}.csv')
 
 
 def make_pipeline():
@@ -36,5 +35,5 @@ def make_pipeline():
     return pipeline
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()

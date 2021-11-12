@@ -15,35 +15,38 @@ def main(dataset, pipeline_name):
 
 
 def execute(dataset, pipeline_name):
-    input_filepath = f'{INTERIM_DIR}/{dataset}/{pipeline_name}'
-    output_filepath = f'{PROCESSED_DIR}/{dataset}/{pipeline_name}'
+    input_filepath = f'{INTERIM_DIR}/{dataset}'
+    output_filepath = f'{PROCESSED_DIR}/{dataset}'
+
+    pathlib.Path(output_filepath).mkdir(exist_ok=True)
 
     target_col = dataset_config[dataset]['target_col']
 
-    for path in pathlib.Path(input_filepath).iterdir():
-        if path.is_file():
-            df = pd.read_csv(path, dtype={"piece": str}, index_col="piece")
+    df = pd.read_csv(
+        f'{input_filepath}/{pipeline_name}.csv',
+        dtype={"piece": str},
+        index_col="piece"
+    )
 
-            df = _add_class_labels(df, target_col)
+    df = _add_class_labels(df, target_col)
 
-            lda = LinearDiscriminantAnalysis()
+    lda = LinearDiscriminantAnalysis()
 
-            le = LabelEncoder()
-            X = df.drop(target_col, axis=1)
-            y = le.fit_transform(df[target_col])
+    le = LabelEncoder()
+    X = df.drop(target_col, axis=1)
+    y = le.fit_transform(df[target_col])
 
-            transformed = lda.fit_transform(X, y)
+    transformed = lda.fit_transform(X, y)
 
-            transformed_df = pd.DataFrame(
-                transformed, index=df.index
-            )
-            transformed_df = _add_class_labels(transformed_df, target_col)
+    transformed_df = pd.DataFrame(
+        transformed, index=df.index
+    )
+    transformed_df = _add_class_labels(transformed_df, target_col)
 
-            outfile = f'{output_filepath}/{path.name}'
-            pathlib.Path(output_filepath).mkdir(exist_ok=True)
-            transformed_df.to_csv(outfile)
+    outfile = f'{output_filepath}/{pipeline_name}.csv'
+    transformed_df.to_csv(outfile)
 
-            print(f'Created {pipeline_name} trainset')
+    print(f'Created {pipeline_name} trainset')
 
 
 def _add_class_labels(data: pd.DataFrame, colname: str) -> pd.DataFrame:

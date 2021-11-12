@@ -13,29 +13,28 @@ def main(dataset, pipeline_name):
 
 
 def execute(dataset, pipeline_name):
-    input_filepath = f'{HCDF_SEGMENTED_DIR}/{dataset}'
-    output_filepath = f'{INTERIM_DIR}/{dataset}/{pipeline_name}'
+    input_filepath = HCDF_SEGMENTED_DIR
+    output_filepath = f'{INTERIM_DIR}/{dataset}'
+
+    pathlib.Path(output_filepath).mkdir(exist_ok=True)
 
     print(
         f'Processing segmented features for pipeline: {pipeline_name}'
     )
 
-    for path in pathlib.Path(input_filepath).iterdir():
-        if path.is_file():
-            data = pd.read_csv(path, dtype={'piece': str})
-            data = data.fillna(method='ffill')
-            data = data.set_index(['piece', 'time'])
+    data = pd.read_csv(f'{input_filepath}/{dataset}.csv', dtype={'piece': str})
+    data = data.fillna(method='ffill')
+    data = data.set_index(['piece', 'time'])
 
-            pipeline = segmented_pipelines[pipeline_name]()
+    pipeline = segmented_pipelines[pipeline_name]()
 
-            processed = pipeline.run(data)
+    processed = pipeline.run(data)
 
-            outfile = f'{output_filepath}/{path.name}'
+    outfile = f'{output_filepath}/{pipeline_name}.csv'
 
-            pathlib.Path(output_filepath).mkdir(exist_ok=True)
-            processed.to_csv(outfile)
+    processed.to_csv(outfile)
 
-            print(f'Wrote {outfile}')
+    print(f'Wrote {outfile}')
 
 
 if __name__ == '__main__':

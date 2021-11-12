@@ -10,8 +10,8 @@ def main(dataset):
     input_filepath = f'{INTERIM_DIR}/{dataset}'
 
     for path in pathlib.Path(input_filepath).iterdir():
-        if path.is_dir():
-            make_trainset.execute(dataset, path.name)
+        if path.is_file():
+            make_trainset.execute(dataset, path.stem)
 
 
 if __name__ == '__main__':

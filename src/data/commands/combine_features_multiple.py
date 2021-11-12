@@ -6,7 +6,6 @@ from src.data.pipelines.catalogue import all_pipeline_combinations
 @click.command()
 @click.argument('dataset', type=str)
 def main(dataset):
-    # pipelines = read_pipeline_list()
     pipelines = all_pipeline_combinations()
 
     for p in pipelines:

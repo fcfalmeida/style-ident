@@ -2,7 +2,6 @@ import click
 import pathlib
 from src.data.pipeline_output_combiner import PipelineOutputCombiner
 from src.data.constants.others import INTERIM_DIR
-from src.data.dataset_config import dataset_config
 
 
 @click.command()
@@ -15,13 +14,12 @@ def main(dataset, pipelines):
 def execute(dataset, pipelines):
     pipelines_str = '_'.join(pipelines)
 
-    for cat in dataset_config[dataset]['categories']:
-        data = PipelineOutputCombiner.combine(dataset, pipelines, cat, 'piece')
+    data = PipelineOutputCombiner.combine(dataset, pipelines, 'piece')
 
-        output_dir = f'{INTERIM_DIR}/{dataset}/{pipelines_str}'
-        pathlib.Path(output_dir).mkdir(exist_ok=True)
+    output_dir = f'{INTERIM_DIR}/{dataset}'
+    pathlib.Path(output_dir).mkdir(exist_ok=True)
 
-        data.to_csv(f'{output_dir}/chroma-nnls_{cat}.csv')
+    data.to_csv(f'{output_dir}/{pipelines_str}.csv')
 
 
 if __name__ == '__main__':
