@@ -2,7 +2,6 @@ import click
 import pathlib
 import pandas as pd
 from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
-from sklearn.preprocessing import LabelEncoder
 from src.data.constants.others import INTERIM_DIR, PROCESSED_DIR
 from src.data.dataset_config import dataset_config
 
@@ -32,9 +31,8 @@ def execute(dataset, pipeline_name):
 
     lda = LinearDiscriminantAnalysis()
 
-    le = LabelEncoder()
     X = df.drop(target_col, axis=1)
-    y = le.fit_transform(df[target_col])
+    y = df[target_col]
 
     transformed = lda.fit_transform(X, y)
 
