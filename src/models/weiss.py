@@ -95,7 +95,8 @@ def execute(dataset: str, pipeline_name: str):
             clf,
             X_test,
             y_test,
-            f'{CONFUSION_MATRICES_DIR}/{dataset}_{pipeline_name}.png'
+            f'{CONFUSION_MATRICES_DIR}/{dataset}',
+            pipeline_name
         )
 
         _save_model(clf, dataset, pipeline_name)
@@ -111,12 +112,18 @@ def _get_scores(clf, X_test, y_test):
     return scores.mean(), scores.std()  # inter-fold deviation
 
 
-def _create_conf_matrix(clf, X_test, y_test, filename):
+def _create_conf_matrix(clf, X_test, y_test, path, pipeline_name):
+    fig, ax = plt.subplots(figsize=(8, 8))
+
     plot_confusion_matrix(
         clf, X_test, y_test, normalize='true',
-        values_format='.2%', cmap='Greys', colorbar=False)
+        values_format='.2%', cmap='Greys', colorbar=False, ax=ax)
 
-    plt.savefig(filename)
+    plt.xticks(rotation=45)
+
+    pathlib.Path(path).mkdir(exist_ok=True)
+
+    plt.savefig(f'{path}/{pipeline_name}.png')
 
 
 def _save_model(clf, dataset, pipeline_name):

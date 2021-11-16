@@ -15,25 +15,25 @@ dataset_config = {
         'target_col': 'composer',
         'classes': [
             'bach',
+            'haydn',
             'beethoven',
             'brahms',
-            'haydn',
             'shostakovich'
         ]
     },
     'crosscomp11': {
         'target_col': 'composer',
         'classes': [
+            'rameau',
             'bach',
-            'beethoven',
-            'brahms',
-            'dvorak',
             'handel',
             'haydn',
-            'mendelssohn',
             'mozart',
-            'rameau',
+            'beethoven',
             'schubert',
+            'mendelssohn',
+            'brahms',
+            'dvorak',
             'shostakovich'
         ]
     },
