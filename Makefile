@@ -58,6 +58,9 @@ plot_feature:
 extract_chroma:
 	${PYTHON_INTERPRETER} -m src.tools.extract_chroma $(dataset)
 
+feature_cluster:
+	${PYTHON_INTERPRETER} -m src.tools.feature_cluster $(dataset) $(pipeline)
+
 test:
 	pytest --cov-report term-missing --cov=src tests/
 
