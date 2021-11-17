@@ -2193,49 +2193,6 @@ class TestHCDFSegmentation:
         return df
 
     def test_hcdf_segmentation(self, data):
-        expected = pd.DataFrame(
-            [
-                {
-                    "piece": "beethoven/Beethoven-S3-I-ex1",
-                    "time": 0.8,
-                    "c1": 0.18538864051515701592,
-                    "c2": 0.0,
-                    "c3": 0.0,
-                    "c4": 0.0,
-                    "c5": 0.0,
-                    "c6": 0.0,
-                    "c7": 0.0,
-                    "c8": 0.0,
-                    "c9": 0.0,
-                    "c10": 0.0,
-                    "c11": 0.0,
-                    "c12": 0.0,
-                    "hcdf_peak_idx": 7,
-                    "hcdf_peak_value": 0.2764702520582143,
-                },
-                {
-                    "piece": "beethoven/Beethoven-S3-I-ex1",
-                    "time": 2.0,
-                    "c1": 0.62407283668289892066,
-                    "c2": 0.0,
-                    "c3": 0.0,
-                    "c4": 0.0,
-                    "c5": 0.0,
-                    "c6": 0.0,
-                    "c7": 0.0,
-                    "c8": 0.0,
-                    "c9": 0.0,
-                    "c10": 0.0,
-                    "c11": 0.0,
-                    "c12": 0.0,
-                    "hcdf_peak_idx": 19,
-                    "hcdf_peak_value": 0.3633306056113953,
-                },
-            ]
-        )
-
-        expected = expected.set_index(["piece", "time"])
-
         result = HCDFSegmentation().run(data)
 
         c1 = result.loc['beethoven/Beethoven-S3-I-ex1', 0.8]['c1']
@@ -2244,7 +2201,7 @@ class TestHCDFSegmentation:
         hcdf_peak_mag = result.loc[
             'beethoven/Beethoven-S3-I-ex1', 0.8]['hcdf_peak_mag']
 
-        assert np.isclose(c1, 0.18538864051515701592)
+        assert np.isclose(c1, 0.4628932941413950206)
         assert np.isclose(hcdf_peak_idx, 7)
         assert np.isclose(hcdf_peak_mag, 0.2764702520582143)
 
@@ -2254,6 +2211,6 @@ class TestHCDFSegmentation:
         hcdf_peak_mag = result.loc[
             'beethoven/Beethoven-S3-I-ex1', 2.0]['hcdf_peak_mag']
 
-        assert np.isclose(c1, 0.62407283668289892066)
+        assert np.isclose(c1, 1.268913384061306723)
         assert np.isclose(hcdf_peak_idx, 19)
         assert np.isclose(hcdf_peak_mag, 0.3633306056113953)

@@ -14,8 +14,8 @@ class HCDFSegmentation(PipelineTask):
     ):
         right_bounds = copy.deepcopy(changes)
 
-        # Remove 0 and subtract 1 to all elements
-        right_bounds = right_bounds[1:]
+        # Remove first and subtract 1 to all elements
+        right_bounds = right_bounds[1:] - 1
         right_bounds = np.append(right_bounds, n_chromas - 1)
 
         return right_bounds
@@ -33,6 +33,10 @@ class HCDFSegmentation(PipelineTask):
                 group[CHROMA_FEATS].values
             )
 
+            # Remove peak at index 0
+            peak_indexes = peak_indexes[1:]
+            peak_mags = peak_mags[1:]
+
             right_bounds = self._get_window_right_bounds(
                 peak_indexes, group.shape[0]
             )
@@ -41,12 +45,12 @@ class HCDFSegmentation(PipelineTask):
                 left_bound_idx = peak_indexes[i]
                 right_bound_idx = right_bounds[i]
 
-                piece, time = group.iloc[right_bound_idx].name
+                piece, time = group.iloc[left_bound_idx].name
                 row = group[left_bound_idx:right_bound_idx+1].sum().to_dict()
                 row['piece'] = piece
                 row['time'] = time
-                row[HarmRhythmFeats.HCDF_PEAK_IDX] = peak_indexes[i+1]
-                row[HarmRhythmFeats.HCDF_PEAK_MAG] = peak_mags[i+1]
+                row[HarmRhythmFeats.HCDF_PEAK_IDX] = peak_indexes[i]
+                row[HarmRhythmFeats.HCDF_PEAK_MAG] = peak_mags[i]
 
                 segmented.append(row)
 
