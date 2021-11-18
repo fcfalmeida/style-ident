@@ -1,15 +1,13 @@
 import click
 import pathlib
 import pandas as pd
-import numpy as np
 import csv
 from joblib import dump
 import matplotlib.pyplot as plt
 from sklearn import svm
-from sklearn.model_selection import (
-    cross_val_score, GridSearchCV, StratifiedKFold, train_test_split
-)
-from sklearn.metrics import plot_confusion_matrix
+from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
+from sklearn.model_selection import GridSearchCV, StratifiedKFold
+from sklearn.metrics import plot_confusion_matrix, accuracy_score
 from src.data.constants.others import (
     PROCESSED_DIR, TRAINOUT_DIR, CONFUSION_MATRICES_DIR
 )
@@ -45,55 +43,41 @@ def execute(dataset: str, pipeline_name: str):
         X = data.drop(target_col, axis=1).values
         y = data[target_col].values
 
-        c = [2 ** x for x in range(-5, 17, 2)]
-        gamma = [2 ** x for x in range(-15, 5, 2)]
-
-        search_params = {
-            'C': c,
-            'gamma': gamma
-        }
-        svc = svm.SVC(kernel='rbf')
-
-        cv = StratifiedKFold(n_splits=5, shuffle=True)
-
-        X_train, X_test, y_train, y_test = train_test_split(
-            X, y, test_size=0.3
-        )
-
-        clf = GridSearchCV(svc, search_params, cv=cv)
-        clf.fit(X_train, y_train)
-
         overall_mean_acc = 0
-        interfold_std = 0
-        mean_accuracies = []
         runs = 10
+
         for _ in range(runs):
-            mean, std = _get_scores(clf, X_test, y_test)
+            split_cv = StratifiedKFold(n_splits=3, shuffle=True)
 
-            overall_mean_acc += mean
-            mean_accuracies.append(mean)
-            interfold_std += std
+            for train_index, test_index in split_cv.split(X, y):
+                X_train, X_test = X[train_index], X[test_index]
+                y_train, y_test = y[train_index], y[test_index]
 
-        overall_mean_acc /= runs
-        interfold_std /= runs
-        interrun_std = np.std(mean_accuracies)
+                X_train_transformed, X_test_transformed = lda_transform(
+                    X_train, y_train, X_test
+                )
 
-        print(clf.best_params_)
+                clf = train_classifier(X_train_transformed, y_train)
+
+                acc = prediction_acc(clf, X_test_transformed, y_test)
+
+                print(clf.best_params_)
+                print(acc)
+
+                overall_mean_acc += acc
+
+        overall_mean_acc /= (runs * 3)
 
         print(f'Mean Accuracy: {overall_mean_acc}')
-        print(f'Inter-run deviation: {interrun_std}')
-        print(f'Inter-fold deviation: {interfold_std}')
 
         writer.writerow([
             pipeline_name,
-            overall_mean_acc,
-            interrun_std,
-            interfold_std
+            overall_mean_acc
         ])
 
         _create_conf_matrix(
             clf,
-            X_test,
+            X_test_transformed,
             y_test,
             f'{CONFUSION_MATRICES_DIR}/{dataset}',
             pipeline_name
@@ -104,16 +88,44 @@ def execute(dataset: str, pipeline_name: str):
     print('-' * 75)
 
 
-def _get_scores(clf, X_test, y_test):
-    cv = StratifiedKFold(n_splits=3, shuffle=True)
+def lda_transform(X_train, y_train, X_test):
+    lda = LinearDiscriminantAnalysis()
+    lda.fit(X_train, y_train)
 
-    scores = cross_val_score(clf, X_test, y_test, cv=cv)
+    X_train_transformed = lda.transform(X_train)
+    X_test_transformed = lda.transform(X_test)
 
-    return scores.mean(), scores.std()  # inter-fold deviation
+    return X_train_transformed, X_test_transformed
+
+
+def train_classifier(X_train, y_train):
+    c = [2 ** x for x in range(-5, 17, 2)]
+    gamma = [2 ** x for x in range(-15, 5, 2)]
+
+    search_params = {
+        'C': c,
+        'gamma': gamma
+    }
+
+    clf = svm.SVC(kernel='rbf')
+
+    gs_cv = StratifiedKFold(n_splits=5, shuffle=True)
+    clf = GridSearchCV(clf, search_params, cv=gs_cv)
+
+    clf.fit(X_train, y_train)
+
+    return clf
+
+
+def prediction_acc(clf, X_test, y_true):
+    y_pred = clf.predict(X_test)
+    acc = accuracy_score(y_true, y_pred)
+
+    return acc
 
 
 def _create_conf_matrix(clf, X_test, y_test, path, pipeline_name):
-    fig, ax = plt.subplots(figsize=(8, 8))
+    _, ax = plt.subplots(figsize=(8, 8))
 
     plot_confusion_matrix(
         clf, X_test, y_test, normalize='true',

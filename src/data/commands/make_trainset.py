@@ -1,7 +1,6 @@
 import click
 import pathlib
 import pandas as pd
-from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 from src.data.constants.others import INTERIM_DIR, PROCESSED_DIR
 from src.data.dataset_config import dataset_config
 
@@ -29,20 +28,8 @@ def execute(dataset, pipeline_name):
 
     df = _add_class_labels(df, target_col)
 
-    lda = LinearDiscriminantAnalysis()
-
-    X = df.drop(target_col, axis=1)
-    y = df[target_col]
-
-    transformed = lda.fit_transform(X, y)
-
-    transformed_df = pd.DataFrame(
-        transformed, index=df.index
-    )
-    transformed_df = _add_class_labels(transformed_df, target_col)
-
     outfile = f'{output_filepath}/{pipeline_name}.csv'
-    transformed_df.to_csv(outfile)
+    df.to_csv(outfile)
 
     print(f'Created {pipeline_name} trainset')
 
