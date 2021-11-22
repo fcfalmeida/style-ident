@@ -27,6 +27,11 @@ res_pipelines = {
     'template_based': TemplateBasedPipeline,
 }
 
+single_res_pipelines = {
+    'tis_complexity_local_res': (TISComplexityResPipeline, 0.1),
+    'tis_basic_local_res': (TISBasicResPipeline, 0.1),
+}
+
 
 def all_pipeline_combinations() -> list:
     segmented_pipeline_names = list(segmented_pipelines.keys())

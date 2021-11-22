@@ -1,4 +1,5 @@
-.PHONY: crossera res_feats all_res_feats hcdf_segmentation combine_feats \
+.PHONY: crossera res_feats all_res_feats single_res_feats \
+	all_single_res_feats hcdf_segmentation combine_feats \
 	combine_feats_multiple trainset all_trainsets train \
 	plot_lda plot_hcdf plot_feature extract_chroma test clean
 
@@ -15,6 +16,12 @@ res_feats:
 
 all_res_feats:
 	${PYTHON_INTERPRETER} -m src.data.commands.make_all_res_feats $(dataset)
+
+single_res_feats:
+	${PYTHON_INTERPRETER} -m src.data.commands.make_single_res_feats $(dataset) $(pipeline)
+
+all_single_res_feats:
+	${PYTHON_INTERPRETER} -m src.data.commands.make_all_single_res_feats $(dataset)
 
 hcdf_segmentation:
 	${PYTHON_INTERPRETER} -m src.data.commands.make_hcdf_segmentation $(dataset)

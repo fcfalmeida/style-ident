@@ -2,6 +2,7 @@ import click
 import pathlib
 import pandas as pd
 from src.features.chroma_resolution import ChromaResolution
+from src.data.pipelines.feature_pipeline import FeaturePipeline
 from src.utils.formatters import format_chroma_resolution
 from src.data.pipelines.catalogue import res_pipelines
 from src.data.constants.others import EXTERNAL_DIR, INTERIM_DIR
@@ -11,11 +12,15 @@ from src.data.constants.others import EXTERNAL_DIR, INTERIM_DIR
 @click.argument("dataset", type=str)
 @click.argument("pipeline_name", type=str)
 def main(dataset, pipeline_name):
-    execute(dataset, pipeline_name)
-
-
-def execute(dataset, pipeline_name):
     RESOLUTIONS = [0.1, 0.5, 10, ChromaResolution.GLOBAL]
+
+    execute(dataset, pipeline_name, RESOLUTIONS, res_pipelines)
+
+
+def execute(
+    dataset: str, pipeline_name: str,
+    resolutions: list[float], catalogue: dict[str, FeaturePipeline]
+):
 
     input_filepath = EXTERNAL_DIR
     output_filepath = f'{INTERIM_DIR}/{dataset}'
@@ -29,17 +34,15 @@ def execute(dataset, pipeline_name):
     data = pd.read_csv(f'{input_filepath}/{dataset}.csv', dtype={"piece": str})
     data = data.fillna(method="ffill")
 
-    for resolution in RESOLUTIONS:
-        pipeline = res_pipelines[pipeline_name](resolution)
+    for res in resolutions:
+        pipeline = catalogue[pipeline_name](res)
 
         processed = pipeline.run(data)
 
-        formatted_res = format_chroma_resolution(resolution)
+        formatted_res = format_chroma_resolution(res)
 
         outfile = f'{output_filepath}/{pipeline_name}__{formatted_res}.csv'
-
         processed.to_csv(outfile)
-
         print(f'Wrote {outfile}')
 
     files = list(
@@ -47,7 +50,6 @@ def execute(dataset, pipeline_name):
     )
 
     joined = join_datasets(files)
-
     joined.to_csv(f'{output_filepath}/{pipeline_name}.csv')
 
     cleanup_output_dir(output_filepath)
