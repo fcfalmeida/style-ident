@@ -1,6 +1,7 @@
 import click
 import pathlib
 import pandas as pd
+import numpy as np
 import csv
 from joblib import dump
 import matplotlib.pyplot as plt
@@ -44,9 +45,13 @@ def execute(dataset: str, pipeline_name: str):
         y = data[target_col].values
 
         overall_mean_acc = 0
+        run_mean_accuracy_values = []
+        inter_fold_dev = 0
         runs = 10
 
         for _ in range(runs):
+            fold_mean_accuracy_values = []
+
             split_cv = StratifiedKFold(n_splits=3, shuffle=True)
 
             for train_index, test_index in split_cv.split(X, y):
@@ -66,9 +71,21 @@ def execute(dataset: str, pipeline_name: str):
 
                 overall_mean_acc += acc
 
+                fold_mean_accuracy_values.append(acc)
+
+            mean_run_accuracy = np.mean(fold_mean_accuracy_values)
+            run_mean_accuracy_values.append(mean_run_accuracy)
+
+            inter_fold_dev += np.std(fold_mean_accuracy_values)
+
+        inter_run_dev = np.std(run_mean_accuracy_values)
+        inter_fold_dev /= runs
+
         overall_mean_acc /= (runs * 3)
 
         print(f'Mean Accuracy: {overall_mean_acc}')
+        print(f'Inter-run Deviation: {inter_run_dev}')
+        print(f'Inter-fold Deviation: {inter_fold_dev}')
 
         writer.writerow([
             pipeline_name,
