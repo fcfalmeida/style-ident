@@ -10,7 +10,9 @@ def main(dataset):
     RESOLUTIONS = [0.1, 0.5, 10, ChromaResolution.GLOBAL]
 
     for pipeline_name in res_pipelines.keys():
-        make_res_feats.execute(dataset, pipeline_name, RESOLUTIONS)
+        make_res_feats.execute(
+            dataset, pipeline_name, RESOLUTIONS, res_pipelines
+        )
 
 
 if __name__ == '__main__':
