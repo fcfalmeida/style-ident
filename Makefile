@@ -7,6 +7,7 @@ PYTHON_INTERPRETER = python3
 
 install: 
 	${PYTHON_INTERPRETER} -m pip install -r requirements.txt
+	${PYTHON_INTERPRETER} -m pip install lib/TIVLib
 
 crossera:
 	${PYTHON_INTERPRETER} -m src.data.commands.make_crossera data/external/chroma data/external/crossera
