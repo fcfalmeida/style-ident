@@ -75,6 +75,9 @@ plot_feature_errorbars:
 feature_cluster:
 	${PYTHON_INTERPRETER} -m src.tools.feature_cluster $(dataset) $(pipeline)
 
+plot_tonal_disp:
+	${PYTHON_INTERPRETER} -m src.tools.plot_tonal_disp $(dataset) $(piece)
+
 test:
 	pytest --cov-report term-missing --cov=src tests/
 
