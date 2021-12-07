@@ -58,13 +58,19 @@ plot_lda:
 	${PYTHON_INTERPRETER} -m src.tools.plot_lda $(dataset) "$(title)"
 
 plot_hcdf:
-	${PYTHON_INTERPRETER} -m src.tools.plot_hcdf data/external/crossera/chroma-nnls_full.csv $(piece)
+	${PYTHON_INTERPRETER} -m src.tools.plot_hcdf $(filepath)
 
-plot_feature:
-	${PYTHON_INTERPRETER} -m src.tools.plot_feature $(dataset) "$(feature)"
+plot_feature_histogram:
+	${PYTHON_INTERPRETER} -m src.tools.plot_feature_histogram $(dataset) "$(feature)"
+
+extract_features:
+	${PYTHON_INTERPRETER} -m src.tools.extract_features $(filepath) $(features)
 
 extract_chroma:
 	${PYTHON_INTERPRETER} -m src.tools.extract_chroma $(dataset)
+
+plot_feature_errorbars:
+	${PYTHON_INTERPRETER} -m src.tools.plot_feature_errorbars $(dataset) $(pipeline)
 
 feature_cluster:
 	${PYTHON_INTERPRETER} -m src.tools.feature_cluster $(dataset) $(pipeline)
