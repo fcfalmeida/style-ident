@@ -78,6 +78,12 @@ feature_cluster:
 plot_tonal_disp:
 	${PYTHON_INTERPRETER} -m src.tools.plot_tonal_disp $(dataset) $(piece)
 
+plot_tiv_coef:
+	${PYTHON_INTERPRETER} -m src.tools.plot_tiv_coef $(dataset) $(piece) $(coef)
+
+plot_piece_tivs:
+	${PYTHON_INTERPRETER} -m src.tools.plot_piece_tivs $(dataset) $(piece)
+
 test:
 	pytest --cov-report term-missing --cov=src tests/
 
