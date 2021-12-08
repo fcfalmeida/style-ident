@@ -25,15 +25,15 @@ def main(dataset, piece):
 
     _, ax = plt.subplots()
 
+    ax.set_xlim(-2, 2)
+    ax.set_ylim(-2, 2)
+
     # Append tonal center to compute MDS
     tivs = np.append(tivs.vectors, tonal_center.vectors, axis=0)
     x, y = _apply_mds(tivs)
 
     ax.scatter(x[:-1], y[:-1])
     ax.scatter(x[-1], y[-1], c='red')
-
-    print(x)
-    print(y)
 
     plt.show()
 
