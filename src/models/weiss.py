@@ -10,7 +10,7 @@ from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 from sklearn.model_selection import (
     GridSearchCV, StratifiedKFold, StratifiedGroupKFold
 )
-from sklearn.metrics import plot_confusion_matrix, accuracy_score
+from sklearn.metrics import confusion_matrix, plot_confusion_matrix, accuracy_score
 from src.data.constants.others import (
     ANNOTATIONS_DIR, PROCESSED_DIR, TRAINOUT_DIR, CONFUSION_MATRICES_DIR
 )
@@ -52,12 +52,15 @@ def execute(dataset: str, pipeline_name: str, composer_filter: bool):
         overall_mean_acc = 0
         run_mean_accuracy_values = []
         inter_fold_dev = 0
+        inter_class_dev = 0
+
         runs = 10
+        n_splits = 3
 
         for _ in range(runs):
             fold_mean_accuracy_values = []
 
-            split = _get_cv_split(X, y, composer_filter, dataset)
+            split = _get_cv_split(X, y, composer_filter, dataset, n_splits)
 
             for train_index, test_index in split:
                 X_train, X_test = X[train_index], X[test_index]
@@ -69,14 +72,18 @@ def execute(dataset: str, pipeline_name: str, composer_filter: bool):
 
                 clf = train_classifier(X_train_transformed, y_train)
 
-                acc = prediction_acc(clf, X_test_transformed, y_test)
+                y_pred = clf.predict(X_test_transformed)
+                acc = accuracy_score(y_test, y_pred)
 
                 print(clf.best_params_)
                 print(acc)
 
                 overall_mean_acc += acc
-
                 fold_mean_accuracy_values.append(acc)
+
+                conf_mat = confusion_matrix(y_test, y_pred)
+                class_accuracy = conf_mat.diagonal() / conf_mat.sum(axis=1)
+                inter_class_dev += np.std(class_accuracy)
 
             mean_run_accuracy = np.mean(fold_mean_accuracy_values)
             run_mean_accuracy_values.append(mean_run_accuracy)
@@ -85,12 +92,14 @@ def execute(dataset: str, pipeline_name: str, composer_filter: bool):
 
         inter_run_dev = np.std(run_mean_accuracy_values)
         inter_fold_dev /= runs
+        inter_class_dev /= (runs * n_splits)
 
-        overall_mean_acc /= (runs * 3)
+        overall_mean_acc /= (runs * n_splits)
 
         print(f'Mean Accuracy: {overall_mean_acc}')
         print(f'Inter-run Deviation: {inter_run_dev}')
         print(f'Inter-fold Deviation: {inter_fold_dev}')
+        print(f'Inter-class Deviation: {inter_class_dev}')
 
         writer.writerow([
             pipeline_name,
@@ -110,20 +119,20 @@ def execute(dataset: str, pipeline_name: str, composer_filter: bool):
     print('-' * 75)
 
 
-def _get_cv_split(X, y, composer_filter, dataset):
+def _get_cv_split(X, y, composer_filter, dataset, n_splits):
     split_cv = None
     groups = None
 
-    filter_col = dataset_config[dataset]['filter_col']
-
     if composer_filter:
-        split_cv = StratifiedGroupKFold(n_splits=3, shuffle=True)
+        filter_col = dataset_config[dataset]['filter_col']
+
+        split_cv = StratifiedGroupKFold(n_splits=n_splits, shuffle=True)
 
         annotations = pd.read_csv(f'{ANNOTATIONS_DIR}/{dataset}.csv')
         # Trim groups to exclude addons
         groups = annotations[filter_col].values[:X.shape[0]]
     else:
-        split_cv = StratifiedKFold(n_splits=3, shuffle=True)
+        split_cv = StratifiedKFold(n_splits=n_splits, shuffle=True)
 
     split = split_cv.split(X, y, groups)
 
@@ -148,10 +157,11 @@ def train_classifier(X_train, y_train):
     degree = [2, 3, 4]
 
     search_params = {
+        'gamma': gamma,
         'C': c
     }
 
-    clf = svm.SVC(kernel='linear')
+    clf = svm.SVC(kernel='rbf')
 
     gs_cv = StratifiedKFold(n_splits=5, shuffle=True)
     clf = GridSearchCV(clf, search_params, cv=gs_cv)
@@ -159,13 +169,6 @@ def train_classifier(X_train, y_train):
     clf.fit(X_train, y_train)
 
     return clf
-
-
-def prediction_acc(clf, X_test, y_true):
-    y_pred = clf.predict(X_test)
-    acc = accuracy_score(y_true, y_pred)
-
-    return acc
 
 
 def _create_conf_matrix(clf, X_test, y_test, path, pipeline_name):
