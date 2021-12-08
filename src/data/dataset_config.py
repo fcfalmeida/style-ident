@@ -9,7 +9,8 @@ dataset_config = {
     },
     'crossera_full': {
         'target_col': 'style_period',
-        'classes': ['baroque', 'classical', 'romantic', 'modern']
+        'classes': ['baroque', 'classical', 'romantic', 'modern'],
+        'filter_col': 'Composer'
     },
     'crosscomp5': {
         'target_col': 'composer',
@@ -19,7 +20,8 @@ dataset_config = {
             'beethoven',
             'brahms',
             'shostakovich'
-        ]
+        ],
+        'filter_col': 'Artist_filter_no'
     },
     'crosscomp11': {
         'target_col': 'composer',
@@ -35,7 +37,8 @@ dataset_config = {
             'brahms',
             'dvorak',
             'shostakovich'
-        ]
+        ],
+        'filter_col': 'Artist_filter_no'
     },
     'orchsetera': {
         'target_col': 'style_period',

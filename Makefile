@@ -46,7 +46,7 @@ all_trainsets:
 	${PYTHON_INTERPRETER} -m src.data.commands.make_all_trainsets $(dataset)
 
 train:
-	${PYTHON_INTERPRETER} -m src.models.weiss $(dataset) $(pipeline)
+	${PYTHON_INTERPRETER} -m src.models.weiss $(dataset) $(pipeline) $(options)
 
 train_all:
 	${PYTHON_INTERPRETER} -m src.data.commands.train_all $(dataset)
