@@ -17,7 +17,7 @@ class TISHorizontal(PipelineTask):
 
     def _tonal_dispersion(
         self, chroma_vectors: ArrayLike, tivs: TIVCollection,
-            distance_type: int) -> pd.DataFrame:
+            distance_type: int, coef: int = None) -> pd.DataFrame:
         """Computes the tonal dispersion value of a `TIVCollection`.
         The tonal dispersion value is either the cosine or euclidean distance
         value between each `TIV` in the `TIVCollection` and the mean `TIV`.
@@ -35,14 +35,35 @@ class TISHorizontal(PipelineTask):
 
         tonal_disp = None
 
-        if distance_type == self.DIST_EUCLIDEAN:
-            tonal_disp = np.linalg.norm(
-                tivs.vectors - tonal_center.vectors, axis=1
-            )
-        elif distance_type == self.DIST_COSINE:
-            tonal_disp = math.complex_cosine_dist(
-                tivs.vectors, tonal_center.vectors
-            )
+        vectors = None
+        tonal_center_vector = None
+        axis = 0
+
+        if coef is None:
+            vectors = tivs.vectors
+            tonal_center_vector = tonal_center.vectors
+            axis = 1
+
+            if distance_type == self.DIST_EUCLIDEAN:
+                tonal_disp = np.linalg.norm(
+                    vectors - tonal_center_vector, axis=axis
+                )
+            elif distance_type == self.DIST_COSINE:
+                tonal_disp = math.complex_cosine_dist(
+                    vectors, tonal_center_vector
+                )
+        else:
+            vectors = tivs.vectors[:, coef]
+            tonal_center_vector = tonal_center.vectors[:, coef]
+
+            if distance_type == self.DIST_EUCLIDEAN:
+                tonal_disp = np.linalg.norm(
+                    vectors[None, :] - tonal_center_vector, axis=axis
+                )
+            elif distance_type == self.DIST_COSINE:
+                tonal_disp = math.complex_cosine_dist(
+                    vectors.reshape(-1, 1), tonal_center_vector.reshape(-1, 1)
+                )
 
         return tonal_disp
 
