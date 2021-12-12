@@ -18,12 +18,12 @@ def main(dataset, piece, coef):
     piece_df = df.loc[piece]
 
     tivs = TIVCollection.from_pcp(piece_df[CHROMA_FEATS].values.T)
-    diatonicity_vectors = tivs.vectors[:, coef]
-    diatonicity_vectors = diatonicity_vectors / TIV.weights[coef]
+    coef_vectors = tivs.vectors[:, coef]
+    coef_vectors = coef_vectors / TIV.weights[coef]
 
     piece_tiv = TIV.from_pcp(piece_df[CHROMA_FEATS].sum().values)
-    piece_diatonicity_vector = piece_tiv.vector[coef]
-    piece_diatonicity_vector = piece_diatonicity_vector / TIV.weights[coef]
+    piece_coef_vector = piece_tiv.vector[coef]
+    piece_coef_vector = piece_coef_vector / TIV.weights[coef]
 
     _, ax = plt.subplots()
 
@@ -32,9 +32,9 @@ def main(dataset, piece, coef):
     ax.set_aspect('equal', adjustable='box')
     ax.grid()
 
-    ax.scatter(diatonicity_vectors.real, diatonicity_vectors.imag)
+    ax.scatter(coef_vectors.real, coef_vectors.imag, alpha=0.1)
     ax.scatter(
-        piece_diatonicity_vector.real, piece_diatonicity_vector.imag, c='red'
+        piece_coef_vector.real, piece_coef_vector.imag, c='red'
     )
 
     circle = plt.Circle((0, 0), 1, fill=False)

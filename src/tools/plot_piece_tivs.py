@@ -41,7 +41,7 @@ def main(dataset, piece):
 
         piece_coef = piece_tiv.vector[i] / TIV.weights[i]
 
-        ax.scatter(frame_coefs.real, frame_coefs.imag, s=5)
+        ax.scatter(frame_coefs.real, frame_coefs.imag, s=5, alpha=0.1)
         ax.scatter(piece_coef.real, piece_coef.imag, s=20, c='red')
 
         circle = plt.Circle((0, 0), 1, fill=False)

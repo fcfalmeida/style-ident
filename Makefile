@@ -84,6 +84,9 @@ plot_tiv_coef:
 plot_piece_tivs:
 	${PYTHON_INTERPRETER} -m src.tools.plot_piece_tivs $(dataset) $(piece)
 
+feature_boxplots:
+	${PYTHON_INTERPRETER} -m src.tools.feature_boxplots $(dataset) $(pipeline) $(feature) $(stat) $(res)
+
 test:
 	pytest --cov-report term-missing --cov=src tests/
 

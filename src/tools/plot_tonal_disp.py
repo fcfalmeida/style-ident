@@ -32,7 +32,7 @@ def main(dataset, piece):
     tivs = np.append(tivs.vectors, tonal_center.vectors, axis=0)
     x, y = _apply_mds(tivs)
 
-    ax.scatter(x[:-1], y[:-1])
+    ax.scatter(x[:-1], y[:-1], alpha=0.1)
     ax.scatter(x[-1], y[-1], c='red')
 
     plt.show()
