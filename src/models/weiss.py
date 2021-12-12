@@ -10,7 +10,9 @@ from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 from sklearn.model_selection import (
     GridSearchCV, StratifiedKFold, StratifiedGroupKFold
 )
-from sklearn.metrics import confusion_matrix, plot_confusion_matrix, accuracy_score
+from sklearn.metrics import (
+    confusion_matrix, plot_confusion_matrix, accuracy_score
+)
 from src.data.constants.others import (
     ANNOTATIONS_DIR, PROCESSED_DIR, TRAINOUT_DIR, CONFUSION_MATRICES_DIR
 )
@@ -83,9 +85,9 @@ def execute(dataset: str, pipeline_name: str, composer_filter: bool):
                 conf_mat = confusion_matrix(y_test, y_pred)
                 class_accuracy = conf_mat.diagonal() / conf_mat.sum(axis=1)
 
-                # Class accuracy might be none if CV split doesn't put all classes
-                # in y_test. If that's the case, we ignore this run for the
-                # inter class deviation calculation
+                # Class accuracy might be none if CV split doesn't put all
+                # classes in y_test. If that's the case, we ignore this run
+                # for the inter class deviation calculation
                 if not np.isnan(np.sum(class_accuracy)):
                     inter_class_dev += np.std(class_accuracy)
 
