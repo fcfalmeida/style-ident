@@ -23,7 +23,6 @@ from src.data.constants.others import MODELS_DIR
 @click.argument('pipeline_name', type=str)
 @click.option('--composer-filter', '-cf', is_flag=True)
 def main(dataset, pipeline_name, composer_filter):
-    print(composer_filter)
     execute(dataset, pipeline_name, composer_filter)
 
 
@@ -83,7 +82,12 @@ def execute(dataset: str, pipeline_name: str, composer_filter: bool):
 
                 conf_mat = confusion_matrix(y_test, y_pred)
                 class_accuracy = conf_mat.diagonal() / conf_mat.sum(axis=1)
-                inter_class_dev += np.std(class_accuracy)
+
+                # Class accuracy might be none if CV split doesn't put all classes
+                # in y_test. If that's the case, we ignore this run for the
+                # inter class deviation calculation
+                if not np.isnan(np.sum(class_accuracy)):
+                    inter_class_dev += np.std(class_accuracy)
 
             mean_run_accuracy = np.mean(fold_mean_accuracy_values)
             run_mean_accuracy_values.append(mean_run_accuracy)
@@ -153,15 +157,11 @@ def train_classifier(X_train, y_train):
     c = [2 ** x for x in range(-5, 17, 2)]
     gamma = [2 ** x for x in range(-15, 5, 2)]
 
-    kernel = ['linear', 'poly']
-    degree = [2, 3, 4]
-
     search_params = {
-        'gamma': gamma,
         'C': c
     }
 
-    clf = svm.SVC(kernel='rbf')
+    clf = svm.SVC(kernel='linear')
 
     gs_cv = StratifiedKFold(n_splits=5, shuffle=True)
     clf = GridSearchCV(clf, search_params, cv=gs_cv)
