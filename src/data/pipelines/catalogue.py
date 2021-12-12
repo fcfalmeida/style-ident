@@ -32,6 +32,8 @@ single_res_pipelines = {
     'tis_basic_local_res': (TISBasicResPipeline, 0.1),
 }
 
+full_catalogue = segmented_pipelines | res_pipelines | single_res_pipelines
+
 
 def all_pipeline_combinations() -> list:
     segmented_pipeline_names = list(segmented_pipelines.keys())
