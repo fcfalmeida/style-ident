@@ -8,8 +8,8 @@ from src.features.skewness_and_whiskers import SknewnessAndWhiskers
 
 
 class TISBasicResPipeline(FeaturePipeline):
-    def __init__(self, chroma_resolution: float) -> None:
-        stats = Stats(MeanAndStd().funcs + SknewnessAndWhiskers().funcs)
+    def __init__(self, chroma_resolution: float = 0.1) -> None:
+        stats = Stats(MeanAndStd().funcs)
 
         super().__init__(
             [TISVertical()],
