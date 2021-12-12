@@ -6,7 +6,7 @@ from TIVlib import TIVCollection
 from src.features.tis_vertical import TISVertical
 
 
-class TestTIS:
+class TestTISVertical:
     @pytest.fixture
     def chroma_data(scope="class"):
         chroma = np.array(
