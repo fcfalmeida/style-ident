@@ -68,25 +68,20 @@ def execute(dataset: str, pipeline_name: str, composer_filter: bool):
 
             fold_mean_accuracy_values = []
             inter_class_dev_run_values = []
-            invalid_run = False
 
             split = _get_cv_split(X, y, composer_filter, dataset, n_splits)
+            indexes = _check_cv_split(X, y, split, n_classes)
 
-            for train_index, test_index in split:
+            if indexes is None:
+                # invalid run
+                print(f'Imbalanced CV split in run {curr_run}. Re-initializing folds.')
+                continue
+
+            for split in indexes:
+                train_index, test_index = split
+
                 X_train, X_test = X[train_index], X[test_index]
                 y_train, y_test = y[train_index], y[test_index]
-
-                y_train_classes, _ = np.unique(y_train, return_counts=True)
-                y_test_classes, _ = np.unique(y_test, return_counts=True)
-
-                # invalidate run if one of the splits doesn't have all classes
-                if (
-                    y_train_classes.size < n_classes or
-                    y_test_classes.size < n_classes
-                ):
-                    print(f'Imbalanced CV split, invalidated run {curr_run}')
-                    invalid_run = True
-                    break
 
                 X_train_transformed, X_test_transformed = lda_transform(
                     X_train, y_train, X_test
@@ -109,9 +104,6 @@ def execute(dataset: str, pipeline_name: str, composer_filter: bool):
 
                 print(clf.best_params_)
                 print(acc)
-
-            if invalid_run:
-                continue
 
             overall_mean_acc = np.sum(fold_mean_accuracy_values)
 
@@ -173,6 +165,26 @@ def _get_cv_split(X, y, composer_filter, dataset, n_splits):
 
     return split
 
+
+def _check_cv_split(X, y, split, n_classes):
+    indexes = []
+
+    # pre-check CV split to ensure all classes are represented
+    for train_index, test_index in split:
+        y_train, y_test = y[train_index], y[test_index]
+
+        y_train_classes, _ = np.unique(y_train, return_counts=True)
+        y_test_classes, _ = np.unique(y_test, return_counts=True)
+
+        if (
+            y_train_classes.size < n_classes or
+            y_test_classes.size < n_classes
+        ):
+            return None
+
+        indexes.append((train_index, test_index))
+
+    return indexes
 
 def lda_transform(X_train, y_train, X_test):
     lda = LinearDiscriminantAnalysis()
