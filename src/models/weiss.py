@@ -32,14 +32,18 @@ def execute(dataset: str, pipeline_name: str, composer_filter: bool):
     input_filepath = f'{PROCESSED_DIR}/{dataset}/{pipeline_name}'
 
     target_col = dataset_config[dataset]['target_col']
+    n_classes = len(dataset_config[dataset]['classes'])
 
     print('-' * 75)
     print(f'Dataset -> {dataset}')
     print(f'Pipeline -> {pipeline_name}')
     print('-' * 75)
 
-    trainout_filepath = f'{TRAINOUT_DIR}/{dataset}_\
-        {"filter_" if composer_filter else ""}trainout.csv'
+    trainout_filepath = (
+        f'{TRAINOUT_DIR}/{dataset}_'
+        f'{"filter_" if composer_filter else ""}'
+        'trainout.csv'
+    )
 
     with open(trainout_filepath, 'a', newline='') as trainout_file:
         writer = csv.writer(trainout_file)
@@ -56,16 +60,33 @@ def execute(dataset: str, pipeline_name: str, composer_filter: bool):
         inter_class_dev = 0
 
         runs = 10
+        curr_run = 0
         n_splits = 3
 
-        for _ in range(runs):
+        while curr_run < runs:
+            print(f'Run {curr_run}')
+
             fold_mean_accuracy_values = []
+            inter_class_dev_run_values = []
+            invalid_run = False
 
             split = _get_cv_split(X, y, composer_filter, dataset, n_splits)
 
             for train_index, test_index in split:
                 X_train, X_test = X[train_index], X[test_index]
                 y_train, y_test = y[train_index], y[test_index]
+
+                y_train_classes, _ = np.unique(y_train, return_counts=True)
+                y_test_classes, _ = np.unique(y_test, return_counts=True)
+
+                # invalidate run if one of the splits doesn't have all classes
+                if (
+                    y_train_classes.size < n_classes or
+                    y_test_classes.size < n_classes
+                ):
+                    print(f'Imbalanced CV split, invalidated run {curr_run}')
+                    invalid_run = True
+                    break
 
                 X_train_transformed, X_test_transformed = lda_transform(
                     X_train, y_train, X_test
@@ -76,31 +97,38 @@ def execute(dataset: str, pipeline_name: str, composer_filter: bool):
                 y_pred = clf.predict(X_test_transformed)
                 acc = accuracy_score(y_test, y_pred)
 
-                print(clf.best_params_)
-                print(acc)
-
-                overall_mean_acc += acc
-                fold_mean_accuracy_values.append(acc)
-
                 conf_mat = confusion_matrix(y_test, y_pred)
                 class_accuracy = conf_mat.diagonal() / conf_mat.sum(axis=1)
 
-                # Class accuracy might be none if CV split doesn't put all
-                # classes in y_test. If that's the case, we ignore this run
-                # for the inter class deviation calculation
-                if not np.isnan(np.sum(class_accuracy)):
-                    inter_class_dev += np.std(class_accuracy)
+                # inter_class_dev += np.std(class_accuracy)
+                run_inter_class_dev = np.std(class_accuracy)
+                inter_class_dev_run_values.append(run_inter_class_dev)
+
+                # overall_mean_acc += acc
+                fold_mean_accuracy_values.append(acc)
+
+                print(clf.best_params_)
+                print(acc)
+
+            if invalid_run:
+                continue
+
+            overall_mean_acc = np.sum(fold_mean_accuracy_values)
 
             mean_run_accuracy = np.mean(fold_mean_accuracy_values)
             run_mean_accuracy_values.append(mean_run_accuracy)
 
             inter_fold_dev += np.std(fold_mean_accuracy_values)
 
+            inter_class_dev += np.sum(inter_class_dev_run_values)
+
+            curr_run += 1
+
         inter_run_dev = np.std(run_mean_accuracy_values)
         inter_fold_dev /= runs
         inter_class_dev /= (runs * n_splits)
 
-        overall_mean_acc /= (runs * n_splits)
+        overall_mean_acc = np.mean(run_mean_accuracy_values)
 
         print(f'Mean Accuracy: {overall_mean_acc}')
         print(f'Inter-run Deviation: {inter_run_dev}')
@@ -117,10 +145,11 @@ def execute(dataset: str, pipeline_name: str, composer_filter: bool):
             X_test_transformed,
             y_test,
             f'{CONFUSION_MATRICES_DIR}/{dataset}',
-            pipeline_name
+            pipeline_name,
+            composer_filter
         )
 
-        _save_model(clf, dataset, pipeline_name)
+        _save_model(clf, dataset, pipeline_name, composer_filter)
 
     print('-' * 75)
 
@@ -160,7 +189,7 @@ def train_classifier(X_train, y_train):
     gamma = [2 ** x for x in range(-15, 5, 2)]
 
     search_params = {
-        'C': c
+        'C': c,
     }
 
     clf = svm.SVC(kernel='linear')
@@ -173,7 +202,7 @@ def train_classifier(X_train, y_train):
     return clf
 
 
-def _create_conf_matrix(clf, X_test, y_test, path, pipeline_name):
+def _create_conf_matrix(clf, X_test, y_test, path, pipeline_name, filter):
     _, ax = plt.subplots(figsize=(8, 8))
 
     plot_confusion_matrix(
@@ -184,15 +213,26 @@ def _create_conf_matrix(clf, X_test, y_test, path, pipeline_name):
 
     pathlib.Path(path).mkdir(exist_ok=True)
 
-    plt.savefig(f'{path}/{pipeline_name}.png')
+    outfile = (
+        f'{path}/{pipeline_name}_'
+        f'{"filter_" if filter else ""}'
+        '.png'
+    )
+
+    plt.savefig(outfile)
 
 
-def _save_model(clf, dataset, pipeline_name):
+def _save_model(clf, dataset, pipeline_name, filter):
     output_filepath = f'{MODELS_DIR}/{dataset}'
 
     pathlib.Path(output_filepath).mkdir(exist_ok=True)
 
-    dump(clf, f'{output_filepath}/{pipeline_name}')
+    outfile = (
+        f'{output_filepath}/{pipeline_name}_'
+        f'{"filter_" if filter else ""}'
+    )
+
+    dump(clf, outfile)
 
 
 if __name__ == '__main__':
