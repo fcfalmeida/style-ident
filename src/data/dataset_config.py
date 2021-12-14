@@ -1,11 +1,13 @@
 dataset_config = {
     'crossera_piano': {
         'target_col': 'style_period',
-        'classes': ['baroque', 'classical', 'romantic', 'modern']
+        'classes': ['baroque', 'classical', 'romantic', 'modern'],
+        'filter_col': 'Composer'
     },
     'crossera_orchestra': {
         'target_col': 'style_period',
-        'classes': ['baroque', 'classical', 'romantic', 'modern']
+        'classes': ['baroque', 'classical', 'romantic', 'modern'],
+        'filter_col': 'Composer'
     },
     'crossera_full': {
         'target_col': 'style_period',
