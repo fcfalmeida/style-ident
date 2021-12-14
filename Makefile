@@ -91,5 +91,12 @@ test:
 	pytest --cov-report term-missing --cov=src tests/
 
 clean:
-	rm -rf data/interim/*
-	rm -rf data/processed/*
+ifdef dataset
+	rm -rf data/interim/$(dataset)/*
+	rm -rf data/processed/$(dataset)/*
+	rm -rf data/models/$(dataset)/*
+	rm -rf data/trainout/conf_matrices/$(dataset)/*
+	rm -rf data/trainout/$(dataset)*.csv
+else
+	@echo "Missing argument: dataset"
+endif
