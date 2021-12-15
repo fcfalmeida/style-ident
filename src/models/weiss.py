@@ -74,7 +74,9 @@ def execute(dataset: str, pipeline_name: str, composer_filter: bool):
 
             if indexes is None:
                 # invalid run
-                print(f'Imbalanced CV split in run {curr_run}. Re-initializing folds.')
+                print(
+                    f'Imbalanced CV split in run {curr_run}.'
+                    'Re-initializing folds.')
                 continue
 
             for split in indexes:
@@ -185,6 +187,7 @@ def _check_cv_split(X, y, split, n_classes):
         indexes.append((train_index, test_index))
 
     return indexes
+
 
 def lda_transform(X_train, y_train, X_test):
     lda = LinearDiscriminantAnalysis()
