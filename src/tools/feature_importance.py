@@ -4,10 +4,10 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.linear_model import LogisticRegression
-from sklearn.model_selection import StratifiedKFold, cross_validate
+from sklearn.model_selection import cross_validate
 from sklearn import preprocessing
 from src.data.dataset_config import dataset_config
-from src.data.constants.others import INTERIM_DIR, PROCESSED_DIR
+from src.data.constants.others import PROCESSED_DIR
 
 
 @click.command()
