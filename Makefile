@@ -73,7 +73,7 @@ plot_feature_errorbars:
 	${PYTHON_INTERPRETER} -m src.tools.plot_feature_errorbars $(dataset) $(pipeline)
 
 feature_cluster:
-	${PYTHON_INTERPRETER} -m src.tools.feature_cluster $(dataset) $(pipeline)
+	${PYTHON_INTERPRETER} -m src.tools.feature_cluster $(dataset) $(pipeline) --stat=$(stat) --res=$(res)
 
 plot_tonal_disp:
 	${PYTHON_INTERPRETER} -m src.tools.plot_tonal_disp $(dataset) $(piece)
@@ -86,6 +86,9 @@ plot_piece_tivs:
 
 feature_boxplots:
 	${PYTHON_INTERPRETER} -m src.tools.feature_boxplots $(dataset) $(pipeline) $(feature) $(stat) $(res)
+
+feature_importance:
+	${PYTHON_INTERPRETER} -m src.tools.feature_importance $(dataset) $(pipeline) $(res)
 
 test:
 	pytest --cov-report term-missing --cov=src tests/
