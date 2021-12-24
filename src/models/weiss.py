@@ -131,7 +131,10 @@ def execute(dataset: str, pipeline_name: str, composer_filter: bool):
 
         writer.writerow([
             pipeline_name,
-            overall_mean_acc
+            overall_mean_acc,
+            inter_run_dev,
+            inter_fold_dev,
+            inter_class_dev
         ])
 
         _create_conf_matrix(
