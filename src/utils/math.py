@@ -1,3 +1,4 @@
+from typing import Callable
 import numpy as np
 from numpy.typing import ArrayLike
 
@@ -71,16 +72,18 @@ def normalize(values: ArrayLike):
     )
 
 
-def entropy(values: ArrayLike):
+def entropy(values: ArrayLike, log_func: Callable = np.log):
     """Computes the Shannon entropy of a 2D array of values, row-wise.
 
     Args:
         values: A 2-dimensional vector of values
+        log_func: The logarithm function to use. Defaults to np.log which
+        computes the natural logarithm.
 
     Returns:
         An array of the entropy value for each row of `values´
     """
-    return np.sum(-values * np.log2(values, where=values > 0), axis=1)
+    return np.sum(-values * log_func(values, where=values > 0), axis=1)
 
 
 def whisker_values(arr: ArrayLike):

@@ -120,7 +120,7 @@ class TestMath:
             [0.0, 0.0, 0.0, 0.0]
         ])
 
-        expected = np.array([1.52354455465, 2.0, 0])
+        expected = np.array([1.0560406125, 1.3862943611, 0])
 
         result = math.entropy(values)
 

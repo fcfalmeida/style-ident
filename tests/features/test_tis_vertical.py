@@ -346,6 +346,25 @@ class TestTISVertical:
 
         assert np.allclose(result, expected)
 
+    def test_coef_entropy(self, chroma_data: ArrayLike):
+        tivs = TIVCollection.from_pcp(chroma_data.T)
+
+        tiv_mags = TISVertical()._tiv_mags(tivs)
+
+        expected = np.array(
+            [
+                1.57452784,
+                1.78616963,
+                1.52743004,
+                0,
+                1.77311751
+            ]
+        )
+
+        result = TISVertical()._coef_entropy(tiv_mags)
+
+        assert np.allclose(result, expected)
+
     def test_run(self, data: pd.DataFrame):
         expected = pd.DataFrame([
             {
@@ -358,7 +377,7 @@ class TestTISVertical:
                 "dim_quality": 0.1889306,
                 "diatonicity": 0.21732042,
                 "wholetoneness": 0.12074303,
-                "coef_entropy": 2.4559371
+                "coef_entropy": 1.64641279
             },
             {
                 "piece": "bach_2.mp3",
@@ -370,7 +389,7 @@ class TestTISVertical:
                 "dim_quality": 0.04029938,
                 "diatonicity": 0.13624077,
                 "wholetoneness": 0.19373219,
-                "coef_entropy": 2.3440925
+                "coef_entropy": 1.73139465
             },
             {
                 "piece": "bach_2.mp3",
@@ -394,7 +413,7 @@ class TestTISVertical:
                 "dim_quality": 0.44405399,
                 "diatonicity": 0.22995932,
                 "wholetoneness": 0.03006012,
-                "coef_entropy": 2.23982496
+                "coef_entropy": 1.42244593
             },
             {
                 "piece": "chopin_3.mp3",
@@ -406,7 +425,7 @@ class TestTISVertical:
                 "dim_quality": 0.33863814,
                 "diatonicity": 0.25832167,
                 "wholetoneness": 0.2724359,
-                "coef_entropy": 2.5141074
+                "coef_entropy": 1.66735449
             },
             {
                 "piece": "chopin_3.mp3",
@@ -418,7 +437,7 @@ class TestTISVertical:
                 "dim_quality": 0.04029938,
                 "diatonicity": 0.13624077,
                 "wholetoneness": 0.19373219,
-                "coef_entropy": 2.3440925
+                "coef_entropy": 1.73139465
             },
             {
                 "piece": "chopin_3.mp3",
@@ -430,7 +449,7 @@ class TestTISVertical:
                 "dim_quality": 0.25771809,
                 "diatonicity": 0.19792183,
                 "wholetoneness": 0.00304569,
-                "coef_entropy": 2.29402995
+                "coef_entropy": 1.51954682
 
             },
             {
@@ -443,7 +462,7 @@ class TestTISVertical:
                 "dim_quality": 0.35473626,
                 "diatonicity": 0.19622033,
                 "wholetoneness": 0.05767894,
-                "coef_entropy": 2.44540898
+                "coef_entropy": 1.53724498
             }
         ])
 

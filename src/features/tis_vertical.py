@@ -42,8 +42,6 @@ class TISVertical(PipelineTask):
         data_cpy[TISFeats.DIMINISHED_QUALITTY] = self._coefficient(mags, 3)
         data_cpy[TISFeats.DIATONICITY] = self._coefficient(mags, 4)
         data_cpy[TISFeats.WHOLETONENESS] = self._coefficient(mags, 5)
-        data_cpy[TISFeats.COEF_ENTROPY] = self._coef_entropy(
-            data_cpy[TIS_COEFFICIENTS].values
-        )
+        data_cpy[TISFeats.COEF_ENTROPY] = self._coef_entropy(mags)
 
         return data_cpy[TIS_VERTICAL_FEATS]
