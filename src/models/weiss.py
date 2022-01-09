@@ -29,6 +29,9 @@ def main(dataset, pipeline_name, composer_filter):
 
 
 def execute(dataset: str, pipeline_name: str, composer_filter: bool):
+    # Set random seed for reproducibility
+    np.random.seed(42)
+
     input_filepath = f'{PROCESSED_DIR}/{dataset}/{pipeline_name}'
 
     target_col = dataset_config[dataset]['target_col']
