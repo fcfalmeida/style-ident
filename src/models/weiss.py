@@ -11,7 +11,7 @@ from sklearn.model_selection import (
     GridSearchCV, StratifiedKFold, StratifiedGroupKFold
 )
 from sklearn.metrics import (
-    confusion_matrix, plot_confusion_matrix, accuracy_score
+    confusion_matrix, ConfusionMatrixDisplay, accuracy_score
 )
 from src.data.constants.others import (
     ANNOTATIONS_DIR, PROCESSED_DIR, TRAINOUT_DIR, CONFUSION_MATRICES_DIR
@@ -35,7 +35,8 @@ def execute(dataset: str, pipeline_name: str, composer_filter: bool):
     input_filepath = f'{PROCESSED_DIR}/{dataset}/{pipeline_name}'
 
     target_col = dataset_config[dataset]['target_col']
-    n_classes = len(dataset_config[dataset]['classes'])
+    classes = dataset_config[dataset]['classes']
+    n_classes = len(classes)
 
     print('-' * 75)
     print(f'Dataset -> {dataset}')
@@ -146,7 +147,8 @@ def execute(dataset: str, pipeline_name: str, composer_filter: bool):
             y_test,
             f'{CONFUSION_MATRICES_DIR}/{dataset}',
             pipeline_name,
-            composer_filter
+            composer_filter,
+            classes
         )
 
         _save_model(clf, dataset, pipeline_name, composer_filter)
@@ -223,12 +225,15 @@ def train_classifier(X_train, y_train):
     return clf
 
 
-def _create_conf_matrix(clf, X_test, y_test, path, pipeline_name, filter):
+def _create_conf_matrix(
+        clf, X_test, y_test, path, pipeline_name, filter, classes):
     _, ax = plt.subplots(figsize=(8, 8))
 
-    plot_confusion_matrix(
+    ConfusionMatrixDisplay.from_estimator(
         clf, X_test, y_test, normalize='true',
-        values_format='.2%', cmap='Greys', colorbar=False, ax=ax)
+        values_format='.2%', cmap='Greys',
+        colorbar=False, ax=ax, labels=classes
+    )
 
     plt.xticks(rotation=45)
 
@@ -236,7 +241,7 @@ def _create_conf_matrix(clf, X_test, y_test, path, pipeline_name, filter):
 
     outfile = (
         f'{path}/{pipeline_name}_'
-        f'{"filter_" if filter else ""}'
+        f'{"filter" if filter else ""}'
         '.png'
     )
 
