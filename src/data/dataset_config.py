@@ -28,9 +28,9 @@ dataset_config = {
     'crosscomp11': {
         'target_col': 'composer',
         'classes': [
-            'rameau',
             'bach',
             'handel',
+            'rameau',
             'haydn',
             'mozart',
             'beethoven',
