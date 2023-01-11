@@ -6,5 +6,6 @@ matplotlib==3.4.3
 click==8.0.1
 joblib==1.0.1
 librosa==0.8.1
+vamp==1.1.0
 flake8==3.9.2
 pytest==6.2.4
