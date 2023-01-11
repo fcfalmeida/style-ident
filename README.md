@@ -4,7 +4,13 @@ This repository contains the implementation of the musical style classification 
 
 ## Getting started
 
-First, install the required system dependencies:
+Clone this repository. Please make sure the `--recursive` flag is passed so that all submodules are also cloned.
+
+```bash
+git clone git@github.com:fcfalmeida/style-ident.git --recursive
+```
+
+Install the required system dependencies:
 
 - Python 3.8
 - Pip package manager
