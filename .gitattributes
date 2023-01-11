@@ -1,0 +1,5 @@
+data/external/crossera_piano.csv filter=lfs diff=lfs merge=lfs -text
+data/external/crossera_full.csv filter=lfs diff=lfs merge=lfs -text
+data/external/crossera_orchestra.csv filter=lfs diff=lfs merge=lfs -text
+data/external/crosscomp5.csv filter=lfs diff=lfs merge=lfs -text
+data/external/crosscomp11.csv filter=lfs diff=lfs merge=lfs -text

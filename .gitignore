@@ -135,7 +135,7 @@ dmypy.json
 .DS_Store
 
 # Large .csv files
-data/external/*
+data/external/hcdf_segmented
 data/interim/*
 data/processed/*
 data/trainout/*
