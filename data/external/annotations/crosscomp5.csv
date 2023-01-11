@@ -1,0 +1,501 @@
+Class,Filename,CrossComp-ID,Composer,Performer,Album,Artist_filter_no,Instrumentation
+01_bach,CrossComp-0001_01_bach_ouverture_no._1_in_c_major_bwv_1066__boure_iii.mp3,CrossComp-0001,Bach; Johann Sebastian,Cologne Chamber Orchestra; Muller-Bruhl,BACH; J.S.: Orchestral Suites Nos. 1-4; BWV 1066-1069,1,orchestra
+01_bach,CrossComp-0002_01_bach_ouverture_no._1_in_c_major_bwv_1066__courante.mp3,CrossComp-0002,Bach; Johann Sebastian,Cologne Chamber Orchestra; Muller-Bruhl,BACH; J.S.: Orchestral Suites Nos. 1-4; BWV 1066-1069,1,orchestra
+01_bach,CrossComp-0003_01_bach_ouverture_no._1_in_c_major_bwv_1066__forlane.mp3,CrossComp-0003,Bach; Johann Sebastian,Cologne Chamber Orchestra; Muller-Bruhl,BACH; J.S.: Orchestral Suites Nos. 1-4; BWV 1066-1069,1,orchestra
+01_bach,CrossComp-0004_01_bach_ouverture_no._1_in_c_major_bwv_1066__gavotte_iii.mp3,CrossComp-0004,Bach; Johann Sebastian,Cologne Chamber Orchestra; Muller-Bruhl,BACH; J.S.: Orchestral Suites Nos. 1-4; BWV 1066-1069,1,orchestra
+01_bach,CrossComp-0005_01_bach_ouverture_no._1_in_c_major_bwv_1066__menuet_iii.mp3,CrossComp-0005,Bach; Johann Sebastian,Cologne Chamber Orchestra; Muller-Bruhl,BACH; J.S.: Orchestral Suites Nos. 1-4; BWV 1066-1069,1,orchestra
+01_bach,CrossComp-0006_01_bach_ouverture_no._1_in_c_major_bwv_1066__ouverture.mp3,CrossComp-0006,Bach; Johann Sebastian,Cologne Chamber Orchestra; Muller-Bruhl,BACH; J.S.: Orchestral Suites Nos. 1-4; BWV 1066-1069,1,orchestra
+01_bach,CrossComp-0007_01_bach_ouverture_no._1_in_c_major_bwv_1066__passepied_iii.mp3,CrossComp-0007,Bach; Johann Sebastian,Cologne Chamber Orchestra; Muller-Bruhl,BACH; J.S.: Orchestral Suites Nos. 1-4; BWV 1066-1069,1,orchestra
+01_bach,CrossComp-0008_01_bach_ouverture_no._2_in_b_minor_bwv_1067__badinerie.mp3,CrossComp-0008,Bach; Johann Sebastian,Cologne Chamber Orchestra; Muller-Bruhl,BACH; J.S.: Orchestral Suites Nos. 1-4; BWV 1066-1069,1,orchestra
+01_bach,CrossComp-0009_01_bach_ouverture_no._2_in_b_minor_bwv_1067__boure_iii.mp3,CrossComp-0009,Bach; Johann Sebastian,Cologne Chamber Orchestra; Muller-Bruhl,BACH; J.S.: Orchestral Suites Nos. 1-4; BWV 1066-1069,1,orchestra
+01_bach,CrossComp-0010_01_bach_ouverture_no._2_in_b_minor_bwv_1067__menuet.mp3,CrossComp-0010,Bach; Johann Sebastian,Cologne Chamber Orchestra; Muller-Bruhl,BACH; J.S.: Orchestral Suites Nos. 1-4; BWV 1066-1069,1,orchestra
+01_bach,CrossComp-0011_01_bach_ouverture_no._2_in_b_minor_bwv_1067__ouverture.mp3,CrossComp-0011,Bach; Johann Sebastian,Cologne Chamber Orchestra; Muller-Bruhl,BACH; J.S.: Orchestral Suites Nos. 1-4; BWV 1066-1069,1,orchestra
+01_bach,CrossComp-0012_01_bach_ouverture_no._2_in_b_minor_bwv_1067__polonaise_double.mp3,CrossComp-0012,Bach; Johann Sebastian,Cologne Chamber Orchestra; Muller-Bruhl,BACH; J.S.: Orchestral Suites Nos. 1-4; BWV 1066-1069,1,orchestra
+01_bach,CrossComp-0013_01_bach_ouverture_no._2_in_b_minor_bwv_1067__rondeau.mp3,CrossComp-0013,Bach; Johann Sebastian,Cologne Chamber Orchestra; Muller-Bruhl,BACH; J.S.: Orchestral Suites Nos. 1-4; BWV 1066-1069,1,orchestra
+01_bach,CrossComp-0014_01_bach_ouverture_no._2_in_b_minor_bwv_1067__sarabande.mp3,CrossComp-0014,Bach; Johann Sebastian,Cologne Chamber Orchestra; Muller-Bruhl,BACH; J.S.: Orchestral Suites Nos. 1-4; BWV 1066-1069,1,orchestra
+01_bach,CrossComp-0015_01_bach_ouverture_no._3_in_d_major_bwv_1068__air.mp3,CrossComp-0015,Bach; Johann Sebastian,Cologne Chamber Orchestra; Muller-Bruhl,BACH; J.S.: Orchestral Suites Nos. 1-4; BWV 1066-1069,1,orchestra
+01_bach,CrossComp-0016_01_bach_ouverture_no._3_in_d_major_bwv_1068__boure.mp3,CrossComp-0016,Bach; Johann Sebastian,Cologne Chamber Orchestra; Muller-Bruhl,BACH; J.S.: Orchestral Suites Nos. 1-4; BWV 1066-1069,1,orchestra
+01_bach,CrossComp-0017_01_bach_ouverture_no._3_in_d_major_bwv_1068__gavotte_iii.mp3,CrossComp-0017,Bach; Johann Sebastian,Cologne Chamber Orchestra; Muller-Bruhl,BACH; J.S.: Orchestral Suites Nos. 1-4; BWV 1066-1069,1,orchestra
+01_bach,CrossComp-0018_01_bach_ouverture_no._3_in_d_major_bwv_1068__gigue.mp3,CrossComp-0018,Bach; Johann Sebastian,Cologne Chamber Orchestra; Muller-Bruhl,BACH; J.S.: Orchestral Suites Nos. 1-4; BWV 1066-1069,1,orchestra
+01_bach,CrossComp-0019_01_bach_ouverture_no._3_in_d_major_bwv_1068__ouverture.mp3,CrossComp-0019,Bach; Johann Sebastian,Cologne Chamber Orchestra; Muller-Bruhl,BACH; J.S.: Orchestral Suites Nos. 1-4; BWV 1066-1069,1,orchestra
+01_bach,CrossComp-0020_01_bach_ouverture_no._4_in_d_major_bwv_1069__boure_iii.mp3,CrossComp-0020,Bach; Johann Sebastian,Cologne Chamber Orchestra; Muller-Bruhl,BACH; J.S.: Orchestral Suites Nos. 1-4; BWV 1066-1069,1,orchestra
+01_bach,CrossComp-0021_01_bach_ouverture_no._4_in_d_major_bwv_1069__gavotte.mp3,CrossComp-0021,Bach; Johann Sebastian,Cologne Chamber Orchestra; Muller-Bruhl,BACH; J.S.: Orchestral Suites Nos. 1-4; BWV 1066-1069,1,orchestra
+01_bach,CrossComp-0022_01_bach_ouverture_no._4_in_d_major_bwv_1069__menuet_iii.mp3,CrossComp-0022,Bach; Johann Sebastian,Cologne Chamber Orchestra; Muller-Bruhl,BACH; J.S.: Orchestral Suites Nos. 1-4; BWV 1066-1069,1,orchestra
+01_bach,CrossComp-0023_01_bach_ouverture_no._4_in_d_major_bwv_1069__ouverture.mp3,CrossComp-0023,Bach; Johann Sebastian,Cologne Chamber Orchestra; Muller-Bruhl,BACH; J.S.: Orchestral Suites Nos. 1-4; BWV 1066-1069,1,orchestra
+01_bach,CrossComp-0024_01_bach_ouverture_no._4_in_d_major_bwv_1069__rejouissance.mp3,CrossComp-0024,Bach; Johann Sebastian,Cologne Chamber Orchestra; Muller-Bruhl,BACH; J.S.: Orchestral Suites Nos. 1-4; BWV 1066-1069,1,orchestra
+01_bach,CrossComp-0025_01_bach_piano_concerto_in_d_minor_bwv_1052_1_allegro_non_troppo_ed_energico.mp3,CrossComp-0025,Bach; Johann Sebastian,Camerata Cassovia; Standovsky; Chang,BACH; J.S.: Piano Concertos; Vol. 1 BWV 1052-1054,2,piano; orchestra
+01_bach,CrossComp-0026_01_bach_piano_concerto_in_d_minor_bwv_1052_2_adagio.mp3,CrossComp-0026,Bach; Johann Sebastian,Camerata Cassovia; Standovsky; Chang,BACH; J.S.: Piano Concertos; Vol. 1 BWV 1052-1054,2,piano; orchestra
+01_bach,CrossComp-0027_01_bach_piano_concerto_in_d_minor_bwv_1052_3_allegro.mp3,CrossComp-0027,Bach; Johann Sebastian,Camerata Cassovia; Standovsky; Chang,BACH; J.S.: Piano Concertos; Vol. 1 BWV 1052-1054,2,piano; orchestra
+01_bach,CrossComp-0028_01_bach_piano_concerto_in_e_major_bwv_1053_1_allegro.mp3,CrossComp-0028,Bach; Johann Sebastian,Camerata Cassovia; Standovsky; Chang,BACH; J.S.: Piano Concertos; Vol. 1 BWV 1052-1054,2,piano; orchestra
+01_bach,CrossComp-0029_01_bach_piano_concerto_in_e_major_bwv_1053_2_siciliano.mp3,CrossComp-0029,Bach; Johann Sebastian,Camerata Cassovia; Standovsky; Chang,BACH; J.S.: Piano Concertos; Vol. 1 BWV 1052-1054,2,piano; orchestra
+01_bach,CrossComp-0030_01_bach_piano_concerto_in_e_major_bwv_1053_3_allegro.mp3,CrossComp-0030,Bach; Johann Sebastian,Camerata Cassovia; Standovsky; Chang,BACH; J.S.: Piano Concertos; Vol. 1 BWV 1052-1054,2,piano; orchestra
+01_bach,CrossComp-0031_01_bach_piano_concerto_in_d_major_bwv_1054_1_allegro.mp3,CrossComp-0031,Bach; Johann Sebastian,Camerata Cassovia; Standovsky; Chang,BACH; J.S.: Piano Concertos; Vol. 1 BWV 1052-1054,2,piano; orchestra
+01_bach,CrossComp-0032_01_bach_piano_concerto_in_d_major_bwv_1054_2_adagio_e_sempre_piano.mp3,CrossComp-0032,Bach; Johann Sebastian,Camerata Cassovia; Standovsky; Chang,BACH; J.S.: Piano Concertos; Vol. 1 BWV 1052-1054,2,piano; orchestra
+01_bach,CrossComp-0033_01_bach_piano_concerto_in_d_major_bwv_1054_3_allegro.mp3,CrossComp-0033,Bach; Johann Sebastian,Camerata Cassovia; Standovsky; Chang,BACH; J.S.: Piano Concertos; Vol. 1 BWV 1052-1054,2,piano; orchestra
+01_bach,CrossComp-0034_01_bach_piano_concerto_in_a_major_bwv_1055_1_allegro_moderato.mp3,CrossComp-0034,Bach; Johann Sebastian,Camerata Cassovia; Standovsky; Chang,BACH; J.S.: Piano Concertos; Vol. 2 BWV 1055-1058,2,piano; orchestra
+01_bach,CrossComp-0035_01_bach_piano_concerto_in_a_major_bwv_1055_2_larghetto.mp3,CrossComp-0035,Bach; Johann Sebastian,Camerata Cassovia; Standovsky; Chang,BACH; J.S.: Piano Concertos; Vol. 2 BWV 1055-1058,2,piano; orchestra
+01_bach,CrossComp-0036_01_bach_piano_concerto_in_a_major_bwv_1055_3_allegro_ma_non_tanto.mp3,CrossComp-0036,Bach; Johann Sebastian,Camerata Cassovia; Standovsky; Chang,BACH; J.S.: Piano Concertos; Vol. 2 BWV 1055-1058,2,piano; orchestra
+01_bach,CrossComp-0037_01_bach_piano_concerto_in_f_minor_bwv_1056_1_allegro_moderato.mp3,CrossComp-0037,Bach; Johann Sebastian,Camerata Cassovia; Standovsky; Chang,BACH; J.S.: Piano Concertos; Vol. 2 BWV 1055-1058,2,piano; orchestra
+01_bach,CrossComp-0038_01_bach_piano_concerto_in_f_minor_bwv_1056_2_largo.mp3,CrossComp-0038,Bach; Johann Sebastian,Camerata Cassovia; Standovsky; Chang,BACH; J.S.: Piano Concertos; Vol. 2 BWV 1055-1058,2,piano; orchestra
+01_bach,CrossComp-0039_01_bach_piano_concerto_in_f_minor_bwv_1056_3_presto.mp3,CrossComp-0039,Bach; Johann Sebastian,Camerata Cassovia; Standovsky; Chang,BACH; J.S.: Piano Concertos; Vol. 2 BWV 1055-1058,2,piano; orchestra
+01_bach,CrossComp-0040_01_bach_piano_concerto_in_f_major_bwv_1057_1_allegro.mp3,CrossComp-0040,Bach; Johann Sebastian,Camerata Cassovia; Standovsky; Chang,BACH; J.S.: Piano Concertos; Vol. 2 BWV 1055-1058,2,piano; orchestra
+01_bach,CrossComp-0041_01_bach_piano_concerto_in_f_major_bwv_1057_2_andante.mp3,CrossComp-0041,Bach; Johann Sebastian,Camerata Cassovia; Standovsky; Chang,BACH; J.S.: Piano Concertos; Vol. 2 BWV 1055-1058,2,piano; orchestra
+01_bach,CrossComp-0042_01_bach_piano_concerto_in_f_major_bwv_1057_3_allegro_assai.mp3,CrossComp-0042,Bach; Johann Sebastian,Camerata Cassovia; Standovsky; Chang,BACH; J.S.: Piano Concertos; Vol. 2 BWV 1055-1058,2,piano; orchestra
+01_bach,CrossComp-0043_01_bach_piano_concerto_in_g_minor_bwv_1058_1_allegro_moderato.mp3,CrossComp-0043,Bach; Johann Sebastian,Camerata Cassovia; Standovsky; Chang,BACH; J.S.: Piano Concertos; Vol. 2 BWV 1055-1058,2,piano; orchestra
+01_bach,CrossComp-0044_01_bach_piano_concerto_in_g_minor_bwv_1058_2_andante.mp3,CrossComp-0044,Bach; Johann Sebastian,Camerata Cassovia; Standovsky; Chang,BACH; J.S.: Piano Concertos; Vol. 2 BWV 1055-1058,2,piano; orchestra
+01_bach,CrossComp-0045_01_bach_piano_concerto_in_g_minor_bwv_1058_3_allegro_assai.mp3,CrossComp-0045,Bach; Johann Sebastian,Camerata Cassovia; Standovsky; Chang,BACH; J.S.: Piano Concertos; Vol. 2 BWV 1055-1058,2,piano; orchestra
+01_bach,CrossComp-0046_01_bach_1_bwv_870_in_cmaj.mp3,CrossComp-0046,Bach; Johann Sebastian,Jando,BACH; J.S.: Well-Tempered Clavier (The); Book 2,3,piano
+01_bach,CrossComp-0047_01_bach_2_bwv_871_in_cmin.mp3,CrossComp-0047,Bach; Johann Sebastian,Jando,BACH; J.S.: Well-Tempered Clavier (The); Book 2,3,piano
+01_bach,CrossComp-0048_01_bach_3_bwv_872_in_cmaj.mp3,CrossComp-0048,Bach; Johann Sebastian,Jando,BACH; J.S.: Well-Tempered Clavier (The); Book 2,3,piano
+01_bach,CrossComp-0049_01_bach_4_bwv_873_in_cmin.mp3,CrossComp-0049,Bach; Johann Sebastian,Jando,BACH; J.S.: Well-Tempered Clavier (The); Book 2,3,piano
+01_bach,CrossComp-0050_01_bach_5_bwv_874_in_dmaj.mp3,CrossComp-0050,Bach; Johann Sebastian,Jando,BACH; J.S.: Well-Tempered Clavier (The); Book 2,3,piano
+01_bach,CrossComp-0051_01_bach_6_bwv_875_in_dmin.mp3,CrossComp-0051,Bach; Johann Sebastian,Jando,BACH; J.S.: Well-Tempered Clavier (The); Book 2,3,piano
+01_bach,CrossComp-0052_01_bach_7_bwv_876_in_ebmaj.mp3,CrossComp-0052,Bach; Johann Sebastian,Jando,BACH; J.S.: Well-Tempered Clavier (The); Book 2,3,piano
+01_bach,CrossComp-0053_01_bach_8_bwv_877_in_ebmin.mp3,CrossComp-0053,Bach; Johann Sebastian,Jando,BACH; J.S.: Well-Tempered Clavier (The); Book 2,3,piano
+01_bach,CrossComp-0054_01_bach_9_bwv_878_in_emaj.mp3,CrossComp-0054,Bach; Johann Sebastian,Jando,BACH; J.S.: Well-Tempered Clavier (The); Book 2,3,piano
+01_bach,CrossComp-0055_01_bach_10_bwv_879_in_emin.mp3,CrossComp-0055,Bach; Johann Sebastian,Jando,BACH; J.S.: Well-Tempered Clavier (The); Book 2,3,piano
+01_bach,CrossComp-0056_01_bach_11_bwv_880_in_fmaj.mp3,CrossComp-0056,Bach; Johann Sebastian,Jando,BACH; J.S.: Well-Tempered Clavier (The); Book 2,3,piano
+01_bach,CrossComp-0057_01_bach_12_bwv_881_in_fmin.mp3,CrossComp-0057,Bach; Johann Sebastian,Jando,BACH; J.S.: Well-Tempered Clavier (The); Book 2,3,piano
+01_bach,CrossComp-0058_01_bach_13_bwv_882_in_fmaj.mp3,CrossComp-0058,Bach; Johann Sebastian,Jando,BACH; J.S.: Well-Tempered Clavier (The); Book 2,3,piano
+01_bach,CrossComp-0059_01_bach_14_bwv_883_in_fmin.mp3,CrossComp-0059,Bach; Johann Sebastian,Jando,BACH; J.S.: Well-Tempered Clavier (The); Book 2,3,piano
+01_bach,CrossComp-0060_01_bach_15_bwv_884_in_gmaj.mp3,CrossComp-0060,Bach; Johann Sebastian,Jando,BACH; J.S.: Well-Tempered Clavier (The); Book 2,3,piano
+01_bach,CrossComp-0061_01_bach_16_bwv_885_in_gmin.mp3,CrossComp-0061,Bach; Johann Sebastian,Jando,BACH; J.S.: Well-Tempered Clavier (The); Book 2,3,piano
+01_bach,CrossComp-0062_01_bach_17_bwv_886_in_abmaj.mp3,CrossComp-0062,Bach; Johann Sebastian,Jando,BACH; J.S.: Well-Tempered Clavier (The); Book 2,3,piano
+01_bach,CrossComp-0063_01_bach_18_bwv_887_in_abmin.mp3,CrossComp-0063,Bach; Johann Sebastian,Jando,BACH; J.S.: Well-Tempered Clavier (The); Book 2,3,piano
+01_bach,CrossComp-0064_01_bach_19_bwv_888_in_amaj.mp3,CrossComp-0064,Bach; Johann Sebastian,Jando,BACH; J.S.: Well-Tempered Clavier (The); Book 2,3,piano
+01_bach,CrossComp-0065_01_bach_20_bwv_889_in_amin.mp3,CrossComp-0065,Bach; Johann Sebastian,Jando,BACH; J.S.: Well-Tempered Clavier (The); Book 2,3,piano
+01_bach,CrossComp-0066_01_bach_21_bwv_890_in_bbmaj.mp3,CrossComp-0066,Bach; Johann Sebastian,Jando,BACH; J.S.: Well-Tempered Clavier (The); Book 2,3,piano
+01_bach,CrossComp-0067_01_bach_22_bwv_891_in_bbmin.mp3,CrossComp-0067,Bach; Johann Sebastian,Jando,BACH; J.S.: Well-Tempered Clavier (The); Book 2,3,piano
+01_bach,CrossComp-0068_01_bach_23_bwv_892_in_bmaj.mp3,CrossComp-0068,Bach; Johann Sebastian,Jando,BACH; J.S.: Well-Tempered Clavier (The); Book 2,3,piano
+01_bach,CrossComp-0069_01_bach_24_bwv_893_in_bmin.mp3,CrossComp-0069,Bach; Johann Sebastian,Jando,BACH; J.S.: Well-Tempered Clavier (The); Book 2,3,piano
+01_bach,CrossComp-0070_01_bach_trio_cmoll_bwv_585.mp3,CrossComp-0070,Bach; Johann Sebastian,Ruebsam,BACH; J.S.: Organ Transcriptions,4,organ
+01_bach,CrossComp-0071_01_bach_trio_gdur_bwv_586.mp3,CrossComp-0071,Bach; Johann Sebastian,Ruebsam,BACH; J.S.: Organ Transcriptions,4,organ
+01_bach,CrossComp-0072_01_bach_aria_fdur_bwv_587.mp3,CrossComp-0072,Bach; Johann Sebastian,Ruebsam,BACH; J.S.: Organ Transcriptions,4,organ
+01_bach,CrossComp-0073_01_bach_concerto_gdur_bwv_592.mp3,CrossComp-0073,Bach; Johann Sebastian,Ruebsam,BACH; J.S.: Organ Transcriptions,4,organ
+01_bach,CrossComp-0074_01_bach_concerto_amoll_bwv_593.mp3,CrossComp-0074,Bach; Johann Sebastian,Ruebsam,BACH; J.S.: Organ Transcriptions,4,organ
+01_bach,CrossComp-0075_01_bach_concerto_cdur_bwv_594.mp3,CrossComp-0075,Bach; Johann Sebastian,Ruebsam,BACH; J.S.: Organ Transcriptions,4,organ
+01_bach,CrossComp-0076_01_bach_concerto_cdur_bwv_595.mp3,CrossComp-0076,Bach; Johann Sebastian,Ruebsam,BACH; J.S.: Organ Transcriptions,4,organ
+01_bach,CrossComp-0077_01_bach_concerto_dmoll_bwv_596.mp3,CrossComp-0077,Bach; Johann Sebastian,Ruebsam,BACH; J.S.: Organ Transcriptions,4,organ
+01_bach,CrossComp-0078_01_bach_concerto_esdur_bwv_597.mp3,CrossComp-0078,Bach; Johann Sebastian,Ruebsam,BACH; J.S.: Organ Transcriptions,4,organ
+01_bach,CrossComp-0079_01_bach_schwingt_freudig_euch_emporschwingt_freudig_euch_empor.mp3,CrossComp-0079,Bach; Johann Sebastian,Aradia Ensemble; Mallon; Dawes,BACH; J.S.: Christmas Cantatas,5,choral; organ; ensemble
+01_bach,CrossComp-0080_01_bach_schwingt_freudig_euch_emporaria_die_liebe_zieht_mit_sanften_schritten.mp3,CrossComp-0080,Bach; Johann Sebastian,Aradia Ensemble; Mallon; Dawes,BACH; J.S.: Christmas Cantatas,5,choral; organ; ensemble
+01_bach,CrossComp-0081_01_bach_schwingt_freudig_euch_emporaria_sei_mir_willkommen_werter_schatz.mp3,CrossComp-0081,Bach; Johann Sebastian,Aradia Ensemble; Mallon; Dawes,BACH; J.S.: Christmas Cantatas,5,choral; organ; ensemble
+01_bach,CrossComp-0082_01_bach_schwingt_freudig_euch_emporaria_auch_mit_gedmpften_schwachen_stimmen.mp3,CrossComp-0082,Bach; Johann Sebastian,Aradia Ensemble; Mallon; Dawes,BACH; J.S.: Christmas Cantatas,5,choral; organ; ensemble
+01_bach,CrossComp-0083_01_bach_schwingt_freudig_euch_emporchoral_wie_bin_ich_doch_so_herzlich_froh.mp3,CrossComp-0083,Bach; Johann Sebastian,Aradia Ensemble; Mallon; Dawes,BACH; J.S.: Christmas Cantatas,5,choral; organ; ensemble
+01_bach,CrossComp-0084_01_bach_bereitet_die_wege_bereitet_die_bahnchoral_ertdt_uns_durch_deine_gte.mp3,CrossComp-0084,Bach; Johann Sebastian,Aradia Ensemble; Mallon; Dawes,BACH; J.S.: Christmas Cantatas,5,choral; organ; ensemble
+01_bach,CrossComp-0085_01_bach_bereitet_die_wege_bereitet_die_bahnrecitativo_ich_will_mein_gott.mp3,CrossComp-0085,Bach; Johann Sebastian,Aradia Ensemble; Mallon; Dawes,BACH; J.S.: Christmas Cantatas,5,choral; organ; ensemble
+01_bach,CrossComp-0086_01_bach_bereitet_die_wege_bereitet_die_bahnaria_bereitet_die_wege_bereitet_die_bahn.mp3,CrossComp-0086,Bach; Johann Sebastian,Aradia Ensemble; Mallon; Dawes,BACH; J.S.: Christmas Cantatas,5,choral; organ; ensemble
+01_bach,CrossComp-0087_01_bach_bereitet_die_wege_bereitet_die_bahnaria_wer_bist_du.mp3,CrossComp-0087,Bach; Johann Sebastian,Aradia Ensemble; Mallon; Dawes,BACH; J.S.: Christmas Cantatas,5,choral; organ; ensemble
+01_bach,CrossComp-0088_01_bach_bereitet_die_wege_bereitet_die_bahnrecitativo_willst_du_dich_gottes_kind.mp3,CrossComp-0088,Bach; Johann Sebastian,Aradia Ensemble; Mallon; Dawes,BACH; J.S.: Christmas Cantatas,5,choral; organ; ensemble
+01_bach,CrossComp-0089_01_bach_bereitet_die_wege_bereitet_die_bahnaria_christi_glieder_ach_bedenket.mp3,CrossComp-0089,Bach; Johann Sebastian,Aradia Ensemble; Mallon; Dawes,BACH; J.S.: Christmas Cantatas,5,choral; organ; ensemble
+01_bach,CrossComp-0090_01_bach_nun_komm_der_heiden_heilandrecitativo_siehe_ich_stehe_vor_der_tr.mp3,CrossComp-0090,Bach; Johann Sebastian,Aradia Ensemble; Mallon; Dawes,BACH; J.S.: Christmas Cantatas,5,choral; organ; ensemble
+01_bach,CrossComp-0091_01_bach_nun_komm_der_heiden_heilandaria_ffne_dich_mein_ganzzes_herze.mp3,CrossComp-0091,Bach; Johann Sebastian,Aradia Ensemble; Mallon; Dawes,BACH; J.S.: Christmas Cantatas,5,choral; organ; ensemble
+01_bach,CrossComp-0092_01_bach_nun_komm_der_heiden_heilandoverture.mp3,CrossComp-0092,Bach; Johann Sebastian,Aradia Ensemble; Mallon; Dawes,BACH; J.S.: Christmas Cantatas,5,choral; organ; ensemble
+01_bach,CrossComp-0093_01_bach_nun_komm_der_heiden_heilandaria_komm_jesu_komm.mp3,CrossComp-0093,Bach; Johann Sebastian,Aradia Ensemble; Mallon; Dawes,BACH; J.S.: Christmas Cantatas,5,choral; organ; ensemble
+01_bach,CrossComp-0094_01_bach_nun_komm_der_heiden_heilandamen_komm_du_schne_freudenkrone.mp3,CrossComp-0094,Bach; Johann Sebastian,Aradia Ensemble; Mallon; Dawes,BACH; J.S.: Christmas Cantatas,5,choral; organ; ensemble
+01_bach,CrossComp-0095_01_bach_nun_komm_der_heiden_heilandrecitativo_der_heiland_ist_gekommen.mp3,CrossComp-0095,Bach; Johann Sebastian,Aradia Ensemble; Mallon; Dawes,BACH; J.S.: Christmas Cantatas,5,choral; organ; ensemble
+01_bach,CrossComp-0096_01_bach_instrumentalsuite_nun_komm_der_heiden_heilandchoral_trio_und_quartett.mp3,CrossComp-0096,Bach; Johann Sebastian,Aradia Ensemble; Mallon,BACH; J.S.: Christmas Cantatas,5,ensemble
+01_bach,CrossComp-0097_01_bach_j.s._bach_bmv_998_prelude.mp3,CrossComp-0097,Bach; Johann Sebastian,Gallagher,Guitar Recital: Kevin Gallagher,6,guitar
+01_bach,CrossComp-0098_01_bach_j.s._bach_bmv_998_fugue.mp3,CrossComp-0098,Bach; Johann Sebastian,Gallagher,Guitar Recital: Kevin Gallagher,6,guitar
+01_bach,CrossComp-0099_01_bach_j.s._bach_bmv_998_allegro.mp3,CrossComp-0099,Bach; Johann Sebastian,Gallagher,Guitar Recital: Kevin Gallagher,6,guitar
+01_bach,CrossComp-0100_01_bach_bach__sonata_for_flute_and_coninuo_in_e_minor.mp3,CrossComp-0100,Bach; Johann Sebastian,Kostelnik,Guitar Recital: Steve Kostelnik,7,guitar
+02_beethoven,CrossComp-0101_02_beethoven_adagio_cantabile.mp3,CrossComp-0101,Beethoven; Ludwig van,Demmler; Grabinger; Tillier,BEETHOVEN / RIES: Clarinet Trios,8,clarinet; piano; cello
+02_beethoven,CrossComp-0102_02_beethoven_andante_con_moto_alla_marcia__presto.mp3,CrossComp-0102,Beethoven; Ludwig van,Demmler; Grabinger; Tillier,BEETHOVEN / RIES: Clarinet Trios,8,clarinet; piano; cello
+02_beethoven,CrossComp-0103_02_beethoven_andante_con_variazioni.mp3,CrossComp-0103,Beethoven; Ludwig van,Demmler; Grabinger; Tillier,BEETHOVEN / RIES: Clarinet Trios,8,clarinet; piano; cello
+02_beethoven,CrossComp-0104_02_beethoven_scherzo_allegro_molto_e_vivace.mp3,CrossComp-0104,Beethoven; Ludwig van,Demmler; Grabinger; Tillier,BEETHOVEN / RIES: Clarinet Trios,8,clarinet; piano; cello
+02_beethoven,CrossComp-0105_02_beethoven_tempi_di_menuetto.mp3,CrossComp-0105,Beethoven; Ludwig van,Demmler; Grabinger; Tillier,BEETHOVEN / RIES: Clarinet Trios,8,clarinet; piano; cello
+02_beethoven,CrossComp-0106_02_beethoven_adagio__allegro_con_brio.mp3,CrossComp-0106,Beethoven; Ludwig van,Demmler; Grabinger; Tillier,BEETHOVEN / RIES: Clarinet Trios,8,clarinet; piano; cello
+02_beethoven,CrossComp-0107_02_beethoven_adagio_ma_non_troppo_e_molto_cantabile.mp3,CrossComp-0107,Beethoven; Ludwig van,Kodaly Quartet,BEETHOVEN; L. van: String Quartets; Vol. 6,9,ensemble; quartet
+02_beethoven,CrossComp-0108_02_beethoven_menuetto_grazioso.mp3,CrossComp-0108,Beethoven; Ludwig van,Kodaly Quartet,BEETHOVEN; L. van: String Quartets; Vol. 6,9,ensemble; quartet
+02_beethoven,CrossComp-0109_02_beethoven_allegro_molto.mp3,CrossComp-0109,Beethoven; Ludwig van,Kodaly Quartet,BEETHOVEN; L. van: String Quartets; Vol. 6,9,ensemble; quartet
+02_beethoven,CrossComp-0110_02_beethoven_maestoso__allegro_teneramente.mp3,CrossComp-0110,Beethoven; Ludwig van,Kodaly Quartet,BEETHOVEN; L. van: String Quartets; Vol. 6,9,ensemble; quartet
+02_beethoven,CrossComp-0111_02_beethoven_introduzione_andante_con_moto__allegro_vivace.mp3,CrossComp-0111,Beethoven; Ludwig van,Kodaly Quartet,BEETHOVEN; L. van: String Quartets; Vol. 6,9,ensemble; quartet
+02_beethoven,CrossComp-0112_02_beethoven_andante_con_moto_quasi_allegretto.mp3,CrossComp-0112,Beethoven; Ludwig van,Kodaly Quartet,BEETHOVEN; L. van: String Quartets; Vol. 6,9,ensemble; quartet
+02_beethoven,CrossComp-0113_02_beethoven_scherzando_vivace.mp3,CrossComp-0113,Beethoven; Ludwig van,Kodaly Quartet,BEETHOVEN; L. van: String Quartets; Vol. 6,9,ensemble; quartet
+02_beethoven,CrossComp-0114_02_beethoven_finale_alla_breve.mp3,CrossComp-0114,Beethoven; Ludwig van,Kodaly Quartet,BEETHOVEN; L. van: String Quartets; Vol. 6,9,ensemble; quartet
+02_beethoven,CrossComp-0115_02_beethoven_string_quarter_in_f_major_op._18_no._1__2__adagio_affettuoso_ed_appasionato.mp3,CrossComp-0115,Beethoven; Ludwig van,Kodaly Quartet,BEETHOVEN; L. van: String Quartets; Vol. 1,9,ensemble; quartet
+02_beethoven,CrossComp-0116_02_beethoven_string_quarter_in_f_major_op._18_no._1__4__allegro.mp3,CrossComp-0116,Beethoven; Ludwig van,Kodaly Quartet,BEETHOVEN; L. van: String Quartets; Vol. 1,9,ensemble; quartet
+02_beethoven,CrossComp-0117_02_beethoven_string_quarter_in_f_major_op._18_no._1__1__allegro_con_brio.mp3,CrossComp-0117,Beethoven; Ludwig van,Kodaly Quartet,BEETHOVEN; L. van: String Quartets; Vol. 1,9,ensemble; quartet
+02_beethoven,CrossComp-0118_02_beethoven_string_quarter_in_g_major_op._18_no._2__1__allegro.mp3,CrossComp-0118,Beethoven; Ludwig van,Kodaly Quartet,BEETHOVEN; L. van: String Quartets; Vol. 1,9,ensemble; quartet
+02_beethoven,CrossComp-0119_02_beethoven_string_quarter_in_g_major_op._18_no._2__3.mp3,CrossComp-0119,Beethoven; Ludwig van,Kodaly Quartet,BEETHOVEN; L. van: String Quartets; Vol. 1,9,ensemble; quartet
+02_beethoven,CrossComp-0120_02_beethoven_string_quarter_in_f_major_op._18_no._1__3.mp3,CrossComp-0120,Beethoven; Ludwig van,Kodaly Quartet,BEETHOVEN; L. van: String Quartets; Vol. 1,9,ensemble; quartet
+02_beethoven,CrossComp-0121_02_beethoven_string_quarter_in_g_major_op._18_no._2__2__adagio_cantabile.mp3,CrossComp-0121,Beethoven; Ludwig van,Kodaly Quartet,BEETHOVEN; L. van: String Quartets; Vol. 1,9,ensemble; quartet
+02_beethoven,CrossComp-0122_02_beethoven_string_quarter_in_g_major_op._18_no._2__4__allegro_molto_quasi_presto.mp3,CrossComp-0122,Beethoven; Ludwig van,Kodaly Quartet,BEETHOVEN; L. van: String Quartets; Vol. 1,9,ensemble; quartet
+02_beethoven,CrossComp-0123_02_beethoven_consecration_of_the_house.mp3,CrossComp-0123,Beethoven; Ludwig van,Slovak Philharmonic Orchestra; Grunzenhauser,BEETHOVEN; L. van: Overtures; Vol. 1,10,orchestra
+02_beethoven,CrossComp-0124_02_beethoven_fidelio.mp3,CrossComp-0124,Beethoven; Ludwig van,Slovak Philharmonic Orchestra; Grunzenhauser,BEETHOVEN; L. van: Overtures; Vol. 1,10,orchestra
+02_beethoven,CrossComp-0125_02_beethoven_ruins_of_athens.mp3,CrossComp-0125,Beethoven; Ludwig van,Slovak Philharmonic Orchestra; Grunzenhauser,BEETHOVEN; L. van: Overtures; Vol. 1,10,orchestra
+02_beethoven,CrossComp-0126_02_beethoven_leonora_no._3.mp3,CrossComp-0126,Beethoven; Ludwig van,Slovak Philharmonic Orchestra; Grunzenhauser,BEETHOVEN; L. van: Overtures; Vol. 1,10,orchestra
+02_beethoven,CrossComp-0127_02_beethoven_egmont.mp3,CrossComp-0127,Beethoven; Ludwig van,Slovak Philharmonic Orchestra; Grunzenhauser,BEETHOVEN; L. van: Overtures; Vol. 1,10,orchestra
+02_beethoven,CrossComp-0128_02_beethoven_coriolanus.mp3,CrossComp-0128,Beethoven; Ludwig van,Slovak Philharmonic Orchestra; Grunzenhauser,BEETHOVEN; L. van: Overtures; Vol. 1,10,orchestra
+02_beethoven,CrossComp-0129_02_beethoven_creatures_of_prometheus.mp3,CrossComp-0129,Beethoven; Ludwig van,Slovak Philharmonic Orchestra; Grunzenhauser,BEETHOVEN; L. van: Overtures; Vol. 1,10,orchestra
+02_beethoven,CrossComp-0130_02_beethoven_no._5_allegro_con_brio.mp3,CrossComp-0130,Beethoven; Ludwig van,Nicolaus Esterhazy Sinfonia; Drahos,BEETHOVEN; L. van: Symphonies Nos. 5 and 6,11,orchestra
+02_beethoven,CrossComp-0131_02_beethoven_no._5_andante_con_moto.mp3,CrossComp-0131,Beethoven; Ludwig van,Nicolaus Esterhazy Sinfonia; Drahos,BEETHOVEN; L. van: Symphonies Nos. 5 and 6,11,orchestra
+02_beethoven,CrossComp-0132_02_beethoven_no._5_allegro.mp3,CrossComp-0132,Beethoven; Ludwig van,Nicolaus Esterhazy Sinfonia; Drahos,BEETHOVEN; L. van: Symphonies Nos. 5 and 6,11,orchestra
+02_beethoven,CrossComp-0133_02_beethoven_no._6_allegro_ma_non_troppo.mp3,CrossComp-0133,Beethoven; Ludwig van,Nicolaus Esterhazy Sinfonia; Drahos,BEETHOVEN; L. van: Symphonies Nos. 5 and 6,11,orchestra
+02_beethoven,CrossComp-0134_02_beethoven_no._6_andante_molto_mosso.mp3,CrossComp-0134,Beethoven; Ludwig van,Nicolaus Esterhazy Sinfonia; Drahos,BEETHOVEN; L. van: Symphonies Nos. 5 and 6,11,orchestra
+02_beethoven,CrossComp-0135_02_beethoven_no._6_allegro.mp3,CrossComp-0135,Beethoven; Ludwig van,Nicolaus Esterhazy Sinfonia; Drahos,BEETHOVEN; L. van: Symphonies Nos. 5 and 6,11,orchestra
+02_beethoven,CrossComp-0136_02_beethoven_no._6_allegretto.mp3,CrossComp-0136,Beethoven; Ludwig van,Nicolaus Esterhazy Sinfonia; Drahos,BEETHOVEN; L. van: Symphonies Nos. 5 and 6,11,orchestra
+02_beethoven,CrossComp-0137_02_beethoven_allegro_vivace.mp3,CrossComp-0137,Beethoven; Ludwig van,Nicolaus Esterhazy Sinfonia; Drahos,BEETHOVEN; L. van: Symphonies Nos. 3 and 8,11,orchestra
+02_beethoven,CrossComp-0138_02_beethoven_allegretto_scherzando.mp3,CrossComp-0138,Beethoven; Ludwig van,Nicolaus Esterhazy Sinfonia; Drahos,BEETHOVEN; L. van: Symphonies Nos. 3 and 8,11,orchestra
+02_beethoven,CrossComp-0139_02_beethoven_scherzo_allegro_vivace.mp3,CrossComp-0139,Beethoven; Ludwig van,Nicolaus Esterhazy Sinfonia; Drahos,BEETHOVEN; L. van: Symphonies Nos. 3 and 8,11,orchestra
+02_beethoven,CrossComp-0140_02_beethoven_finale_allegro_molto.mp3,CrossComp-0140,Beethoven; Ludwig van,Nicolaus Esterhazy Sinfonia; Drahos,BEETHOVEN; L. van: Symphonies Nos. 3 and 8,11,orchestra
+02_beethoven,CrossComp-0141_02_beethoven_symphony_no.8_in_f_major_op.93__allegro_vivace_e_con_brio.mp3,CrossComp-0141,Beethoven; Ludwig van,Nicolaus Esterhazy Sinfonia; Drahos,BEETHOVEN; L. van: Symphonies Nos. 3 and 8,11,orchestra
+02_beethoven,CrossComp-0142_02_beethoven_tempo_di_menuetto.mp3,CrossComp-0142,Beethoven; Ludwig van,Nicolaus Esterhazy Sinfonia; Drahos,BEETHOVEN; L. van: Symphonies Nos. 3 and 8,11,orchestra
+02_beethoven,CrossComp-0143_02_beethoven_symphony_no.3_in_e_flat_major_op.55__allegro_con_brio.mp3,CrossComp-0143,Beethoven; Ludwig van,Nicolaus Esterhazy Sinfonia; Drahos,BEETHOVEN; L. van: Symphonies Nos. 3 and 8,11,orchestra
+02_beethoven,CrossComp-0144_02_beethoven_marcia_funebre_allegro_assai.mp3,CrossComp-0144,Beethoven; Ludwig van,Nicolaus Esterhazy Sinfonia; Drahos,BEETHOVEN; L. van: Symphonies Nos. 3 and 8,11,orchestra
+02_beethoven,CrossComp-0145_02_beethoven_triumphmarsch_triumphal_march_for_tarpeja_woo_2a.mp3,CrossComp-0145,Beethoven; Ludwig van,Nicolaus Esterhazy Sinfonia; Drahos,BEETHOVEN: Overtures; Vol. 2,11,orchestra
+02_beethoven,CrossComp-0146_02_beethoven_king_stephen_op._117.mp3,CrossComp-0146,Beethoven; Ludwig van,Nicolaus Esterhazy Sinfonia; Drahos,BEETHOVEN: Overtures; Vol. 2,11,orchestra
+02_beethoven,CrossComp-0147_02_beethoven_lenora_no._2_op._72.mp3,CrossComp-0147,Beethoven; Ludwig van,Nicolaus Esterhazy Sinfonia; Drahos,BEETHOVEN: Overtures; Vol. 2,11,orchestra
+02_beethoven,CrossComp-0148_02_beethoven_lenora_no._1_op._138.mp3,CrossComp-0148,Beethoven; Ludwig van,Nicolaus Esterhazy Sinfonia; Drahos,BEETHOVEN: Overtures; Vol. 2,11,orchestra
+02_beethoven,CrossComp-0149_02_beethoven_music_for_knightly_ballet_woo_1.mp3,CrossComp-0149,Beethoven; Ludwig van,Nicolaus Esterhazy Sinfonia; Drahos,BEETHOVEN: Overtures; Vol. 2,11,orchestra
+02_beethoven,CrossComp-0150_02_beethoven_trauermarsch_funeral_march_for_lenore_prohaska_woo_944.mp3,CrossComp-0150,Beethoven; Ludwig van,Nicolaus Esterhazy Sinfonia; Drahos,BEETHOVEN: Overtures; Vol. 2,11,orchestra
+02_beethoven,CrossComp-0151_02_beethoven_nameday_celebration_op_115.mp3,CrossComp-0151,Beethoven; Ludwig van,Nicolaus Esterhazy Sinfonia; Drahos,BEETHOVEN: Overtures; Vol. 2,11,orchestra
+02_beethoven,CrossComp-0152_02_beethoven_the_consentration_of_the_house_op._124.mp3,CrossComp-0152,Beethoven; Ludwig van,Nicolaus Esterhazy Sinfonia; Drahos,BEETHOVEN: Overtures; Vol. 2,11,orchestra
+02_beethoven,CrossComp-0153_02_beethoven_finale_presto.mp3,CrossComp-0153,Beethoven; Ludwig van,Nicolaus Esterhazy Sinfonia; Drahos,BEETHOVEN; L. van: Symphony No. 9; Choral,11,orchestra; choral
+02_beethoven,CrossComp-0154_02_beethoven_molto_vivace.mp3,CrossComp-0154,Beethoven; Ludwig van,Nicolaus Esterhazy Sinfonia; Drahos,BEETHOVEN; L. van: Symphony No. 9; Choral,11,orchestra; choral
+02_beethoven,CrossComp-0155_02_beethoven_allegro_ma_non_troppo_un_poco_maestoso.mp3,CrossComp-0155,Beethoven; Ludwig van,Nicolaus Esterhazy Sinfonia; Drahos,BEETHOVEN; L. van: Symphony No. 9; Choral,11,orchestra; choral
+02_beethoven,CrossComp-0156_02_beethoven_adagio_molto_e_canabile_andante_moderato.mp3,CrossComp-0156,Beethoven; Ludwig van,Nicolaus Esterhazy Sinfonia; Drahos,BEETHOVEN; L. van: Symphony No. 9; Choral,11,orchestra; choral
+02_beethoven,CrossComp-0157_02_beethoven_9_in_g.mp3,CrossComp-0157,Beethoven; Ludwig van,Jando,BEETHOVEN; L. van: Bagatelles and Dances; Vol. 3 ,3,piano
+02_beethoven,CrossComp-0158_02_beethoven_5_in_c.mp3,CrossComp-0158,Beethoven; Ludwig van,Jando,BEETHOVEN; L. van: Bagatelles and Dances; Vol. 3 ,3,piano
+02_beethoven,CrossComp-0159_02_beethoven_6_in_a.mp3,CrossComp-0159,Beethoven; Ludwig van,Jando,BEETHOVEN; L. van: Bagatelles and Dances; Vol. 3 ,3,piano
+02_beethoven,CrossComp-0160_02_beethoven_andante_f_major_woo57_andante_favori.mp3,CrossComp-0160,Beethoven; Ludwig van,Jando,BEETHOVEN; L. van: Bagatelles and Dances; Vol. 3 ,3,piano
+02_beethoven,CrossComp-0161_02_beethoven_4_in_e_flat.mp3,CrossComp-0161,Beethoven; Ludwig van,Jando,BEETHOVEN; L. van: Bagatelles and Dances; Vol. 3 ,3,piano
+02_beethoven,CrossComp-0162_02_beethoven_two_german_dances_allegro_and_da_capo_the_deutscher_hess_6.mp3,CrossComp-0162,Beethoven; Ludwig van,Jando,BEETHOVEN; L. van: Bagatelles and Dances; Vol. 3 ,3,piano
+02_beethoven,CrossComp-0163_02_beethoven_3_in_g.mp3,CrossComp-0163,Beethoven; Ludwig van,Jando,BEETHOVEN; L. van: Bagatelles and Dances; Vol. 3 ,3,piano
+02_beethoven,CrossComp-0164_02_beethoven_12_in_f.mp3,CrossComp-0164,Beethoven; Ludwig van,Jando,BEETHOVEN; L. van: Bagatelles and Dances; Vol. 3 ,3,piano
+02_beethoven,CrossComp-0165_02_beethoven_10_in_e_flat.mp3,CrossComp-0165,Beethoven; Ludwig van,Jando,BEETHOVEN; L. van: Bagatelles and Dances; Vol. 3 ,3,piano
+02_beethoven,CrossComp-0166_02_beethoven_rondo_c_major_op.51_no.1.mp3,CrossComp-0166,Beethoven; Ludwig van,Jando,BEETHOVEN; L. van: Bagatelles and Dances; Vol. 3 ,3,piano
+02_beethoven,CrossComp-0167_02_beethoven_rondo_a_major_wo_o49.mp3,CrossComp-0167,Beethoven; Ludwig van,Jando,BEETHOVEN; L. van: Bagatelles and Dances; Vol. 3 ,3,piano
+02_beethoven,CrossComp-0168_02_beethoven_rondo_g_major_op.51_no..mp3,CrossComp-0168,Beethoven; Ludwig van,Jando,BEETHOVEN; L. van: Bagatelles and Dances; Vol. 3 ,3,piano
+02_beethoven,CrossComp-0169_02_beethoven_7_in_d.mp3,CrossComp-0169,Beethoven; Ludwig van,Jando,BEETHOVEN; L. van: Bagatelles and Dances; Vol. 3 ,3,piano
+02_beethoven,CrossComp-0170_02_beethoven_11_in_c.mp3,CrossComp-0170,Beethoven; Ludwig van,Jando,BEETHOVEN; L. van: Bagatelles and Dances; Vol. 3 ,3,piano
+02_beethoven,CrossComp-0171_02_beethoven_1_in_d.mp3,CrossComp-0171,Beethoven; Ludwig van,Jando,BEETHOVEN; L. van: Bagatelles and Dances; Vol. 3 ,3,piano
+02_beethoven,CrossComp-0172_02_beethoven_2_in_b_flat.mp3,CrossComp-0172,Beethoven; Ludwig van,Jando,BEETHOVEN; L. van: Bagatelles and Dances; Vol. 3 ,3,piano
+02_beethoven,CrossComp-0173_02_beethoven_rondo_a_capriccio_g_major_op.129_rage_over_a_lost_penny.mp3,CrossComp-0173,Beethoven; Ludwig van,Jando,BEETHOVEN; L. van: Bagatelles and Dances; Vol. 3 ,3,piano
+02_beethoven,CrossComp-0174_02_beethoven_8_in_b_flat.mp3,CrossComp-0174,Beethoven; Ludwig van,Jando,BEETHOVEN; L. van: Bagatelles and Dances; Vol. 3 ,3,piano
+02_beethoven,CrossComp-0175_02_beethoven_string_quartet_in_c_sharp_minor_op._131_presto.mp3,CrossComp-0175,Beethoven; Ludwig van,Kodaly Quartet,BEETHOVEN; L. van: String Quartets; Vol. 9 ,9,ensemble; violin; cello; viola
+02_beethoven,CrossComp-0176_02_beethoven_string_quartet_in_c_sharp_minor_op._131_adagio_ma_non_troppo_e_molto_espressivo.mp3,CrossComp-0176,Beethoven; Ludwig van,Kodaly Quartet,BEETHOVEN; L. van: String Quartets; Vol. 9 ,9,ensemble; violin; cello; viola
+02_beethoven,CrossComp-0177_02_beethoven_string_quartet_in_f_major_op._135_grave_ma_non_troppo_trattoallegro.mp3,CrossComp-0177,Beethoven; Ludwig van,Kodaly Quartet,BEETHOVEN; L. van: String Quartets; Vol. 9 ,9,ensemble; violin; cello; viola
+02_beethoven,CrossComp-0178_02_beethoven_string_quartet_in_c_sharp_minor_op._131_allegro_molto_vivace.mp3,CrossComp-0178,Beethoven; Ludwig van,Kodaly Quartet,BEETHOVEN; L. van: String Quartets; Vol. 9 ,9,ensemble; violin; cello; viola
+02_beethoven,CrossComp-0179_02_beethoven_string_quartet_in_f_major_op._135_allegretto.mp3,CrossComp-0179,Beethoven; Ludwig van,Kodaly Quartet,BEETHOVEN; L. van: String Quartets; Vol. 9 ,9,ensemble; violin; cello; viola
+02_beethoven,CrossComp-0180_02_beethoven_string_quartet_in_f_major_op._135_lento_assai_cantante_e_tranquillo.mp3,CrossComp-0180,Beethoven; Ludwig van,Kodaly Quartet,BEETHOVEN; L. van: String Quartets; Vol. 9 ,9,ensemble; violin; cello; viola
+02_beethoven,CrossComp-0181_02_beethoven_string_quartet_in_c_sharp_minor_op._131_andante_ma_non_troppo_e_molto_cantabile.mp3,CrossComp-0181,Beethoven; Ludwig van,Kodaly Quartet,BEETHOVEN; L. van: String Quartets; Vol. 9 ,9,ensemble; violin; cello; viola
+02_beethoven,CrossComp-0182_02_beethoven_string_quartet_in_c_sharp_minor_op._131_allegro_moderato.mp3,CrossComp-0182,Beethoven; Ludwig van,Kodaly Quartet,BEETHOVEN; L. van: String Quartets; Vol. 9 ,9,ensemble; violin; cello; viola
+02_beethoven,CrossComp-0183_02_beethoven_string_quartet_in_f_major_op._135_vivace.mp3,CrossComp-0183,Beethoven; Ludwig van,Kodaly Quartet,BEETHOVEN; L. van: String Quartets; Vol. 9 ,9,ensemble; violin; cello; viola
+02_beethoven,CrossComp-0184_02_beethoven_string_quartet_in_c_sharp_minor_op._131_adagio_quasi_un_poco_andante.mp3,CrossComp-0184,Beethoven; Ludwig van,Kodaly Quartet,BEETHOVEN; L. van: String Quartets; Vol. 9 ,9,ensemble; violin; cello; viola
+02_beethoven,CrossComp-0185_02_beethoven_string_quartet_in_c_sharp_minor_op._131_allegro.mp3,CrossComp-0185,Beethoven; Ludwig van,Kodaly Quartet,BEETHOVEN; L. van: String Quartets; Vol. 9 ,9,ensemble; violin; cello; viola
+02_beethoven,CrossComp-0186_02_beethoven_string_quartets_in_a_minor_op_132_heiliger_dankgesang_eines_genesenden_in_der_lydischen_tonart_molto_adagioandante.mp3,CrossComp-0186,Beethoven; Ludwig van,Kodaly Quartet,BEETHOVEN; L. van: String Quartets; Vol. 7 ,9,ensemble; violin; cello; viola
+02_beethoven,CrossComp-0187_02_beethoven_string_quartets_in_a_minor_op_132_alla_marcia_assai_vivace.mp3,CrossComp-0187,Beethoven; Ludwig van,Kodaly Quartet,BEETHOVEN; L. van: String Quartets; Vol. 7 ,9,ensemble; violin; cello; viola
+02_beethoven,CrossComp-0188_02_beethoven_string_quartets_in_f_major_h._34_allegretto.mp3,CrossComp-0188,Beethoven; Ludwig van,Kodaly Quartet,BEETHOVEN; L. van: String Quartets; Vol. 7 ,9,ensemble; violin; cello; viola
+02_beethoven,CrossComp-0189_02_beethoven_string_quartets_in_f_major_h._34_allegro_moderato.mp3,CrossComp-0189,Beethoven; Ludwig van,Kodaly Quartet,BEETHOVEN; L. van: String Quartets; Vol. 7 ,9,ensemble; violin; cello; viola
+02_beethoven,CrossComp-0190_02_beethoven_string_quartets_in_a_minor_op_132_allegro_ma_non_tanto.mp3,CrossComp-0190,Beethoven; Ludwig van,Kodaly Quartet,BEETHOVEN; L. van: String Quartets; Vol. 7 ,9,ensemble; violin; cello; viola
+02_beethoven,CrossComp-0191_02_beethoven_string_quartets_in_a_minor_op_132_allegro_appassionato.mp3,CrossComp-0191,Beethoven; Ludwig van,Kodaly Quartet,BEETHOVEN; L. van: String Quartets; Vol. 7 ,9,ensemble; violin; cello; viola
+02_beethoven,CrossComp-0192_02_beethoven_string_quartets_in_a_minor_op_132_assai_sostenutoallegro.mp3,CrossComp-0192,Beethoven; Ludwig van,Kodaly Quartet,BEETHOVEN; L. van: String Quartets; Vol. 7 ,9,ensemble; violin; cello; viola
+02_beethoven,CrossComp-0193_02_beethoven_string_quartets_in_f_major_h._34_allegro.mp3,CrossComp-0193,Beethoven; Ludwig van,Kodaly Quartet,BEETHOVEN; L. van: String Quartets; Vol. 7 ,9,ensemble; violin; cello; viola
+02_beethoven,CrossComp-0194_02_beethoven_string_quartets_in_b_flat_major_op_130_presto.mp3,CrossComp-0194,Beethoven; Ludwig van,Kodaly Quartet,BEETHOVEN; L. van: String Quartets; Vol. 8,9,ensemble; violin; cello; viola
+02_beethoven,CrossComp-0195_02_beethoven_string_quartets_in_b_flat_major_op_130_finale_allegro.mp3,CrossComp-0195,Beethoven; Ludwig van,Kodaly Quartet,BEETHOVEN; L. van: String Quartets; Vol. 8,9,ensemble; violin; cello; viola
+02_beethoven,CrossComp-0196_02_beethoven_grosse_fuge_op._133.mp3,CrossComp-0196,Beethoven; Ludwig van,Kodaly Quartet,BEETHOVEN; L. van: String Quartets; Vol. 8,9,ensemble; violin; cello; viola
+02_beethoven,CrossComp-0197_02_beethoven_string_quartets_in_b_flat_major_op_130_alla_danza_tedesca_allegro_assai.mp3,CrossComp-0197,Beethoven; Ludwig van,Kodaly Quartet,BEETHOVEN; L. van: String Quartets; Vol. 8,9,ensemble; violin; cello; viola
+02_beethoven,CrossComp-0198_02_beethoven_string_quartets_in_b_flat_major_op_130_adagio_ma_non_troppo_allegro.mp3,CrossComp-0198,Beethoven; Ludwig van,Kodaly Quartet,BEETHOVEN; L. van: String Quartets; Vol. 8,9,ensemble; violin; cello; viola
+02_beethoven,CrossComp-0199_02_beethoven_string_quartets_in_b_flat_major_op_130_andante_con_moto_ma_non_troppo.mp3,CrossComp-0199,Beethoven; Ludwig van,Kodaly Quartet,BEETHOVEN; L. van: String Quartets; Vol. 8,9,ensemble; violin; cello; viola
+02_beethoven,CrossComp-0200_02_beethoven_string_quartets_in_b_flat_major_op_130_cavatina_adagio_molto_espressivo.mp3,CrossComp-0200,Beethoven; Ludwig van,Kodaly Quartet,BEETHOVEN; L. van: String Quartets; Vol. 8,9,ensemble; violin; cello; viola
+03_brahms,CrossComp-0201_03_brahms_brahms_piano_concerto_no._1_in_d_minor_op._15adagio.mp3,CrossComp-0201,Brahms; Johannes,Biret,BRAHMS; J.: Piano Concerto No.1 / SCHUMANN; R.: Introduction and Concerto-Allegro,12,orchestra
+03_brahms,CrossComp-0202_03_brahms_brahms_piano_concerto_no._1_in_d_minor_op._15rondo_allegro_non_troppo.mp3,CrossComp-0202,Brahms; Johannes,Biret,BRAHMS; J.: Piano Concerto No.1 / SCHUMANN; R.: Introduction and Concerto-Allegro,12,orchestra
+03_brahms,CrossComp-0203_03_brahms_brahms_piano_concerto_no._1_in_d_minor_op._15maestoso.mp3,CrossComp-0203,Brahms; Johannes,Biret,BRAHMS; J.: Piano Concerto No.1 / SCHUMANN; R.: Introduction and Concerto-Allegro,12,orchestra
+03_brahms,CrossComp-0204_03_brahms_quintet_for_clarinet_and_strings_in_b_minor_op._115__andantino__presto_non_assai_ma_con_sentimento.mp3,CrossComp-0204,Brahms; Johannes,Danubius Quartet; Jando; Onczay,BRAHMS: Clarinet Trio; Op. 114 / Clarinet Quintet; Op. 115,13,ensemble; quartet; clarinet
+03_brahms,CrossComp-0205_03_brahms_quintet_for_clarinet_and_strings_in_b_minor_op._115__adagio.mp3,CrossComp-0205,Brahms; Johannes,Danubius Quartet; Jando; Onczay,BRAHMS: Clarinet Trio; Op. 114 / Clarinet Quintet; Op. 115,13,ensemble; quartet; clarinet
+03_brahms,CrossComp-0206_03_brahms_quintet_for_clarinet_and_strings_in_b_minor_op._115__allegro.mp3,CrossComp-0206,Brahms; Johannes,Danubius Quartet; Jando; Onczay,BRAHMS: Clarinet Trio; Op. 114 / Clarinet Quintet; Op. 115,13,ensemble; quartet; clarinet
+03_brahms,CrossComp-0207_03_brahms_quintet_for_clarinet_and_strings_in_b_minor_op._115_con_moto.mp3,CrossComp-0207,Brahms; Johannes,Danubius Quartet; Jando; Onczay,BRAHMS: Clarinet Trio; Op. 114 / Clarinet Quintet; Op. 115,13,ensemble; quartet; clarinet
+03_brahms,CrossComp-0208_03_brahms_trio_for_piano_clarinet_and_cello_in_a_minor_op._114__andantino_grazioso.mp3,CrossComp-0208,Brahms; Johannes,Danubius Quartet; Jando; Onczay,BRAHMS: Clarinet Trio; Op. 114 / Clarinet Quintet; Op. 115,13,ensemble; clarinet; cello; piano
+03_brahms,CrossComp-0209_03_brahms_trio_for_piano_clarinet_and_cello_in_a_minor_op._114__adagio.mp3,CrossComp-0209,Brahms; Johannes,Danubius Quartet; Jando; Onczay,BRAHMS: Clarinet Trio; Op. 114 / Clarinet Quintet; Op. 115,13,ensemble; clarinet; cello; piano
+03_brahms,CrossComp-0210_03_brahms_trio_for_piano_clarinet_and_cello_in_a_minor_op._114__allegro.mp3,CrossComp-0210,Brahms; Johannes,Danubius Quartet; Jando; Onczay,BRAHMS: Clarinet Trio; Op. 114 / Clarinet Quintet; Op. 115,13,ensemble; clarinet; cello; piano
+03_brahms,CrossComp-0211_03_brahms_brahms__vier_ernste_gesange_op.121__wenn_ich_mit_menschen__und_mit_engelzungen_redete.mp3,CrossComp-0211,Brahms; Johannes,Jando,SCHUMANN; R. / BRAHMS / WAGNER: Romantic Song Cycles,3,piano
+03_brahms,CrossComp-0212_03_brahms_brahms__vier_ernste_gesange_op.121__ich_wandte_mich_und_sahe_an_alle.mp3,CrossComp-0212,Brahms; Johannes,Jando,SCHUMANN; R. / BRAHMS / WAGNER: Romantic Song Cycles,3,piano
+03_brahms,CrossComp-0213_03_brahms_brahms__vier_ernste_gesange_op.121__o_tod_o_tod_wie_bitter_bist_du.mp3,CrossComp-0213,Brahms; Johannes,Jando,SCHUMANN; R. / BRAHMS / WAGNER: Romantic Song Cycles,3,piano
+03_brahms,CrossComp-0214_03_brahms_brahms__vier_ernste_gesange_op.121__denn_es_gehet_dem_menschen_wie_dem_vieg.mp3,CrossComp-0214,Brahms; Johannes,Jando,SCHUMANN; R. / BRAHMS / WAGNER: Romantic Song Cycles,3,piano
+03_brahms,CrossComp-0215_03_brahms_j._brahms_klaviestcke_op._76capiccio_in_b_minor_allegretto_non_trppo.mp3,CrossComp-0215,Brahms; Johannes,Tebenikhin,Piano Recital: Amir Tebenikhin,14,piano
+03_brahms,CrossComp-0216_03_brahms_j._brahms_klaviestcke_op._76capiccio_in_f_sharp_minor_un_poco_agitato.mp3,CrossComp-0216,Brahms; Johannes,Tebenikhin,Piano Recital: Amir Tebenikhin,14,piano
+03_brahms,CrossComp-0217_03_brahms_j._brahms_klaviestcke_op._76capriccio_in_c_major_grazioso_ed_un_poco_vivace.mp3,CrossComp-0217,Brahms; Johannes,Tebenikhin,Piano Recital: Amir Tebenikhin,14,piano
+03_brahms,CrossComp-0218_03_brahms_j._brahms_klaviestcke_op._76capriccio_in_a_sharp_minor_agitano_ma_non_troppo_presto.mp3,CrossComp-0218,Brahms; Johannes,Tebenikhin,Piano Recital: Amir Tebenikhin,14,piano
+03_brahms,CrossComp-0219_03_brahms_j._brahms_klaviestcke_op._76intermezzo_in_a_flat_major_grazioso.mp3,CrossComp-0219,Brahms; Johannes,Tebenikhin,Piano Recital: Amir Tebenikhin,14,piano
+03_brahms,CrossComp-0220_03_brahms_j._brahms_klaviestcke_op._76intermezzo_in_a_minor_moderato_semplice.mp3,CrossComp-0220,Brahms; Johannes,Tebenikhin,Piano Recital: Amir Tebenikhin,14,piano
+03_brahms,CrossComp-0221_03_brahms_j._brahms_klaviestcke_op._76intermezzo_in_b_flat_major_allegretto_grazioso.mp3,CrossComp-0221,Brahms; Johannes,Tebenikhin,Piano Recital: Amir Tebenikhin,14,piano
+03_brahms,CrossComp-0222_03_brahms_j._brahms_klaviestcke_op._76intermezzo_in_a_major_andante_con_moto.mp3,CrossComp-0222,Brahms; Johannes,Tebenikhin,Piano Recital: Amir Tebenikhin,14,piano
+03_brahms,CrossComp-0223_03_brahms_brahms_vc_in_d_major_op.77_iii._allegro_giocoso_ma_non_troppo_vivace_poco_piu_presto.mp3,CrossComp-0223,Brahms; Johannes,Slovak Philharmonic Orchestra; Grunzenhauser; Nishizaki,BRUCH; M.: Violin Concerto No. 1 / BRAHMS; J.: Violin Concerto,15,orchestra; violin
+03_brahms,CrossComp-0224_03_brahms_brahms_vc_in_d_major_op.77_ii._adagio.mp3,CrossComp-0224,Brahms; Johannes,Slovak Philharmonic Orchestra; Grunzenhauser; Nishizaki,BRUCH; M.: Violin Concerto No. 1 / BRAHMS; J.: Violin Concerto,15,orchestra; violin
+03_brahms,CrossComp-0225_03_brahms_brahms_vc_in_d_major_op.77_i._allegro_non_troppo_cadenza.mp3,CrossComp-0225,Brahms; Johannes,Slovak Philharmonic Orchestra; Grunzenhauser; Nishizaki,BRUCH; M.: Violin Concerto No. 1 / BRAHMS; J.: Violin Concerto,15,orchestra; violin
+03_brahms,CrossComp-0226_03_brahms_no.1_in_f_major_op.88_allegro_energico__presto.mp3,CrossComp-0226,Brahms; Johannes,Quartet; Pasquier,BRAHMS: String Quintets Nos. 1 and 2,16,orchestra
+03_brahms,CrossComp-0227_03_brahms_no.1_in_f_major_op.88__allegro_non_troppo_ma_con_brio.mp3,CrossComp-0227,Brahms; Johannes,Quartet; Pasquier,BRAHMS: String Quintets Nos. 1 and 2,16,orchestra
+03_brahms,CrossComp-0228_03_brahms_no.2_in_g_mojor_op.111__allegro_non_troppo_ma_con_brio.mp3,CrossComp-0228,Brahms; Johannes,Quartet; Pasquier,BRAHMS: String Quintets Nos. 1 and 2,16,orchestra
+03_brahms,CrossComp-0229_03_brahms_no.2_in_g_mojor_op.111_un_poco_allegretto.mp3,CrossComp-0229,Brahms; Johannes,Quartet; Pasquier,BRAHMS: String Quintets Nos. 1 and 2,16,orchestra
+03_brahms,CrossComp-0230_03_brahms_no.2_in_g_mojor_op.111_vicace_ma_non_troppo_presto.mp3,CrossComp-0230,Brahms; Johannes,Quartet; Pasquier,BRAHMS: String Quintets Nos. 1 and 2,16,orchestra
+03_brahms,CrossComp-0231_03_brahms_no.2_in_g_mojor_op.111_adagio.mp3,CrossComp-0231,Brahms; Johannes,Quartet; Pasquier,BRAHMS: String Quintets Nos. 1 and 2,16,orchestra
+03_brahms,CrossComp-0232_03_brahms_no.1_in_f_major_op.88_grave_ed_appassionato__allegro_vivace__presto.mp3,CrossComp-0232,Brahms; Johannes,Quartet; Pasquier,BRAHMS: String Quintets Nos. 1 and 2,16,orchestra
+03_brahms,CrossComp-0233_03_brahms_no.15_in_a_major.mp3,CrossComp-0233,Brahms; Johannes,Bisengaliev; Lenehan,BRAHMS / JOACHIM: Hungarian Dances,17,orchestra
+03_brahms,CrossComp-0234_03_brahms_no.20_in_d_minor.mp3,CrossComp-0234,Brahms; Johannes,Bisengaliev; Lenehan,BRAHMS / JOACHIM: Hungarian Dances,17,orchestra
+03_brahms,CrossComp-0235_03_brahms_no.17_in_f_sharp_minor.mp3,CrossComp-0235,Brahms; Johannes,Bisengaliev; Lenehan,BRAHMS / JOACHIM: Hungarian Dances,17,orchestra
+03_brahms,CrossComp-0236_03_brahms_no.10_in_f_major_original_in_e_major.mp3,CrossComp-0236,Brahms; Johannes,Bisengaliev; Lenehan,BRAHMS / JOACHIM: Hungarian Dances,17,orchestra
+03_brahms,CrossComp-0237_03_brahms_no.9_in_e_minor.mp3,CrossComp-0237,Brahms; Johannes,Bisengaliev; Lenehan,BRAHMS / JOACHIM: Hungarian Dances,17,orchestra
+03_brahms,CrossComp-0238_03_brahms_no.8_in_a_minor.mp3,CrossComp-0238,Brahms; Johannes,Bisengaliev; Lenehan,BRAHMS / JOACHIM: Hungarian Dances,17,orchestra
+03_brahms,CrossComp-0239_03_brahms_no.5_in_g_minor_original_in_f_sharp_minor.mp3,CrossComp-0239,Brahms; Johannes,Bisengaliev; Lenehan,BRAHMS / JOACHIM: Hungarian Dances,17,orchestra
+03_brahms,CrossComp-0240_03_brahms_no.12_in_d_minor.mp3,CrossComp-0240,Brahms; Johannes,Bisengaliev; Lenehan,BRAHMS / JOACHIM: Hungarian Dances,17,orchestra
+03_brahms,CrossComp-0241_03_brahms_no.4_in_b_minor_original_in_f_minor.mp3,CrossComp-0241,Brahms; Johannes,Bisengaliev; Lenehan,BRAHMS / JOACHIM: Hungarian Dances,17,orchestra
+03_brahms,CrossComp-0242_03_brahms_no.7_in_a_major.mp3,CrossComp-0242,Brahms; Johannes,Bisengaliev; Lenehan,BRAHMS / JOACHIM: Hungarian Dances,17,orchestra
+03_brahms,CrossComp-0243_03_brahms_no.21_in_e_minor.mp3,CrossComp-0243,Brahms; Johannes,Bisengaliev; Lenehan,BRAHMS / JOACHIM: Hungarian Dances,17,orchestra
+03_brahms,CrossComp-0244_03_brahms_no.2_in_d_minor.mp3,CrossComp-0244,Brahms; Johannes,Bisengaliev; Lenehan,BRAHMS / JOACHIM: Hungarian Dances,17,orchestra
+03_brahms,CrossComp-0245_03_brahms_no.6_in_d_major_original_in_d_flat_major.mp3,CrossComp-0245,Brahms; Johannes,Bisengaliev; Lenehan,BRAHMS / JOACHIM: Hungarian Dances,17,orchestra
+03_brahms,CrossComp-0246_03_brahms_no.19_in_a_minor.mp3,CrossComp-0246,Brahms; Johannes,Bisengaliev; Lenehan,BRAHMS / JOACHIM: Hungarian Dances,17,orchestra
+03_brahms,CrossComp-0247_03_brahms_brahms_hungerian_dances_arr._joachim_no.1_in_g_minor.mp3,CrossComp-0247,Brahms; Johannes,Bisengaliev; Lenehan,BRAHMS / JOACHIM: Hungarian Dances,17,orchestra
+03_brahms,CrossComp-0248_03_brahms_no.16_in_g_minor.mp3,CrossComp-0248,Brahms; Johannes,Bisengaliev; Lenehan,BRAHMS / JOACHIM: Hungarian Dances,17,orchestra
+03_brahms,CrossComp-0249_03_brahms_no.11_in_d_minor.mp3,CrossComp-0249,Brahms; Johannes,Bisengaliev; Lenehan,BRAHMS / JOACHIM: Hungarian Dances,17,orchestra
+03_brahms,CrossComp-0250_03_brahms_no.3_in_f_major.mp3,CrossComp-0250,Brahms; Johannes,Bisengaliev; Lenehan,BRAHMS / JOACHIM: Hungarian Dances,17,orchestra
+03_brahms,CrossComp-0251_03_brahms_no.18_in_d_major.mp3,CrossComp-0251,Brahms; Johannes,Bisengaliev; Lenehan,BRAHMS / JOACHIM: Hungarian Dances,17,orchestra
+03_brahms,CrossComp-0252_03_brahms_no.14_in_d_minor.mp3,CrossComp-0252,Brahms; Johannes,Bisengaliev; Lenehan,BRAHMS / JOACHIM: Hungarian Dances,17,orchestra
+03_brahms,CrossComp-0253_03_brahms_no.13_in_d_major.mp3,CrossComp-0253,Brahms; Johannes,Bisengaliev; Lenehan,BRAHMS / JOACHIM: Hungarian Dances,17,orchestra
+03_brahms,CrossComp-0254_03_brahms_symphony_no.2_in_d_major_op.73allegro_non_troppo.mp3,CrossComp-0254,Brahms; Johannes,Kohn; Matthies,BRAHMS; J.: Four-Hand Piano Music; Vol. 7 ,18,orchestra
+03_brahms,CrossComp-0255_03_brahms_symphony_no.2_in_d_major_op.73adagio_non_troppo.mp3,CrossComp-0255,Brahms; Johannes,Kohn; Matthies,BRAHMS; J.: Four-Hand Piano Music; Vol. 7 ,18,orchestra
+03_brahms,CrossComp-0256_03_brahms_symphony_no.3_in_f_major_op.90allegro.mp3,CrossComp-0256,Brahms; Johannes,Kohn; Matthies,BRAHMS; J.: Four-Hand Piano Music; Vol. 7 ,18,orchestra; choral
+03_brahms,CrossComp-0257_03_brahms_symphony_no.2_in_d_major_op.73allegretto_grazioso_quasi_andantinopresto_ma_non_assai.mp3,CrossComp-0257,Brahms; Johannes,Kohn; Matthies,BRAHMS; J.: Four-Hand Piano Music; Vol. 7 ,18,orchestra; choral
+03_brahms,CrossComp-0258_03_brahms_symphony_no.3_in_f_major_op.90andante.mp3,CrossComp-0258,Brahms; Johannes,Kohn; Matthies,BRAHMS; J.: Four-Hand Piano Music; Vol. 7 ,18,orchestra; choral
+03_brahms,CrossComp-0259_03_brahms_symphony_no.3_in_f_major_op.90un_poco_allegretto.mp3,CrossComp-0259,Brahms; Johannes,Kohn; Matthies,BRAHMS; J.: Four-Hand Piano Music; Vol. 7 ,18,orchestra; choral
+03_brahms,CrossComp-0260_03_brahms_symphony_no.3_in_f_major_op.90allegro_con_brio.mp3,CrossComp-0260,Brahms; Johannes,Kohn; Matthies,BRAHMS; J.: Four-Hand Piano Music; Vol. 7 ,18,piano
+03_brahms,CrossComp-0261_03_brahms_symphony_no.2_in_d_major_op.73allegro_con_spirito.mp3,CrossComp-0261,Brahms; Johannes,Kohn; Matthies,BRAHMS; J.: Four-Hand Piano Music; Vol. 7 ,18,piano
+03_brahms,CrossComp-0262_03_brahms_three_intermezzi_op._117_no._1_in_e_flat_major_andante_moderato.mp3,CrossComp-0262,Brahms; Johannes,Biret,BRAHMS; J.: Intermezzi; Op. 117 / Piano Pieces; Opp. 118-119,12,piano
+03_brahms,CrossComp-0263_03_brahms_piano_pieces_op._119_intermezzo_in_e_minor_andantino_un_poco_agitato.mp3,CrossComp-0263,Brahms; Johannes,Biret,BRAHMS; J.: Intermezzi; Op. 117 / Piano Pieces; Opp. 118-119,12,piano
+03_brahms,CrossComp-0264_03_brahms_piano_pieces_op._118_intermezzo_in_a_minor_allegro_non_assai_ma_molto_appassionato.mp3,CrossComp-0264,Brahms; Johannes,Biret,BRAHMS; J.: Intermezzi; Op. 117 / Piano Pieces; Opp. 118-119,12,piano
+03_brahms,CrossComp-0265_03_brahms_three_intermezzi_op._117_no._2_in_b_flat_minor_andante_non_tropo_e_con_molto.mp3,CrossComp-0265,Brahms; Johannes,Biret,BRAHMS; J.: Intermezzi; Op. 117 / Piano Pieces; Opp. 118-119,12,piano
+03_brahms,CrossComp-0266_03_brahms_three_intermezzi_op._117_no._3_in_c_sharp_minor_andante_con_moto.mp3,CrossComp-0266,Brahms; Johannes,Biret,BRAHMS; J.: Intermezzi; Op. 117 / Piano Pieces; Opp. 118-119,12,piano
+03_brahms,CrossComp-0267_03_brahms_piano_pieces_op._119_intermezzo_in_c_major_grazioso_e_glocoso.mp3,CrossComp-0267,Brahms; Johannes,Biret,BRAHMS; J.: Intermezzi; Op. 117 / Piano Pieces; Opp. 118-119,12,piano
+03_brahms,CrossComp-0268_03_brahms_piano_pieces_op._119_rhapsody_in_e_flat_major_allegro_risoluto.mp3,CrossComp-0268,Brahms; Johannes,Biret,BRAHMS; J.: Intermezzi; Op. 117 / Piano Pieces; Opp. 118-119,12,piano
+03_brahms,CrossComp-0269_03_brahms_piano_pieces_op._118_intermezzo_in_a_major_andante_teneramente.mp3,CrossComp-0269,Brahms; Johannes,Biret,BRAHMS; J.: Intermezzi; Op. 117 / Piano Pieces; Opp. 118-119,12,piano
+03_brahms,CrossComp-0270_03_brahms_piano_pieces_op._118_ballade_in_g_minor_allegro_energico.mp3,CrossComp-0270,Brahms; Johannes,Biret,BRAHMS; J.: Intermezzi; Op. 117 / Piano Pieces; Opp. 118-119,12,piano
+03_brahms,CrossComp-0271_03_brahms_piano_pieces_op._118_intermezzo_in_f_minor_allegretto_un_poco_agitato.mp3,CrossComp-0271,Brahms; Johannes,Biret,BRAHMS; J.: Intermezzi; Op. 117 / Piano Pieces; Opp. 118-119,12,piano
+03_brahms,CrossComp-0272_03_brahms_piano_pieces_op._118_intermezzo_in_e_flat_major_andante._largo_e_mesto.mp3,CrossComp-0272,Brahms; Johannes,Biret,BRAHMS; J.: Intermezzi; Op. 117 / Piano Pieces; Opp. 118-119,12,piano
+03_brahms,CrossComp-0273_03_brahms_piano_pieces_op._119_intermezzo_in_b_minor_adagio.mp3,CrossComp-0273,Brahms; Johannes,Biret,BRAHMS; J.: Intermezzi; Op. 117 / Piano Pieces; Opp. 118-119,12,piano
+03_brahms,CrossComp-0274_03_brahms_piano_pieces_op._118_romanze_in_f_major_andante.mp3,CrossComp-0274,Brahms; Johannes,Biret,BRAHMS; J.: Intermezzi; Op. 117 / Piano Pieces; Opp. 118-119,12,piano
+03_brahms,CrossComp-0275_03_brahms_andante.mp3,CrossComp-0275,Brahms; Johannes,Biret,BRAHMS; J.: Piano Concerto No.2 / SCHUMANN; R.: Introduction and Allegro appasionato,12,piano
+03_brahms,CrossComp-0276_03_brahms_allegro_appassionato.mp3,CrossComp-0276,Brahms; Johannes,Biret,BRAHMS; J.: Piano Concerto No.2 / SCHUMANN; R.: Introduction and Allegro appasionato,12,piano
+03_brahms,CrossComp-0277_03_brahms_allegro_non_troppo.mp3,CrossComp-0277,Brahms; Johannes,Biret,BRAHMS; J.: Piano Concerto No.2 / SCHUMANN; R.: Introduction and Allegro appasionato,12,piano
+03_brahms,CrossComp-0278_03_brahms_allegretto_graziozo.mp3,CrossComp-0278,Brahms; Johannes,Biret,BRAHMS; J.: Piano Concerto No.2 / SCHUMANN; R.: Introduction and Allegro appasionato,12,piano
+03_brahms,CrossComp-0279_03_brahms_string_quartet_in_a_minor_op._51_no._2_quasi_minuetto_moderatto.mp3,CrossComp-0279,Brahms; Johannes,Quartet,BRAHMS: String Quartets Op. 51;Nos. 1 and 2,19,ensemble; viola; cello; violin
+03_brahms,CrossComp-0280_03_brahms_string_quartet_in_c_minor_op._51_no._1_allegro.mp3,CrossComp-0280,Brahms; Johannes,Quartet,BRAHMS: String Quartets Op. 51;Nos. 1 and 2,19,ensemble; viola; cello; violin
+03_brahms,CrossComp-0281_03_brahms_string_quartet_in_a_minor_op._51_no._2_andante_moderato.mp3,CrossComp-0281,Brahms; Johannes,Quartet,BRAHMS: String Quartets Op. 51;Nos. 1 and 2,19,ensemble; viola; cello; violin
+03_brahms,CrossComp-0282_03_brahms_string_quartet_in_c_minor_op._51_no._1_romanze_poco_adagio.mp3,CrossComp-0282,Brahms; Johannes,Quartet,BRAHMS: String Quartets Op. 51;Nos. 1 and 2,19,ensemble; viola; cello; violin
+03_brahms,CrossComp-0283_03_brahms_string_quartet_in_a_minor_op._51_no._2_allegro_non_troppo.mp3,CrossComp-0283,Brahms; Johannes,Quartet,BRAHMS: String Quartets Op. 51;Nos. 1 and 2,19,ensemble; viola; cello; violin
+03_brahms,CrossComp-0284_03_brahms_string_quartet_in_a_minor_op._51_no._2_finale_allegro_non_assai.mp3,CrossComp-0284,Brahms; Johannes,Quartet,BRAHMS: String Quartets Op. 51;Nos. 1 and 2,19,ensemble; viola; cello; violin
+03_brahms,CrossComp-0285_03_brahms_string_quartet_in_c_minor_op._51_no._1_allegretto_molto_moderato_e_comodo.mp3,CrossComp-0285,Brahms; Johannes,Quartet,BRAHMS: String Quartets Op. 51;Nos. 1 and 2,19,ensemble; viola; cello; violin
+03_brahms,CrossComp-0286_03_brahms_herzliebster_jesu.mp3,CrossComp-0286,Brahms; Johannes,Parkins,BRAHMS: Organ Works,20,organ
+03_brahms,CrossComp-0287_03_brahms_fugue_in_a_flat_minor.mp3,CrossComp-0287,Brahms; Johannes,Parkins,BRAHMS: Organ Works,20,organ
+03_brahms,CrossComp-0288_03_brahms_herzlich_tut_mich_verlangen.mp3,CrossComp-0288,Brahms; Johannes,Parkins,BRAHMS: Organ Works,20,organ
+03_brahms,CrossComp-0289_03_brahms_prelude_and_fugue_in_g_minor.mp3,CrossComp-0289,Brahms; Johannes,Parkins,BRAHMS: Organ Works,20,organ
+03_brahms,CrossComp-0290_03_brahms_herzlich_tut_mich_verlanger.mp3,CrossComp-0290,Brahms; Johannes,Parkins,BRAHMS: Organ Works,20,organ
+03_brahms,CrossComp-0291_03_brahms_o_wie_selig_seid_ihr_doch.mp3,CrossComp-0291,Brahms; Johannes,Parkins,BRAHMS: Organ Works,20,organ
+03_brahms,CrossComp-0292_03_brahms_es_is_ein_ros_entsprungen.mp3,CrossComp-0292,Brahms; Johannes,Parkins,BRAHMS: Organ Works,20,organ
+03_brahms,CrossComp-0293_03_brahms_prelude_and_fugue_in_a_minor.mp3,CrossComp-0293,Brahms; Johannes,Parkins,BRAHMS: Organ Works,20,organ
+03_brahms,CrossComp-0294_03_brahms_mein_jesu_der_du_mich.mp3,CrossComp-0294,Brahms; Johannes,Parkins,BRAHMS: Organ Works,20,organ
+03_brahms,CrossComp-0295_03_brahms_schmucke_dich_o_liebe_seele.mp3,CrossComp-0295,Brahms; Johannes,Parkins,BRAHMS: Organ Works,20,organ
+03_brahms,CrossComp-0296_03_brahms_chorale_prelude_and_fugue_in_a_minor_on_o_traurigkeit....mp3,CrossComp-0296,Brahms; Johannes,Parkins,BRAHMS: Organ Works,20,organ
+03_brahms,CrossComp-0297_03_brahms_o_gott_du_frommer_gott.mp3,CrossComp-0297,Brahms; Johannes,Parkins,BRAHMS: Organ Works,20,organ
+03_brahms,CrossComp-0298_03_brahms_o_welt_ich_muss_dich_lassen.mp3,CrossComp-0298,Brahms; Johannes,Parkins,BRAHMS: Organ Works,20,organ
+03_brahms,CrossComp-0299_03_brahms_herzlich_tut_mich_erfreuen.mp3,CrossComp-0299,Brahms; Johannes,Parkins,BRAHMS: Organ Works,20,organ
+03_brahms,CrossComp-0300_03_brahms_string_sextet_no_1_in_b_flat_major_op_18.mp3,CrossComp-0300,Brahms; Johannes,Stuttgart Soloist,BRAHMS: String Sextets Nos. 1 and 2,21,ensemble
+06_haydn,CrossComp-0501_06_haydn_ii._largo_cantabile_e_mesto_op._76_no._5.mp3,CrossComp-0501,Haydn; Franz Joseph,Kodaly Quartet,HAYDN: String Quartets Op. 76; Nos. 4-6,9,ensemble; violin; viola; cello
+06_haydn,CrossComp-0502_06_haydn_iii._menuetto_allegro_op._76_no._4.mp3,CrossComp-0502,Haydn; Franz Joseph,Kodaly Quartet,HAYDN: String Quartets Op. 76; Nos. 4-6,9,ensemble; violin; viola; cello
+06_haydn,CrossComp-0503_06_haydn_iv._finale_presto_op._76_no._5.mp3,CrossComp-0503,Haydn; Franz Joseph,Kodaly Quartet,HAYDN: String Quartets Op. 76; Nos. 4-6,9,ensemble; violin; viola; cello
+06_haydn,CrossComp-0504_06_haydn_i._allegretto__allegro_op._76_no._5.mp3,CrossComp-0504,Haydn; Franz Joseph,Kodaly Quartet,HAYDN: String Quartets Op. 76; Nos. 4-6,9,ensemble; violin; viola; cello
+06_haydn,CrossComp-0505_06_haydn_i._allegro_con_spirito_op._76_no._4.mp3,CrossComp-0505,Haydn; Franz Joseph,Kodaly Quartet,HAYDN: String Quartets Op. 76; Nos. 4-6,9,ensemble; violin; viola; cello
+06_haydn,CrossComp-0506_06_haydn_iii._menuetto_allegro_op._76_no._5.mp3,CrossComp-0506,Haydn; Franz Joseph,Kodaly Quartet,HAYDN: String Quartets Op. 76; Nos. 4-6,9,ensemble; violin; viola; cello
+06_haydn,CrossComp-0507_06_haydn_iii._menuetto_presto_op._76_no._6.mp3,CrossComp-0507,Haydn; Franz Joseph,Kodaly Quartet,HAYDN: String Quartets Op. 76; Nos. 4-6,9,ensemble; violin; viola; cello
+06_haydn,CrossComp-0508_06_haydn_ii._adagio_op._76_no._4.mp3,CrossComp-0508,Haydn; Franz Joseph,Kodaly Quartet,HAYDN: String Quartets Op. 76; Nos. 4-6,9,ensemble; violin; viola; cello
+06_haydn,CrossComp-0509_06_haydn_ii._fantasia_adagio_op._76_no._6.mp3,CrossComp-0509,Haydn; Franz Joseph,Kodaly Quartet,HAYDN: String Quartets Op. 76; Nos. 4-6,9,ensemble; violin; viola; cello
+06_haydn,CrossComp-0510_06_haydn_iv._finale_allegro_spirituoso_op._76_no._6.mp3,CrossComp-0510,Haydn; Franz Joseph,Kodaly Quartet,HAYDN: String Quartets Op. 76; Nos. 4-6,9,ensemble; violin; viola; cello
+06_haydn,CrossComp-0511_06_haydn_i._allegretto__allegro_op._76_no._6.mp3,CrossComp-0511,Haydn; Franz Joseph,Kodaly Quartet,HAYDN: String Quartets Op. 76; Nos. 4-6,9,ensemble; violin; viola; cello
+06_haydn,CrossComp-0512_06_haydn_iv._finale_allegro_ma_non_troppo_op._76_no._4.mp3,CrossComp-0512,Haydn; Franz Joseph,Kodaly Quartet,HAYDN: String Quartets Op. 76; Nos. 4-6,9,ensemble; violin; viola; cello
+06_haydn,CrossComp-0513_06_haydn_symphony_no.94_in_g_surprise__allegro_molto.mp3,CrossComp-0513,Haydn; Franz Joseph,Capella Istropolitana; Wordsworth,HAYDN: Symphonies Nos. 45;94 and 101,35,orchestra
+06_haydn,CrossComp-0514_06_haydn_symphony_no.94_in_g_surprise__andante.mp3,CrossComp-0514,Haydn; Franz Joseph,Capella Istropolitana; Wordsworth,HAYDN: Symphonies Nos. 45;94 and 101,35,orchestra
+06_haydn,CrossComp-0515_06_haydn_symphony_no.101_in_d_the_clock__adagiopresto.mp3,CrossComp-0515,Haydn; Franz Joseph,Capella Istropolitana; Wordsworth,HAYDN: Symphonies Nos. 45;94 and 101,35,orchestra
+06_haydn,CrossComp-0516_06_haydn_symphony_no.94_in_g_surprise__adagiovivace_assai.mp3,CrossComp-0516,Haydn; Franz Joseph,Capella Istropolitana; Wordsworth,HAYDN: Symphonies Nos. 45;94 and 101,35,orchestra
+06_haydn,CrossComp-0517_06_haydn_symphony_no.94_in_g_surprise__menuet_allegro_molto.mp3,CrossComp-0517,Haydn; Franz Joseph,Capella Istropolitana; Wordsworth,HAYDN: Symphonies Nos. 45;94 and 101,35,orchestra
+06_haydn,CrossComp-0518_06_haydn_symphony_no.45_in_f_minor_farewell__allegro_assai.mp3,CrossComp-0518,Haydn; Franz Joseph,Capella Istropolitana; Wordsworth,HAYDN: Symphonies Nos. 45;94 and 101,35,orchestra
+06_haydn,CrossComp-0519_06_haydn_symphony_no.101_in_d_the_clock__menuet_allegretto.mp3,CrossComp-0519,Haydn; Franz Joseph,Capella Istropolitana; Wordsworth,HAYDN: Symphonies Nos. 45;94 and 101,35,orchestra
+06_haydn,CrossComp-0520_06_haydn_symphony_no.45_in_f_minor_farewell__finale_prestoadagio.mp3,CrossComp-0520,Haydn; Franz Joseph,Capella Istropolitana; Wordsworth,HAYDN: Symphonies Nos. 45;94 and 101,35,orchestra
+06_haydn,CrossComp-0521_06_haydn_symphony_no.45_in_f_minor_farewell__adagio.mp3,CrossComp-0521,Haydn; Franz Joseph,Capella Istropolitana; Wordsworth,HAYDN: Symphonies Nos. 45;94 and 101,35,orchestra
+06_haydn,CrossComp-0522_06_haydn_symphony_no.101_in_d_the_clock__finale_vivace.mp3,CrossComp-0522,Haydn; Franz Joseph,Capella Istropolitana; Wordsworth,HAYDN: Symphonies Nos. 45;94 and 101,35,orchestra
+06_haydn,CrossComp-0523_06_haydn_symphony_no.45_in_f_minor_farewell__menuetto_allegretto.mp3,CrossComp-0523,Haydn; Franz Joseph,Capella Istropolitana; Wordsworth,HAYDN: Symphonies Nos. 45;94 and 101,35,orchestra
+06_haydn,CrossComp-0524_06_haydn_symphony_no.101_in_d_the_clock__andante.mp3,CrossComp-0524,Haydn; Franz Joseph,Capella Istropolitana; Wordsworth,HAYDN: Symphonies Nos. 45;94 and 101,35,orchestra
+06_haydn,CrossComp-0525_06_haydn_symphonies_no._46_in_b_major_finale_presto_e_scherzando.mp3,CrossComp-0525,Haydn; Franz Joseph,Cologne Chamber Orchestra; Muller-Bruhl,HAYDN: Symphonies; Vol. 24 (Nos. 43;46;47) ,1,orchestra
+06_haydn,CrossComp-0526_06_haydn_symphonies_no._46_in_b_major_poco_adagio.mp3,CrossComp-0526,Haydn; Franz Joseph,Cologne Chamber Orchestra; Muller-Bruhl,HAYDN: Symphonies; Vol. 24 (Nos. 43;46;47) ,1,orchestra
+06_haydn,CrossComp-0527_06_haydn_symphonies_no._43_in_e_flat_major_mercury_adagio.mp3,CrossComp-0527,Haydn; Franz Joseph,Cologne Chamber Orchestra; Muller-Bruhl,HAYDN: Symphonies; Vol. 24 (Nos. 43;46;47) ,1,orchestra
+06_haydn,CrossComp-0528_06_haydn_symphonies_no._43_in_e_flat_major_mercury_allegro.mp3,CrossComp-0528,Haydn; Franz Joseph,Cologne Chamber Orchestra; Muller-Bruhl,HAYDN: Symphonies; Vol. 24 (Nos. 43;46;47) ,1,orchestra
+06_haydn,CrossComp-0529_06_haydn_symphonies_no._46_in_b_major_vivace.mp3,CrossComp-0529,Haydn; Franz Joseph,Cologne Chamber Orchestra; Muller-Bruhl,HAYDN: Symphonies; Vol. 24 (Nos. 43;46;47) ,1,orchestra
+06_haydn,CrossComp-0530_06_haydn_finale_presto_assai.mp3,CrossComp-0530,Haydn; Franz Joseph,Cologne Chamber Orchestra; Muller-Bruhl,HAYDN: Symphonies; Vol. 24 (Nos. 43;46;47) ,1,orchestra
+06_haydn,CrossComp-0531_06_haydn_symphonies_no._47_in_g_major_un_poco_adagio_cantabile.mp3,CrossComp-0531,Haydn; Franz Joseph,Cologne Chamber Orchestra; Muller-Bruhl,HAYDN: Symphonies; Vol. 24 (Nos. 43;46;47) ,1,orchestra
+06_haydn,CrossComp-0532_06_haydn_symphonies_no._47_in_g_major_allegro.mp3,CrossComp-0532,Haydn; Franz Joseph,Cologne Chamber Orchestra; Muller-Bruhl,HAYDN: Symphonies; Vol. 24 (Nos. 43;46;47) ,1,orchestra
+06_haydn,CrossComp-0533_06_haydn_symphonies_no._43_in_e_flat_major_mercury_menuetto.mp3,CrossComp-0533,Haydn; Franz Joseph,Cologne Chamber Orchestra; Muller-Bruhl,HAYDN: Symphonies; Vol. 24 (Nos. 43;46;47) ,1,orchestra
+06_haydn,CrossComp-0534_06_haydn_symphonies_no._46_in_b_major_menuet.mp3,CrossComp-0534,Haydn; Franz Joseph,Cologne Chamber Orchestra; Muller-Bruhl,HAYDN: Symphonies; Vol. 24 (Nos. 43;46;47) ,1,orchestra
+06_haydn,CrossComp-0535_06_haydn_symphonies_no._47_in_g_major_menuet.mp3,CrossComp-0535,Haydn; Franz Joseph,Cologne Chamber Orchestra; Muller-Bruhl,HAYDN: Symphonies; Vol. 24 (Nos. 43;46;47) ,1,orchestra
+06_haydn,CrossComp-0536_06_haydn_symphonies_no._43_in_e_flat_major_mercury_finale_allegro.mp3,CrossComp-0536,Haydn; Franz Joseph,Cologne Chamber Orchestra; Muller-Bruhl,HAYDN: Symphonies; Vol. 24 (Nos. 43;46;47) ,1,orchestra
+06_haydn,CrossComp-0537_06_haydn_string_quartet_in_c_major_op.54_no.1_adagio.mp3,CrossComp-0537,Haydn; Franz Joseph,Kodaly Quartet,HAYDN: String Quartets Op. 54; Nos. 1- 3,9,ensemble; violin; viola; cello
+06_haydn,CrossComp-0538_06_haydn_string_quartet_in_c_major_op.54_no.1_finale_adagio__presto_adagio.mp3,CrossComp-0538,Haydn; Franz Joseph,Kodaly Quartet,HAYDN: String Quartets Op. 54; Nos. 1- 3,9,ensemble; violin; viola; cello
+06_haydn,CrossComp-0539_06_haydn_string_quartet_in_c_major_op.54_no.1_menuetto_allegretto.mp3,CrossComp-0539,Haydn; Franz Joseph,Kodaly Quartet,HAYDN: String Quartets Op. 54; Nos. 1- 3,9,ensemble; violin; viola; cello
+06_haydn,CrossComp-0540_06_haydn_string_quartet_in_c_major_op.54_no.1_vivace.mp3,CrossComp-0540,Haydn; Franz Joseph,Kodaly Quartet,HAYDN: String Quartets Op. 54; Nos. 1- 3,9,ensemble; violin; viola; cello
+06_haydn,CrossComp-0541_06_haydn_string_quartet_in_e_major_op.54_no.3_allegro.mp3,CrossComp-0541,Haydn; Franz Joseph,Kodaly Quartet,HAYDN: String Quartets Op. 54; Nos. 1- 4,9,ensemble; violin; viola; cello
+06_haydn,CrossComp-0542_06_haydn_string_quartet_in_e_major_op.54_no.3_finale_presto.mp3,CrossComp-0542,Haydn; Franz Joseph,Kodaly Quartet,HAYDN: String Quartets Op. 54; Nos. 1- 4,9,ensemble; violin; viola; cello
+06_haydn,CrossComp-0543_06_haydn_string_quartet_in_e_major_op.54_no.3_largo_cantabile.mp3,CrossComp-0543,Haydn; Franz Joseph,Kodaly Quartet,HAYDN: String Quartets Op. 54; Nos. 1- 4,9,ensemble; violin; viola; cello
+06_haydn,CrossComp-0544_06_haydn_string_quartet_in_e_major_op.54_no.3_menuetto_allegretto.mp3,CrossComp-0544,Haydn; Franz Joseph,Kodaly Quartet,HAYDN: String Quartets Op. 54; Nos. 1- 4,9,ensemble; violin; viola; cello
+06_haydn,CrossComp-0545_06_haydn_string_quartet_in_g_major_op.54_no.2_allegretto.mp3,CrossComp-0545,Haydn; Franz Joseph,Kodaly Quartet,HAYDN: String Quartets Op. 54; Nos. 1- 5,9,ensemble; violin; viola; cello
+06_haydn,CrossComp-0546_06_haydn_string_quartet_in_g_major_op.54_no.2_allegro_con_brio.mp3,CrossComp-0546,Haydn; Franz Joseph,Kodaly Quartet,HAYDN: String Quartets Op. 54; Nos. 1- 5,9,ensemble; violin; viola; cello
+06_haydn,CrossComp-0547_06_haydn_string_quartet_in_g_major_op.54_no.2_finale_presto.mp3,CrossComp-0547,Haydn; Franz Joseph,Kodaly Quartet,HAYDN: String Quartets Op. 54; Nos. 1- 5,9,ensemble; violin; viola; cello
+06_haydn,CrossComp-0548_06_haydn_string_quartet_in_g_major_op.54_no.2_menuetto_allegretto.mp3,CrossComp-0548,Haydn; Franz Joseph,Kodaly Quartet,HAYDN: String Quartets Op. 54; Nos. 1- 5,9,ensemble; violin; viola; cello
+06_haydn,CrossComp-0549_06_haydn_sonata_9_in_d_major_menuet.mp3,CrossComp-0549,Haydn; Franz Joseph,Jando,HAYDN: Piano Sonatas Nos. 1-10,3,piano
+06_haydn,CrossComp-0550_06_haydn_sonata_10_in_c_major_menuet.mp3,CrossComp-0550,Haydn; Franz Joseph,Jando,HAYDN: Piano Sonatas Nos. 1-10,3,piano
+06_haydn,CrossComp-0551_06_haydn_sonata_8_in_a_major_menuet.mp3,CrossComp-0551,Haydn; Franz Joseph,Jando,HAYDN: Piano Sonatas Nos. 1-10,3,piano
+06_haydn,CrossComp-0552_06_haydn_sonata_6_in_c_major_moderato.mp3,CrossComp-0552,Haydn; Franz Joseph,Jando,HAYDN: Piano Sonatas Nos. 1-10,3,piano
+06_haydn,CrossComp-0553_06_haydn_sonata_1_in_g_major_andante.mp3,CrossComp-0553,Haydn; Franz Joseph,Jando,HAYDN: Piano Sonatas Nos. 1-10,3,piano
+06_haydn,CrossComp-0554_06_haydn_sonata_8_in_a_major_allegro.mp3,CrossComp-0554,Haydn; Franz Joseph,Jando,HAYDN: Piano Sonatas Nos. 1-10,3,piano
+06_haydn,CrossComp-0555_06_haydn_sonata_5_in_g_major_menuet.mp3,CrossComp-0555,Haydn; Franz Joseph,Jando,HAYDN: Piano Sonatas Nos. 1-10,3,piano
+06_haydn,CrossComp-0556_06_haydn_sonata_7_in_d_major_finale_allegro.mp3,CrossComp-0556,Haydn; Franz Joseph,Jando,HAYDN: Piano Sonatas Nos. 1-10,3,piano
+06_haydn,CrossComp-0557_06_haydn_sonata_6_in_c_major_finale_presto.mp3,CrossComp-0557,Haydn; Franz Joseph,Jando,HAYDN: Piano Sonatas Nos. 1-10,3,piano
+06_haydn,CrossComp-0558_06_haydn_sonata_2_in_c_major_allegro_moderato.mp3,CrossComp-0558,Haydn; Franz Joseph,Jando,HAYDN: Piano Sonatas Nos. 1-10,3,piano
+06_haydn,CrossComp-0559_06_haydn_sonata_2_in_c_major_menuet.mp3,CrossComp-0559,Haydn; Franz Joseph,Jando,HAYDN: Piano Sonatas Nos. 1-10,3,piano
+06_haydn,CrossComp-0560_06_haydn_sonata_3_in_f_major_menuet.mp3,CrossComp-0560,Haydn; Franz Joseph,Jando,HAYDN: Piano Sonatas Nos. 1-10,3,piano
+06_haydn,CrossComp-0561_06_haydn_sonata_10_in_c_major_adagio.mp3,CrossComp-0561,Haydn; Franz Joseph,Jando,HAYDN: Piano Sonatas Nos. 1-10,3,piano
+06_haydn,CrossComp-0562_06_haydn_sonata_3_in_f_major_allegro.mp3,CrossComp-0562,Haydn; Franz Joseph,Jando,HAYDN: Piano Sonatas Nos. 1-10,3,piano
+06_haydn,CrossComp-0563_06_haydn_sonata_10_in_c_major_allegro.mp3,CrossComp-0563,Haydn; Franz Joseph,Jando,HAYDN: Piano Sonatas Nos. 1-10,3,piano
+06_haydn,CrossComp-0564_06_haydn_sonata_4_in_g_major_finale_presto.mp3,CrossComp-0564,Haydn; Franz Joseph,Jando,HAYDN: Piano Sonatas Nos. 1-10,3,piano
+06_haydn,CrossComp-0565_06_haydn_sonata_9_in_d_major_moderato.mp3,CrossComp-0565,Haydn; Franz Joseph,Jando,HAYDN: Piano Sonatas Nos. 1-10,3,piano
+06_haydn,CrossComp-0566_06_haydn_sonata_1_in_g_major_allegro.mp3,CrossComp-0566,Haydn; Franz Joseph,Jando,HAYDN: Piano Sonatas Nos. 1-10,3,piano
+06_haydn,CrossComp-0567_06_haydn_sonata_7_in_d_major_menuet.mp3,CrossComp-0567,Haydn; Franz Joseph,Jando,HAYDN: Piano Sonatas Nos. 1-10,3,piano
+06_haydn,CrossComp-0568_06_haydn_sonata_1_in_g_major_menuet.mp3,CrossComp-0568,Haydn; Franz Joseph,Jando,HAYDN: Piano Sonatas Nos. 1-10,3,piano
+06_haydn,CrossComp-0569_06_haydn_sonata_4_in_g_major_menuetto.mp3,CrossComp-0569,Haydn; Franz Joseph,Jando,HAYDN: Piano Sonatas Nos. 1-10,3,piano
+06_haydn,CrossComp-0570_06_haydn_sonata_4_in_g_major_allegro.mp3,CrossComp-0570,Haydn; Franz Joseph,Jando,HAYDN: Piano Sonatas Nos. 1-10,3,piano
+06_haydn,CrossComp-0571_06_haydn_sonata_6_in_c_major_menuet.mp3,CrossComp-0571,Haydn; Franz Joseph,Jando,HAYDN: Piano Sonatas Nos. 1-10,3,piano
+06_haydn,CrossComp-0572_06_haydn_sonata_3_in_f_major_scherzo.mp3,CrossComp-0572,Haydn; Franz Joseph,Jando,HAYDN: Piano Sonatas Nos. 1-10,3,piano
+06_haydn,CrossComp-0573_06_haydn_sonata_8_in_a_major_presto.mp3,CrossComp-0573,Haydn; Franz Joseph,Jando,HAYDN: Piano Sonatas Nos. 1-10,3,piano
+06_haydn,CrossComp-0574_06_haydn_sonata_2_in_c_major_finale_allegro.mp3,CrossComp-0574,Haydn; Franz Joseph,Jando,HAYDN: Piano Sonatas Nos. 1-10,3,piano
+06_haydn,CrossComp-0575_06_haydn_sonata_7_in_d_major_tema_moderato_with_variations.mp3,CrossComp-0575,Haydn; Franz Joseph,Jando,HAYDN: Piano Sonatas Nos. 1-10,3,piano
+06_haydn,CrossComp-0576_06_haydn_sonata_5_in_g_major_presto.mp3,CrossComp-0576,Haydn; Franz Joseph,Jando,HAYDN: Piano Sonatas Nos. 1-10,3,piano
+06_haydn,CrossComp-0577_06_haydn_sonata_5_in_g_major_andante.mp3,CrossComp-0577,Haydn; Franz Joseph,Jando,HAYDN: Piano Sonatas Nos. 1-10,3,piano
+06_haydn,CrossComp-0578_06_haydn_sonata_no._14_in_c_majormenuet.mp3,CrossComp-0578,Haydn; Franz Joseph,Jando,HAYDN: Piano Sonatas Nos. 11-16 and 18,3,piano
+06_haydn,CrossComp-0579_06_haydn_sonata_no._16_in_d_majorallegro_moderato.mp3,CrossComp-0579,Haydn; Franz Joseph,Jando,HAYDN: Piano Sonatas Nos. 11-16 and 18,3,piano
+06_haydn,CrossComp-0580_06_haydn_sonata_no._11_in_b_flat_majorlargo.mp3,CrossComp-0580,Haydn; Franz Joseph,Jando,HAYDN: Piano Sonatas Nos. 11-16 and 18,3,piano
+06_haydn,CrossComp-0581_06_haydn_sonata_no._18_in_e_flat_majormenuetto.mp3,CrossComp-0581,Haydn; Franz Joseph,Jando,HAYDN: Piano Sonatas Nos. 11-16 and 18,3,piano
+06_haydn,CrossComp-0582_06_haydn_sonata_no._15_in_e_majorfinale_presto.mp3,CrossComp-0582,Haydn; Franz Joseph,Jando,HAYDN: Piano Sonatas Nos. 11-16 and 18,3,piano
+06_haydn,CrossComp-0583_06_haydn_sonata_no._15_in_e_majormoderato.mp3,CrossComp-0583,Haydn; Franz Joseph,Jando,HAYDN: Piano Sonatas Nos. 11-16 and 18,3,piano
+06_haydn,CrossComp-0584_06_haydn_sonata_no._16_in_d_majormenuet.mp3,CrossComp-0584,Haydn; Franz Joseph,Jando,HAYDN: Piano Sonatas Nos. 11-16 and 18,3,piano
+06_haydn,CrossComp-0585_06_haydn_sonata_no._12_in_a_majormenuet.mp3,CrossComp-0585,Haydn; Franz Joseph,Jando,HAYDN: Piano Sonatas Nos. 11-16 and 18,3,piano
+06_haydn,CrossComp-0586_06_haydn_sonata_no._13_in_g_majorfinale_allegro_molto.mp3,CrossComp-0586,Haydn; Franz Joseph,Jando,HAYDN: Piano Sonatas Nos. 11-16 and 18,3,piano
+06_haydn,CrossComp-0587_06_haydn_sonata_no._13_in_g_majoradagio.mp3,CrossComp-0587,Haydn; Franz Joseph,Jando,HAYDN: Piano Sonatas Nos. 11-16 and 18,3,piano
+06_haydn,CrossComp-0588_06_haydn_sonata_no._18_in_e_flat_majorallegro.mp3,CrossComp-0588,Haydn; Franz Joseph,Jando,HAYDN: Piano Sonatas Nos. 11-16 and 18,3,piano
+06_haydn,CrossComp-0589_06_haydn_sonata_no._14_in_c_majorandante.mp3,CrossComp-0589,Haydn; Franz Joseph,Jando,HAYDN: Piano Sonatas Nos. 11-16 and 18,3,piano
+06_haydn,CrossComp-0590_06_haydn_sonata_no._16_in_d_majorfinale_allegro.mp3,CrossComp-0590,Haydn; Franz Joseph,Jando,HAYDN: Piano Sonatas Nos. 11-16 and 18,3,piano
+06_haydn,CrossComp-0591_06_haydn_sonata_no._12_in_a_majorfinale_allegro.mp3,CrossComp-0591,Haydn; Franz Joseph,Jando,HAYDN: Piano Sonatas Nos. 11-16 and 18,3,piano
+06_haydn,CrossComp-0592_06_haydn_sonata_no._15_in_e_majormenuet.mp3,CrossComp-0592,Haydn; Franz Joseph,Jando,HAYDN: Piano Sonatas Nos. 11-16 and 18,3,piano
+06_haydn,CrossComp-0593_06_haydn_sonata_no._12_in_a_majorandante.mp3,CrossComp-0593,Haydn; Franz Joseph,Jando,HAYDN: Piano Sonatas Nos. 11-16 and 18,3,piano
+06_haydn,CrossComp-0594_06_haydn_sonata_no._11_in_b_flat_majormoderato.mp3,CrossComp-0594,Haydn; Franz Joseph,Jando,HAYDN: Piano Sonatas Nos. 11-16 and 18,3,piano
+06_haydn,CrossComp-0595_06_haydn_sonata_no._14_in_c_majorallegretto.mp3,CrossComp-0595,Haydn; Franz Joseph,Jando,HAYDN: Piano Sonatas Nos. 11-16 and 18,3,piano
+06_haydn,CrossComp-0596_06_haydn_sonata_no._13_in_g_majorminuet.mp3,CrossComp-0596,Haydn; Franz Joseph,Jando,HAYDN: Piano Sonatas Nos. 11-16 and 18,3,piano
+06_haydn,CrossComp-0597_06_haydn_sonata_no._11_in_b_flat_majormenuet.mp3,CrossComp-0597,Haydn; Franz Joseph,Jando,HAYDN: Piano Sonatas Nos. 11-16 and 18,3,piano
+06_haydn,CrossComp-0598_06_haydn_sonata_no._13_in_g_majorallegro.mp3,CrossComp-0598,Haydn; Franz Joseph,Jando,HAYDN: Piano Sonatas Nos. 11-16 and 18,3,piano
+06_haydn,CrossComp-0599_06_haydn_symphony_no.86_in_d__finale_allegro_con_spirito.mp3,CrossComp-0599,Haydn; Franz Joseph,Nicolaus Esterhazy Sinfonia; Drahos,HAYDN: Symphonies; Vol. 11 (Nos. 53;86;87),11,orchestra
+06_haydn,CrossComp-0600_06_haydn_symphony_no.86_in_d__capriccio_largo.mp3,CrossComp-0600,Haydn; Franz Joseph,Nicolaus Esterhazy Sinfonia; Drahos,HAYDN: Symphonies; Vol. 11 (Nos. 53;86;87),11,orchestra
+11_shostakovich,CrossComp-1001_11_shostakovich_string_quartet_no._11_in_f_minor_op._122__iii_recitative_adagio_.mp3,CrossComp-1001,Shostakovich; Dmitry,Eder Quartet,SHOSTAKOVICH: String Quartets Nos. 10; 11 and 13,63,ensemble; cello; viola; violin
+11_shostakovich,CrossComp-1002_11_shostakovich_string_quartet_no._11_in_f_minor_op._122__iv_etude_allegro_.mp3,CrossComp-1002,Shostakovich; Dmitry,Eder Quartet,SHOSTAKOVICH: String Quartets Nos. 10; 11 and 13,63,ensemble; cello; viola; violin
+11_shostakovich,CrossComp-1003_11_shostakovich_string_quartet_no._13_in_bb_minor_op._138__adagio.mp3,CrossComp-1003,Shostakovich; Dmitry,Eder Quartet,SHOSTAKOVICH: String Quartets Nos. 10; 11 and 13,63,ensemble; cello; viola; violin
+11_shostakovich,CrossComp-1004_11_shostakovich_string_quartet_no._10_in_ab_major_op._118__ii_allegretto_furioso.mp3,CrossComp-1004,Shostakovich; Dmitry,Eder Quartet,SHOSTAKOVICH: String Quartets Nos. 10; 11 and 13,63,ensemble; cello; viola; violin
+11_shostakovich,CrossComp-1005_11_shostakovich_string_quartet_no._11_in_f_minor_op._122__ii_scherzo_allegretto_.mp3,CrossComp-1005,Shostakovich; Dmitry,Eder Quartet,SHOSTAKOVICH: String Quartets Nos. 10; 11 and 13,63,ensemble; cello; viola; violin
+11_shostakovich,CrossComp-1006_11_shostakovich_string_quartet_no._11_in_f_minor_op._122__v_humoresque_allegro_.mp3,CrossComp-1006,Shostakovich; Dmitry,Eder Quartet,SHOSTAKOVICH: String Quartets Nos. 10; 11 and 13,63,ensemble; cello; viola; violin
+11_shostakovich,CrossComp-1007_11_shostakovich_string_quartet_no._11_in_f_minor_op._122__vii_finale_moderato.mp3,CrossComp-1007,Shostakovich; Dmitry,Eder Quartet,SHOSTAKOVICH: String Quartets Nos. 10; 11 and 13,63,ensemble; cello; viola; violin
+11_shostakovich,CrossComp-1008_11_shostakovich_string_quartet_no._11_in_f_minor_op._122__i_introduction_andantino.mp3,CrossComp-1008,Shostakovich; Dmitry,Eder Quartet,SHOSTAKOVICH: String Quartets Nos. 10; 11 and 13,63,ensemble; cello; viola; violin
+11_shostakovich,CrossComp-1009_11_shostakovich_string_quartet_no._11_in_f_minor_op._122__vi_elegy_adagio_.mp3,CrossComp-1009,Shostakovich; Dmitry,Eder Quartet,SHOSTAKOVICH: String Quartets Nos. 10; 11 and 13,63,ensemble; cello; viola; violin
+11_shostakovich,CrossComp-1010_11_shostakovich_string_quartet_no._10_in_ab_major_op._118__iv__allegretto.mp3,CrossComp-1010,Shostakovich; Dmitry,Eder Quartet,SHOSTAKOVICH: String Quartets Nos. 10; 11 and 13,63,ensemble; cello; viola; violin
+11_shostakovich,CrossComp-1011_11_shostakovich_string_quartet_no._10_in_ab_major_op._118__iii_adagio_.mp3,CrossComp-1011,Shostakovich; Dmitry,Eder Quartet,SHOSTAKOVICH: String Quartets Nos. 10; 11 and 13,63,ensemble; cello; viola; violin
+11_shostakovich,CrossComp-1012_11_shostakovich_string_quartet_no._1_in_c_major_op._49.mp3,CrossComp-1012,Shostakovich; Dmitry,Eder Quartet,SHOSTAKOVICH: String Quartets Nos. 10; 11 and 13,63,ensemble; cello; viola; violin
+11_shostakovich,CrossComp-1013_11_shostakovich_string_quartet_no._8_in_c_minor_op._110.mp3,CrossComp-1013,Shostakovich; Dmitry,Eder Quartet,SHOSTAKOVICH: String Quartets Nos. 10; 11 and 13,63,ensemble; cello; viola; violin
+11_shostakovich,CrossComp-1014_11_shostakovich_string_quartet_no._10_in_ab_major_op._118__i_andante.mp3,CrossComp-1014,Shostakovich; Dmitry,Eder Quartet,SHOSTAKOVICH: String Quartets Nos. 10; 11 and 13,63,ensemble; cello; viola; violin
+11_shostakovich,CrossComp-1015_11_shostakovich_string_quartet_no._9_in_eb_minor_op._117.mp3,CrossComp-1015,Shostakovich; Dmitry,Eder Quartet,SHOSTAKOVICH: String Quartets Nos. 10; 11 and 13,63,ensemble; cello; viola; violin
+11_shostakovich,CrossComp-1016_11_shostakovich_prelude_no_11_in_b_major.mp3,CrossComp-1016,Shostakovich; Dmitry,Scherbakov,SHOSTAKOVICH: 24 Preludes and Fugues; Op. 87,64,piano
+11_shostakovich,CrossComp-1017_11_shostakovich_fugue_no_24_in_d_minor.mp3,CrossComp-1017,Shostakovich; Dmitry,Scherbakov,SHOSTAKOVICH: 24 Preludes and Fugues; Op. 87,64,piano
+11_shostakovich,CrossComp-1018_11_shostakovich_prelude_no_23_in_f_major.mp3,CrossComp-1018,Shostakovich; Dmitry,Scherbakov,SHOSTAKOVICH: 24 Preludes and Fugues; Op. 87,64,piano
+11_shostakovich,CrossComp-1019_11_shostakovich_fugue_no_8_in_f_sharp_minor.mp3,CrossComp-1019,Shostakovich; Dmitry,Scherbakov,SHOSTAKOVICH: 24 Preludes and Fugues; Op. 87,64,piano
+11_shostakovich,CrossComp-1020_11_shostakovich_prelude_no_18_in_f_minor.mp3,CrossComp-1020,Shostakovich; Dmitry,Scherbakov,SHOSTAKOVICH: 24 Preludes and Fugues; Op. 87,64,piano
+11_shostakovich,CrossComp-1021_11_shostakovich_fugue_no_23_in_f_major.mp3,CrossComp-1021,Shostakovich; Dmitry,Scherbakov,SHOSTAKOVICH: 24 Preludes and Fugues; Op. 87,64,piano
+11_shostakovich,CrossComp-1022_11_shostakovich_prelude_no_24_in_d_minor.mp3,CrossComp-1022,Shostakovich; Dmitry,Scherbakov,SHOSTAKOVICH: 24 Preludes and Fugues; Op. 87,64,piano
+11_shostakovich,CrossComp-1023_11_shostakovich_fugue_no_11_in_b_major.mp3,CrossComp-1023,Shostakovich; Dmitry,Scherbakov,SHOSTAKOVICH: 24 Preludes and Fugues; Op. 87,64,piano
+11_shostakovich,CrossComp-1024_11_shostakovich_prelude_no_9_in_e_major.mp3,CrossComp-1024,Shostakovich; Dmitry,Scherbakov,SHOSTAKOVICH: 24 Preludes and Fugues; Op. 87,64,piano
+11_shostakovich,CrossComp-1025_11_shostakovich_prelude_no_12_in_g_sharp_minor.mp3,CrossComp-1025,Shostakovich; Dmitry,Scherbakov,SHOSTAKOVICH: 24 Preludes and Fugues; Op. 87,64,piano
+11_shostakovich,CrossComp-1026_11_shostakovich_fugue_no_18_in_f_minor.mp3,CrossComp-1026,Shostakovich; Dmitry,Scherbakov,SHOSTAKOVICH: 24 Preludes and Fugues; Op. 87,64,piano
+11_shostakovich,CrossComp-1027_11_shostakovich_prelude_no_7_in_a_major.mp3,CrossComp-1027,Shostakovich; Dmitry,Scherbakov,SHOSTAKOVICH: 24 Preludes and Fugues; Op. 87,64,piano
+11_shostakovich,CrossComp-1028_11_shostakovich_preludes_no_1_in_c_major.mp3,CrossComp-1028,Shostakovich; Dmitry,Scherbakov,SHOSTAKOVICH: 24 Preludes and Fugues; Op. 87,64,piano
+11_shostakovich,CrossComp-1029_11_shostakovich_fugue_no_17_in_a_flat_major.mp3,CrossComp-1029,Shostakovich; Dmitry,Scherbakov,SHOSTAKOVICH: 24 Preludes and Fugues; Op. 87,64,piano
+11_shostakovich,CrossComp-1030_11_shostakovich_prelude_no_10_in_c_sharp_minor.mp3,CrossComp-1030,Shostakovich; Dmitry,Scherbakov,SHOSTAKOVICH: 24 Preludes and Fugues; Op. 87,64,piano
+11_shostakovich,CrossComp-1031_11_shostakovich_fugue_no_9_in_e_major.mp3,CrossComp-1031,Shostakovich; Dmitry,Scherbakov,SHOSTAKOVICH: 24 Preludes and Fugues; Op. 87,64,piano
+11_shostakovich,CrossComp-1032_11_shostakovich_fugue_no_16_in_b_flat_major.mp3,CrossComp-1032,Shostakovich; Dmitry,Scherbakov,SHOSTAKOVICH: 24 Preludes and Fugues; Op. 87,64,piano
+11_shostakovich,CrossComp-1033_11_shostakovich_fugue_no_5_in_d_major.mp3,CrossComp-1033,Shostakovich; Dmitry,Scherbakov,SHOSTAKOVICH: 24 Preludes and Fugues; Op. 87,64,piano
+11_shostakovich,CrossComp-1034_11_shostakovich_prelude_no_8_in_f_sharp_minor.mp3,CrossComp-1034,Shostakovich; Dmitry,Scherbakov,SHOSTAKOVICH: 24 Preludes and Fugues; Op. 87,64,piano
+11_shostakovich,CrossComp-1035_11_shostakovich_fugue_no_2_in_a_minor.mp3,CrossComp-1035,Shostakovich; Dmitry,Scherbakov,SHOSTAKOVICH: 24 Preludes and Fugues; Op. 87,64,piano
+11_shostakovich,CrossComp-1036_11_shostakovich_prelude_no_5_in_d_major.mp3,CrossComp-1036,Shostakovich; Dmitry,Scherbakov,SHOSTAKOVICH: 24 Preludes and Fugues; Op. 87,64,piano
+11_shostakovich,CrossComp-1037_11_shostakovich_prelude_no_17_in_a_flat_major.mp3,CrossComp-1037,Shostakovich; Dmitry,Scherbakov,SHOSTAKOVICH: 24 Preludes and Fugues; Op. 87,64,piano
+11_shostakovich,CrossComp-1038_11_shostakovich_prelude_no_16_in_b_flat_major.mp3,CrossComp-1038,Shostakovich; Dmitry,Scherbakov,SHOSTAKOVICH: 24 Preludes and Fugues; Op. 87,64,piano
+11_shostakovich,CrossComp-1039_11_shostakovich_prelude_no_13_in_f_sharp_major.mp3,CrossComp-1039,Shostakovich; Dmitry,Scherbakov,SHOSTAKOVICH: 24 Preludes and Fugues; Op. 87,64,piano
+11_shostakovich,CrossComp-1040_11_shostakovich_fugue_no_19_in_e_flat_major.mp3,CrossComp-1040,Shostakovich; Dmitry,Scherbakov,SHOSTAKOVICH: 24 Preludes and Fugues; Op. 87,64,piano
+11_shostakovich,CrossComp-1041_11_shostakovich_prelude_no_20_in_c_minor.mp3,CrossComp-1041,Shostakovich; Dmitry,Scherbakov,SHOSTAKOVICH: 24 Preludes and Fugues; Op. 87,64,piano
+11_shostakovich,CrossComp-1042_11_shostakovich_preludes_no_2_in_a_major.mp3,CrossComp-1042,Shostakovich; Dmitry,Scherbakov,SHOSTAKOVICH: 24 Preludes and Fugues; Op. 87,64,piano
+11_shostakovich,CrossComp-1043_11_shostakovich_prelude_no_14_in_e_flat_minor.mp3,CrossComp-1043,Shostakovich; Dmitry,Scherbakov,SHOSTAKOVICH: 24 Preludes and Fugues; Op. 87,64,piano
+11_shostakovich,CrossComp-1044_11_shostakovich_fugue_no_15_in_d_flat_major.mp3,CrossComp-1044,Shostakovich; Dmitry,Scherbakov,SHOSTAKOVICH: 24 Preludes and Fugues; Op. 87,64,piano
+11_shostakovich,CrossComp-1045_11_shostakovich_fugue_no_20_in_c_minor.mp3,CrossComp-1045,Shostakovich; Dmitry,Scherbakov,SHOSTAKOVICH: 24 Preludes and Fugues; Op. 87,64,piano
+11_shostakovich,CrossComp-1046_11_shostakovich_prelude_no_4_in_e_minor.mp3,CrossComp-1046,Shostakovich; Dmitry,Scherbakov,SHOSTAKOVICH: 24 Preludes and Fugues; Op. 87,64,piano
+11_shostakovich,CrossComp-1047_11_shostakovich_fugue_no_3_in_g_major.mp3,CrossComp-1047,Shostakovich; Dmitry,Scherbakov,SHOSTAKOVICH: 24 Preludes and Fugues; Op. 87,64,piano
+11_shostakovich,CrossComp-1048_11_shostakovich_fugue_no_13_in_f_sharp_major.mp3,CrossComp-1048,Shostakovich; Dmitry,Scherbakov,SHOSTAKOVICH: 24 Preludes and Fugues; Op. 87,64,piano
+11_shostakovich,CrossComp-1049_11_shostakovich_fugue_no_4_in_e_minor.mp3,CrossComp-1049,Shostakovich; Dmitry,Scherbakov,SHOSTAKOVICH: 24 Preludes and Fugues; Op. 87,64,piano
+11_shostakovich,CrossComp-1050_11_shostakovich_prelude_no_21_in_b_flat_major.mp3,CrossComp-1050,Shostakovich; Dmitry,Scherbakov,SHOSTAKOVICH: 24 Preludes and Fugues; Op. 87,64,piano
+11_shostakovich,CrossComp-1051_11_shostakovich_prelude_no_3_in_in_g_major.mp3,CrossComp-1051,Shostakovich; Dmitry,Scherbakov,SHOSTAKOVICH: 24 Preludes and Fugues; Op. 87,64,piano
+11_shostakovich,CrossComp-1052_11_shostakovich_prelude_no_15_in_d_flat_major.mp3,CrossComp-1052,Shostakovich; Dmitry,Scherbakov,SHOSTAKOVICH: 24 Preludes and Fugues; Op. 87,64,piano
+11_shostakovich,CrossComp-1053_11_shostakovich_fugue_no_1_in_c_major.mp3,CrossComp-1053,Shostakovich; Dmitry,Scherbakov,SHOSTAKOVICH: 24 Preludes and Fugues; Op. 87,64,piano
+11_shostakovich,CrossComp-1054_11_shostakovich_prelude_no_19_in_e_flat_major.mp3,CrossComp-1054,Shostakovich; Dmitry,Scherbakov,SHOSTAKOVICH: 24 Preludes and Fugues; Op. 87,64,piano
+11_shostakovich,CrossComp-1055_11_shostakovich_fugue_no_12_in_g_sharp_minor.mp3,CrossComp-1055,Shostakovich; Dmitry,Scherbakov,SHOSTAKOVICH: 24 Preludes and Fugues; Op. 87,64,piano
+11_shostakovich,CrossComp-1056_11_shostakovich_fugue_no_14_in_e_flat_minor.mp3,CrossComp-1056,Shostakovich; Dmitry,Scherbakov,SHOSTAKOVICH: 24 Preludes and Fugues; Op. 87,64,piano
+11_shostakovich,CrossComp-1057_11_shostakovich_fugue_no_6_in_b_minor.mp3,CrossComp-1057,Shostakovich; Dmitry,Scherbakov,SHOSTAKOVICH: 24 Preludes and Fugues; Op. 87,64,piano
+11_shostakovich,CrossComp-1058_11_shostakovich_fugue_no_21_in_b_flat_major.mp3,CrossComp-1058,Shostakovich; Dmitry,Scherbakov,SHOSTAKOVICH: 24 Preludes and Fugues; Op. 87,64,piano
+11_shostakovich,CrossComp-1059_11_shostakovich_fugue_no_22_in_g_minor.mp3,CrossComp-1059,Shostakovich; Dmitry,Scherbakov,SHOSTAKOVICH: 24 Preludes and Fugues; Op. 87,64,piano
+11_shostakovich,CrossComp-1060_11_shostakovich_prelude_no_6_in_b_minor.mp3,CrossComp-1060,Shostakovich; Dmitry,Scherbakov,SHOSTAKOVICH: 24 Preludes and Fugues; Op. 87,64,piano
+11_shostakovich,CrossComp-1061_11_shostakovich_fugue_no_10_in_c_sharp_minor.mp3,CrossComp-1061,Shostakovich; Dmitry,Scherbakov,SHOSTAKOVICH: 24 Preludes and Fugues; Op. 87,64,piano
+11_shostakovich,CrossComp-1062_11_shostakovich_prelude_no_22_in_g_minor.mp3,CrossComp-1062,Shostakovich; Dmitry,Scherbakov,SHOSTAKOVICH: 24 Preludes and Fugues; Op. 87,64,piano
+11_shostakovich,CrossComp-1063_11_shostakovich_fugue_no_7_in_a_major.mp3,CrossComp-1063,Shostakovich; Dmitry,Scherbakov,SHOSTAKOVICH: 24 Preludes and Fugues; Op. 87,64,piano
+11_shostakovich,CrossComp-1064_11_shostakovich_de_profundis.mp3,CrossComp-1064,Shostakovich; Dmitry,Slovak Radio Symphony Orchestra; Apollinaire; Garcia Lorca; Kuchelbecker; Rilke,SHOSTAKOVICH: Symphony No. 14,65,orchestra
+11_shostakovich,CrossComp-1065_11_shostakovich_loreley.mp3,CrossComp-1065,Shostakovich; Dmitry,Slovak Radio Symphony Orchestra; Apollinaire; Garcia Lorca; Kuchelbecker; Rilke,SHOSTAKOVICH: Symphony No. 14,65,orchestra
+11_shostakovich,CrossComp-1066_11_shostakovich_at_the_sainte_jail.mp3,CrossComp-1066,Shostakovich; Dmitry,Slovak Radio Symphony Orchestra; Apollinaire; Garcia Lorca; Kuchelbecker; Rilke,SHOSTAKOVICH: Symphony No. 14,65,orchestra
+11_shostakovich,CrossComp-1067_11_shostakovich_the_poets_death.mp3,CrossComp-1067,Shostakovich; Dmitry,Slovak Radio Symphony Orchestra; Apollinaire; Garcia Lorca; Kuchelbecker; Rilke,SHOSTAKOVICH: Symphony No. 14,65,orchestra
+11_shostakovich,CrossComp-1068_11_shostakovich_look_here_madame.mp3,CrossComp-1068,Shostakovich; Dmitry,Slovak Radio Symphony Orchestra; Apollinaire; Garcia Lorca; Kuchelbecker; Rilke,SHOSTAKOVICH: Symphony No. 14,65,orchestra
+11_shostakovich,CrossComp-1069_11_shostakovich_conclusion.mp3,CrossComp-1069,Shostakovich; Dmitry,Slovak Radio Symphony Orchestra; Apollinaire; Garcia Lorca; Kuchelbecker; Rilke,SHOSTAKOVICH: Symphony No. 14,65,orchestra
+11_shostakovich,CrossComp-1070_11_shostakovich_malaguena.mp3,CrossComp-1070,Shostakovich; Dmitry,Slovak Radio Symphony Orchestra; Apollinaire; Garcia Lorca; Kuchelbecker; Rilke,SHOSTAKOVICH: Symphony No. 14,65,orchestra
+11_shostakovich,CrossComp-1071_11_shostakovich_zaporozhye_cossacks_reply.mp3,CrossComp-1071,Shostakovich; Dmitry,Slovak Radio Symphony Orchestra; Apollinaire; Garcia Lorca; Kuchelbecker; Rilke,SHOSTAKOVICH: Symphony No. 14,65,orchestra
+11_shostakovich,CrossComp-1072_11_shostakovich_the_suicide.mp3,CrossComp-1072,Shostakovich; Dmitry,Slovak Radio Symphony Orchestra; Apollinaire; Garcia Lorca; Kuchelbecker; Rilke,SHOSTAKOVICH: Symphony No. 14,65,orchestra
+11_shostakovich,CrossComp-1073_11_shostakovich_o_delvig_delvig.mp3,CrossComp-1073,Shostakovich; Dmitry,Slovak Radio Symphony Orchestra; Apollinaire; Garcia Lorca; Kuchelbecker; Rilke,SHOSTAKOVICH: Symphony No. 14,65,orchestra
+11_shostakovich,CrossComp-1074_11_shostakovich_on_the_alert.mp3,CrossComp-1074,Shostakovich; Dmitry,Slovak Radio Symphony Orchestra; Apollinaire; Garcia Lorca; Kuchelbecker; Rilke,SHOSTAKOVICH: Symphony No. 14,65,orchestra
+11_shostakovich,CrossComp-1075_11_shostakovich_suite_from_the_gadfly_op.97a_intermezzo.mp3,CrossComp-1075,Shostakovich; Dmitry,Ukraine National Symphony Orchestra; Kuchar,SHOSTAKOVICH: Gadfly Suite ( The ) / Five Days-Five Nights Suite,66,orchestra
+11_shostakovich,CrossComp-1076_11_shostakovich_suite_from_five_days__five_nights_op.111a_the_liberation_of_dresden.mp3,CrossComp-1076,Shostakovich; Dmitry,Ukraine National Symphony Orchestra; Kuchar,SHOSTAKOVICH: Gadfly Suite ( The ) / Five Days-Five Nights Suite,66,orchestra
+11_shostakovich,CrossComp-1077_11_shostakovich_suite_from_five_days__five_nights_op.111a_dresden_in_ruins.mp3,CrossComp-1077,Shostakovich; Dmitry,Ukraine National Symphony Orchestra; Kuchar,SHOSTAKOVICH: Gadfly Suite ( The ) / Five Days-Five Nights Suite,66,orchestra
+11_shostakovich,CrossComp-1078_11_shostakovich_suite_from_the_gadfly_op.97a_finale.mp3,CrossComp-1078,Shostakovich; Dmitry,Ukraine National Symphony Orchestra; Kuchar,SHOSTAKOVICH: Gadfly Suite ( The ) / Five Days-Five Nights Suite,66,orchestra
+11_shostakovich,CrossComp-1079_11_shostakovich_suite_from_the_gadfly_op.97a_folk_feast_national_holiday.mp3,CrossComp-1079,Shostakovich; Dmitry,Ukraine National Symphony Orchestra; Kuchar,SHOSTAKOVICH: Gadfly Suite ( The ) / Five Days-Five Nights Suite,66,orchestra
+11_shostakovich,CrossComp-1080_11_shostakovich_suite_from_the_gadfly_op.97a_nocturne.mp3,CrossComp-1080,Shostakovich; Dmitry,Ukraine National Symphony Orchestra; Kuchar,SHOSTAKOVICH: Gadfly Suite ( The ) / Five Days-Five Nights Suite,66,orchestra
+11_shostakovich,CrossComp-1081_11_shostakovich_suite_from_the_gadfly_op.97a_barrelorgan_waltz.mp3,CrossComp-1081,Shostakovich; Dmitry,Ukraine National Symphony Orchestra; Kuchar,SHOSTAKOVICH: Gadfly Suite ( The ) / Five Days-Five Nights Suite,66,orchestra
+11_shostakovich,CrossComp-1082_11_shostakovich_suite_from_the_gadfly_op.97a_contredanse.mp3,CrossComp-1082,Shostakovich; Dmitry,Ukraine National Symphony Orchestra; Kuchar,SHOSTAKOVICH: Gadfly Suite ( The ) / Five Days-Five Nights Suite,66,orchestra
+11_shostakovich,CrossComp-1083_11_shostakovich_suite_from_the_gadfly_op.97a_romance.mp3,CrossComp-1083,Shostakovich; Dmitry,Ukraine National Symphony Orchestra; Kuchar,SHOSTAKOVICH: Gadfly Suite ( The ) / Five Days-Five Nights Suite,66,orchestra
+11_shostakovich,CrossComp-1084_11_shostakovich_suite_from_the_gadfly_op.97a_scene.mp3,CrossComp-1084,Shostakovich; Dmitry,Ukraine National Symphony Orchestra; Kuchar,SHOSTAKOVICH: Gadfly Suite ( The ) / Five Days-Five Nights Suite,66,orchestra
+11_shostakovich,CrossComp-1085_11_shostakovich_suite_from_the_gadfly_op.97a_overture.mp3,CrossComp-1085,Shostakovich; Dmitry,Ukraine National Symphony Orchestra; Kuchar,SHOSTAKOVICH: Gadfly Suite ( The ) / Five Days-Five Nights Suite,66,orchestra
+11_shostakovich,CrossComp-1086_11_shostakovich_suite_from_five_days__five_nights_op.111a_introduction.mp3,CrossComp-1086,Shostakovich; Dmitry,Ukraine National Symphony Orchestra; Kuchar,SHOSTAKOVICH: Gadfly Suite ( The ) / Five Days-Five Nights Suite,66,orchestra
+11_shostakovich,CrossComp-1087_11_shostakovich_suite_from_the_gadfly_op.97a_galop.mp3,CrossComp-1087,Shostakovich; Dmitry,Ukraine National Symphony Orchestra; Kuchar,SHOSTAKOVICH: Gadfly Suite ( The ) / Five Days-Five Nights Suite,66,orchestra
+11_shostakovich,CrossComp-1088_11_shostakovich_suite_from_the_gadfly_op.97a_interlude.mp3,CrossComp-1088,Shostakovich; Dmitry,Ukraine National Symphony Orchestra; Kuchar,SHOSTAKOVICH: Gadfly Suite ( The ) / Five Days-Five Nights Suite,66,orchestra
+11_shostakovich,CrossComp-1089_11_shostakovich_suite_from_five_days__five_nights_op.111a_interlude.mp3,CrossComp-1089,Shostakovich; Dmitry,Ukraine National Symphony Orchestra; Kuchar,SHOSTAKOVICH: Gadfly Suite ( The ) / Five Days-Five Nights Suite,66,orchestra
+11_shostakovich,CrossComp-1090_11_shostakovich_suite_from_the_gadfly_op.97a_introduction_prelude.mp3,CrossComp-1090,Shostakovich; Dmitry,Ukraine National Symphony Orchestra; Kuchar,SHOSTAKOVICH: Gadfly Suite ( The ) / Five Days-Five Nights Suite,66,orchestra
+11_shostakovich,CrossComp-1091_11_shostakovich_suite_from_five_days__five_nights_op.111a_finale.mp3,CrossComp-1091,Shostakovich; Dmitry,Ukraine National Symphony Orchestra; Kuchar,SHOSTAKOVICH: Gadfly Suite ( The ) / Five Days-Five Nights Suite,66,orchestra
+11_shostakovich,CrossComp-1092_11_shostakovich_violin_concerto_2_in_c_sharp_minor_op._129__2_adagio.mp3,CrossComp-1092,Shostakovich; Dmitry,Polish national Radio Symphony Orchestra; Kaler; Wit,SHOSTAKOVICH: Violin Concertos Nos. 1 and 2,67,orchestra; violin
+11_shostakovich,CrossComp-1093_11_shostakovich_violin_concerto_1_in_a_minor_op._99__3_passacaglia.mp3,CrossComp-1093,Shostakovich; Dmitry,Polish national Radio Symphony Orchestra; Kaler; Wit,SHOSTAKOVICH: Violin Concertos Nos. 1 and 2,67,orchestra; violin
+11_shostakovich,CrossComp-1094_11_shostakovich_violin_concerto_1_in_a_minor_op._99__2_sherzo.mp3,CrossComp-1094,Shostakovich; Dmitry,Polish national Radio Symphony Orchestra; Kaler; Wit,SHOSTAKOVICH: Violin Concertos Nos. 1 and 2,67,orchestra; violin
+11_shostakovich,CrossComp-1095_11_shostakovich_violin_concerto_2_in_c_sharp_minor_op._129__3_adagioallegro.mp3,CrossComp-1095,Shostakovich; Dmitry,Polish national Radio Symphony Orchestra; Kaler; Wit,SHOSTAKOVICH: Violin Concertos Nos. 1 and 2,67,orchestra; violin
+11_shostakovich,CrossComp-1096_11_shostakovich_violin_concerto_1_in_a_minor_op._99__1_nocturne.mp3,CrossComp-1096,Shostakovich; Dmitry,Polish national Radio Symphony Orchestra; Kaler; Wit,SHOSTAKOVICH: Violin Concertos Nos. 1 and 2,67,orchestra; violin
+11_shostakovich,CrossComp-1097_11_shostakovich_violin_concerto_2_in_c_sharp_minor_op._129__1_moderato.mp3,CrossComp-1097,Shostakovich; Dmitry,Polish national Radio Symphony Orchestra; Kaler; Wit,SHOSTAKOVICH: Violin Concertos Nos. 1 and 2,67,orchestra; violin
+11_shostakovich,CrossComp-1098_11_shostakovich_violin_concerto_1_in_a_minor_op._99__4_burlesque.mp3,CrossComp-1098,Shostakovich; Dmitry,Polish national Radio Symphony Orchestra; Kaler; Wit,SHOSTAKOVICH: Violin Concertos Nos. 1 and 2,67,orchestra; violin
+11_shostakovich,CrossComp-1099_11_shostakovich_pc_no._2_in_f_major_op._102__andante.mp3,CrossComp-1099,Shostakovich; Dmitry,New Zealand Symphony Orchestra; Houston; Lyndon-Gee,SHOSTAKOVICH: Piano Concertos Nos. 1 and 2,68,orchestra; piano
+11_shostakovich,CrossComp-1100_11_shostakovich_pc_no._2_in_f_major_op._102__allegro.mp3,CrossComp-1100,Shostakovich; Dmitry,New Zealand Symphony Orchestra; Houston; Lyndon-Gee,SHOSTAKOVICH: Piano Concertos Nos. 1 and 2,68,orchestra; piano
