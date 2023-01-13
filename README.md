@@ -6,7 +6,7 @@ This repository contains the implementation of the musical style classification 
 
 Install the required system dependencies:
 
-- Python 3.8
+- Python 3.9
 - Pip package manager
 - GNU Make
 - Git LFS
