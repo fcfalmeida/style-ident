@@ -30,7 +30,7 @@ make install
 Interaction with the system is done through the commands defined in the project's `Makefile`, which includes documentation on how to use them. For example, to compute TIV Basic features using the multiple resolution segmentation approach on the Cross-Era Piano dataset, run the following:
 
 ```bash
-make res_feats dataset=crossera_piano pipeline=tis_basic_segmented
+make res_feats dataset=crossera_piano pipeline=tis_basic_res
 ```
 
 A *pipeline* represents the computation of a feature group using a given segmentation approach. Currently available pipelines are:
